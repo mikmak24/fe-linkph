@@ -46,7 +46,7 @@ import { RouterLink } from 'vue-router'
                 </div>
                 <div>
                   <h5 class="mb-1">Phone</h5>
-                  <p class="mb-0">0930-6030-755</p>
+                  <p class="mb-0">0939-6030-755</p>
                 </div>
               </div>
               

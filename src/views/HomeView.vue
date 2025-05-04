@@ -117,7 +117,7 @@ onMounted(() => {
               <router-link to="/about" class="btn btn-outline-light btn-lg">Learn More</router-link>
             </div>
             <div class="contact-info">
-              <p class="mb-1"><i class="bi bi-telephone me-2"></i>0930-6030-755</p>
+              <p class="mb-1"><i class="bi bi-telephone me-2"></i>0939-6030-755</p>
               <p class="mb-1"><i class="bi bi-envelope me-2"></i>thelinkphilippines@gmail.com</p>
             </div>
           </div>
