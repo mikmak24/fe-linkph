@@ -1,7 +1,13 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import bibleVersesData from '@/assets/data/bible-verses.json'
+
+// Import images directly
+import slideA from '@/assets/images/slideshows/a.jpg'
+import slideB from '@/assets/images/slideshows/b.jpg'
+import slideC from '@/assets/images/slideshows/c.jpg'
+import slideD from '@/assets/images/slideshows/d.jpg'
 
 // Create a reactive reference for the selected verse
 const randomVerse = ref({
@@ -25,59 +31,78 @@ const selectRandomVerse = () => {
 // Add a ref to control visibility for animation
 const isVerseVisible = ref(false);
 
-// Slideshow functionality
+// Slideshow functionality using Bootstrap
 const slides = [
-  'a.jpg',
-  'b.jpg',
-  'c.jpg',
-  'd.jpg'
+  { id: 0, url: slideA },
+  { id: 1, url: slideB },
+  { id: 2, url: slideC },
+  { id: 3, url: slideD }
 ];
-const currentSlide = ref(0);
-let slideInterval = null;
 
-const nextSlide = () => {
-  currentSlide.value = (currentSlide.value + 1) % slides.length;
-  console.log('Changing to slide:', currentSlide.value); // Debug log
-};
-
-// Start slideshow when component mounts
+// Initialize carousel and verse when component mounts
 onMounted(() => {
+  // Initialize random verse
   selectRandomVerse();
-  // Initial slide
-  console.log('Starting slideshow with slide:', currentSlide.value);
-  // Change slide every 8 seconds
-  slideInterval = setInterval(nextSlide, 4000);
-});
-
-// Clean up interval when component unmounts
-onBeforeUnmount(() => {
-  if (slideInterval) clearInterval(slideInterval);
+  
+  // Initialize Bootstrap carousel with JavaScript
+  // Using setTimeout to ensure DOM is fully rendered
+  setTimeout(() => {
+    try {
+      if (typeof bootstrap !== 'undefined') {
+        const carouselElement = document.getElementById('heroCarousel');
+        if (carouselElement) {
+          const carousel = new bootstrap.Carousel(carouselElement, {
+            interval: 6000, // Longer interval between slides (6 seconds)
+            ride: 'carousel',
+            wrap: true,
+            pause: false // Don't pause on hover
+          });
+        } else {
+          console.warn('Carousel element not found in DOM');
+        }
+      } else {
+        console.warn('Bootstrap not available');
+      }
+    } catch (e) {
+      console.error('Bootstrap carousel initialization error:', e);
+    }
+  }, 500);
 });
 </script>
 
 <template>
   <div>
-    <!-- Hero Section with Slideshow -->
+    <!-- Hero Section with Bootstrap Carousel -->
     <section class="hero-section">
-      <div class="slideshow-container">
-        <div 
-          v-for="(slide, index) in slides" 
-          :key="index"
-          class="slide"
-          :class="{ 'active': index === currentSlide }"
-          :style="{ 
-            backgroundImage: `linear-gradient(rgba(12, 93, 86, 0.8), rgba(3, 63, 58, 0.9)), 
-                            url('/src/assets/images/slideshows/${slide}')` 
-          }"
-        ></div>
-        <!-- Debugging indicator -->
-        <div class="slide-indicator">
-          <span 
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div 
             v-for="(slide, index) in slides" 
-            :key="'indicator-'+index"
-            :class="{ 'active': index === currentSlide }"
-            class="dot"
-          ></span>
+            :key="`slide-${slide.id}`"
+            class="carousel-item"
+            :class="{ 'active': index === 0 }"
+          >
+            <div 
+              class="carousel-background w-100 h-100"
+              :style="{
+                backgroundImage: `linear-gradient(rgba(12, 93, 86, 0.8), rgba(3, 63, 58, 0.9)), url(${slide.url})`
+              }"
+            ></div>
+          </div>
+        </div>
+        
+        <!-- Indicator dots -->
+        <div class="carousel-indicators">
+          <button 
+            v-for="(slide, index) in slides" 
+            :key="`indicator-${slide.id}`"
+            type="button"
+            data-bs-target="#heroCarousel"
+            :data-bs-slide-to="index"
+            :class="{ 'active': index === 0 }"
+            :aria-current="index === 0 ? 'true' : 'false'"
+            :aria-label="`Slide ${index + 1}`"
+          ></button>
         </div>
       </div>
       
@@ -271,16 +296,17 @@ onBeforeUnmount(() => {
   overflow: hidden;
 }
 
-.slideshow-container {
+/* Bootstrap Carousel Styling */
+#heroCarousel {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 0;
 }
 
-.slide {
+.carousel-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -288,12 +314,44 @@ onBeforeUnmount(() => {
   height: 100%;
   background-size: cover;
   background-position: center center;
-  opacity: 0;
-  transition: opacity 0.7s ease-in-out;
 }
 
-.slide.active {
+.carousel-item {
+  height: 100vh;
+}
+
+/* Smoother fade transition */
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-duration: 3s; /* Longer transition */
+  transition-property: opacity;
+  transition-timing-function: ease-in-out; /* Smoother easing */
+}
+
+.carousel-fade .carousel-item.active {
   opacity: 1;
+  z-index: 1;
+}
+
+/* Make the carousel indicators more subtle */
+.carousel-indicators {
+  bottom: 25px; /* Position a bit higher */
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.carousel-indicators button.active {
+  background-color: white;
+  transform: scale(1.2);
+  opacity: 0.8;
 }
 
 .hero-content {
@@ -505,29 +563,5 @@ onBeforeUnmount(() => {
 
 .btn-outline-light:hover {
   transform: translateY(-2px);
-}
-
-/* Slide indicator dots */
-.slide-indicator {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 100;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  transition: all 0.3s ease;
-}
-
-.dot.active {
-  background-color: white;
-  transform: scale(1.2);
 }
 </style>
