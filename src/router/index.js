@@ -62,6 +62,11 @@ const router = createRouter({
       name: 'oneOnOneGuide',
       component: () => import('../views/OneOnOneGuideView.vue'),
     },
+    // Catch all route - redirect to home
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/'
+    }
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
