@@ -41,7 +41,7 @@ onMounted(() => {
     letterImages.value.push({
       id: letter,
       src: new URL(`../assets/images/gallery/${letter}.jpg`, import.meta.url).href,
-      alt: `Ministry Image ${letter.toUpperCase()}`
+      alt: ``
     })
   })
 })
