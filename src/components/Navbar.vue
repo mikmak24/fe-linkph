@@ -80,6 +80,11 @@ onUnmounted(() => {
               <i class="bi bi-images me-1"></i> Gallery
             </RouterLink>
           </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" to="/bibliology" @click="isNavCollapsed = true">
+              <i class="bi bi-book me-1"></i> Bibliology
+            </RouterLink>
+          </li>
           <!-- <li class="nav-item">
             <RouterLink class="nav-link" to="/resources" @click="isNavCollapsed = true">
               <i class="bi bi-book me-1"></i> Resources
