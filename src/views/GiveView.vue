@@ -423,14 +423,19 @@ import { RouterLink } from 'vue-router'
 
 <style scoped>
 .page-header {
-  background-color: var(--light-color);
+  background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
   padding: 80px 0 30px;
   margin-bottom: 50px;
 }
 
-.breadcrumb-item a {
-  color: var(--primary-color);
-  text-decoration: none;
+.page-header, .page-header h1, .page-header nav, .page-header .breadcrumb, .page-header .breadcrumb-item, .page-header .breadcrumb-item a {
+  color: #fff !important;
+}
+.page-header .breadcrumb-item.active {
+  color: #f0f0f0 !important;
+}
+.page-header .breadcrumb-item a {
+  text-decoration: underline;
 }
 
 .scripture-box {
