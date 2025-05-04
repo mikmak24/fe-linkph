@@ -27,11 +27,11 @@ const closeModal = () => {
 
 onMounted(() => {
   // Populate number images
-  for (let i = 1; i <= 23; i++) {
+  for (let i = 1; i <= 22; i++) {
     numberImages.value.push({
       id: i,
       src: new URL(`../assets/images/gallery/${i}.jpg`, import.meta.url).href,
-      alt: `Church Event ${i}`
+      alt: ``
     })
   }
   
