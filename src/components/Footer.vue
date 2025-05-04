@@ -23,7 +23,7 @@ import { RouterLink } from 'vue-router'
             <li class="mb-2"><RouterLink to="/" class="footer-link">Home</RouterLink></li>
             <li class="mb-2"><RouterLink to="/about" class="footer-link">About</RouterLink></li>
             <li class="mb-2"><RouterLink to="/visit" class="footer-link">Visit</RouterLink></li>
-            <li class="mb-2"><RouterLink to="/grow" class="footer-link">Grow</RouterLink></li>
+            <li class="mb-2"><RouterLink to="/grow" class="footer-link">Discipleship</RouterLink></li>
           </ul>
         </div>
         
@@ -39,10 +39,11 @@ import { RouterLink } from 'vue-router'
         
         <div class="col-lg-4">
           <h5 class="mb-4">Contact Us</h5>
-          <p><i class="bi bi-geo-alt me-2"></i> Church Address</p>
-          <p><i class="bi bi-envelope me-2"></i> info@linkph.org</p>
-          <p><i class="bi bi-telephone me-2"></i> (123) 456-7890</p>
-          <p><i class="bi bi-clock me-2"></i> Sunday Service: 10:00 AM</p>
+          <p>We would love to hear from you! Whether you have questions about our services, want to get involved, or simply want to learn more, feel free to reach out:</p>
+          <p><i class="bi bi-envelope me-2"></i> thelinkphilippines@gmail.com</p>
+          <p><i class="bi bi-telephone me-2"></i> 0930-6030-755</p>
+          <p><i class="bi bi-geo-alt me-2"></i> Bacolod City, Negros Occidental 6100</p>
+          <p>Thank you for visiting Link Church. We look forward to welcoming you into our community!</p>
         </div>
       </div>
     </div>

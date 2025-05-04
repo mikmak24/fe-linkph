@@ -57,6 +57,11 @@ const router = createRouter({
       name: 'bibliology',
       component: () => import('../views/BibliologyView.vue'),
     },
+    {
+      path: '/one-on-one-guide',
+      name: 'oneOnOneGuide',
+      component: () => import('../views/OneOnOneGuideView.vue'),
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

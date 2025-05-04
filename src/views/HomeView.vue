@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { RouterLink } from 'vue-router'
 import bibleVersesData from '@/assets/data/bible-verses.json'
 
@@ -25,16 +25,62 @@ const selectRandomVerse = () => {
 // Add a ref to control visibility for animation
 const isVerseVisible = ref(false);
 
-// Call the function when the component is mounted
+// Slideshow functionality
+const slides = [
+  'a.jpg',
+  'b.jpg',
+  'c.jpg',
+  'd.jpg'
+];
+const currentSlide = ref(0);
+let slideInterval = null;
+
+const nextSlide = () => {
+  currentSlide.value = (currentSlide.value + 1) % slides.length;
+  console.log('Changing to slide:', currentSlide.value); // Debug log
+};
+
+// Start slideshow when component mounts
 onMounted(() => {
   selectRandomVerse();
+  // Initial slide
+  console.log('Starting slideshow with slide:', currentSlide.value);
+  // Change slide every 8 seconds
+  slideInterval = setInterval(nextSlide, 4000);
+});
+
+// Clean up interval when component unmounts
+onBeforeUnmount(() => {
+  if (slideInterval) clearInterval(slideInterval);
 });
 </script>
 
 <template>
   <div>
-    <!-- Hero Section -->
+    <!-- Hero Section with Slideshow -->
     <section class="hero-section">
+      <div class="slideshow-container">
+        <div 
+          v-for="(slide, index) in slides" 
+          :key="index"
+          class="slide"
+          :class="{ 'active': index === currentSlide }"
+          :style="{ 
+            backgroundImage: `linear-gradient(rgba(12, 93, 86, 0.8), rgba(3, 63, 58, 0.9)), 
+                            url('/src/assets/images/slideshows/${slide}')` 
+          }"
+        ></div>
+        <!-- Debugging indicator -->
+        <div class="slide-indicator">
+          <span 
+            v-for="(slide, index) in slides" 
+            :key="'indicator-'+index"
+            :class="{ 'active': index === currentSlide }"
+            class="dot"
+          ></span>
+        </div>
+      </div>
+      
       <div class="container-fluid h-100">
         <div class="row h-100 align-items-center">
           <div class="col-lg-8 text-white hero-content">
@@ -46,8 +92,8 @@ onMounted(() => {
               <router-link to="/about" class="btn btn-outline-light btn-lg">Learn More</router-link>
             </div>
             <div class="contact-info">
-              <p class="mb-1"><i class="bi bi-telephone me-2"></i>09123456789</p>
-              <p class="mb-1"><i class="bi bi-envelope me-2"></i>linkchurchph@gmail.com</p>
+              <p class="mb-1"><i class="bi bi-telephone me-2"></i>0930-6030-755</p>
+              <p class="mb-1"><i class="bi bi-envelope me-2"></i>thelinkphilippines@gmail.com</p>
             </div>
           </div>
         </div>
@@ -218,16 +264,41 @@ onMounted(() => {
 <style scoped>
 .hero-section {
   position: relative;
-  background: linear-gradient(rgba(12, 93, 86, 0.8), rgba(3, 63, 58, 0.9)), url('@/assets/images/group-photo.jpg') no-repeat center center;
-  background-size: cover;
   height: 100vh; /* Full viewport height */
   display: flex;
   align-items: center;
   width: 100%;
+  overflow: hidden;
+}
+
+.slideshow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
 }
 
 .hero-content {
   padding-left: 10%;
+  z-index: 10;
 }
 
 .hero-section h1 {
@@ -239,7 +310,6 @@ onMounted(() => {
   color: var(--primary-color);
   display: inline-block;
   font-weight: 900;
-
 }
 
 .tagline {
@@ -435,5 +505,29 @@ onMounted(() => {
 
 .btn-outline-light:hover {
   transform: translateY(-2px);
+}
+
+/* Slide indicator dots */
+.slide-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 100;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: white;
+  transform: scale(1.2);
 }
 </style>

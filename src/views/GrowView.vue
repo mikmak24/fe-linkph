@@ -9,11 +9,11 @@ import { RouterLink } from 'vue-router'
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <h1 class="fw-bold">Grow</h1>
+            <h1 class="fw-bold">Discipleship</h1>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><RouterLink to="/">Home</RouterLink></li>
-                <li class="breadcrumb-item active" aria-current="page">Grow</li>
+                <li class="breadcrumb-item active" aria-current="page">Discipleship</li>
               </ol>
             </nav>
           </div>
