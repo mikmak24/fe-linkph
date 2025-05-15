@@ -122,7 +122,13 @@ const lessons = [
         <div class="row">
           <div class="col-lg-12">
             <div class="lessons-grid">
-              <div class="lesson-card" v-for="(lesson, index) in lessons" :key="index">
+              <RouterLink to="/link-kids/acts-overview" class="lesson-card text-decoration-none">
+                <div class="lesson-content">
+                  <h4>A Journey through the Book of Acts Overview Lesson</h4>
+                  <p class="lesson-reference">Overview of Acts 1-9</p>
+                </div>
+              </RouterLink>
+              <div class="lesson-card" v-for="(lesson, index) in lessons.slice(1)" :key="index">
                 <div class="lesson-content">
                   <h4>{{ lesson.title }}</h4>
                   <p class="lesson-reference">{{ lesson.reference }}</p>

@@ -38,6 +38,11 @@ const router = createRouter({
       component: () => import('../views/LinkKidsView.vue'),
     },
     {
+      path: '/link-kids/acts-overview',
+      name: 'actsOverview',
+      component: () => import('../views/ActsOverviewLesson.vue'),
+    },
+    {
       path: '/resources',
       name: 'resources',
       component: () => import('../views/ResourcesView.vue'),
