@@ -86,6 +86,11 @@ onUnmounted(() => {
               <i class="bi bi-people me-1"></i> Ministries
             </RouterLink>
           </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" to="/link-kids" @click="isNavCollapsed = true; closeDropdowns()">
+              <i class="bi bi-emoji-smile me-1"></i>Link Kids
+            </RouterLink>
+          </li>
           <li class="nav-item dropdown">
             <a 
               class="nav-link dropdown-toggle" 
