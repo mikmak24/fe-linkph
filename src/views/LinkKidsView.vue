@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router'
 
 const lessons = [
   { title: "A Journey through the Book of Acts Overview Lesson", reference: "" },
-  { title: "The Day of Pentecost & God's Gift", reference: "Acts 2:1-21" },
+  { title: "The Day of Pentecost & God's Gift", reference: "Acts 2:1-21", path: "/link-kids/pentecost" },
   { title: "Apostles Witness Jesus' Ascension", reference: "Acts 1" },
   { title: "The Birth of the Church on Pentecost", reference: "Acts 2" },
   { title: "Peter Heals the Crippled Beggar in Jesus' Name", reference: "Acts 3" },
@@ -128,12 +128,20 @@ const lessons = [
                   <p class="lesson-reference">Overview of Acts 1-9</p>
                 </div>
               </RouterLink>
-              <div class="lesson-card" v-for="(lesson, index) in lessons.slice(1)" :key="index">
-                <div class="lesson-content">
-                  <h4>{{ lesson.title }}</h4>
-                  <p class="lesson-reference">{{ lesson.reference }}</p>
+              <template v-for="(lesson, index) in lessons.slice(1)" :key="index">
+                <RouterLink v-if="lesson.path" :to="lesson.path" class="lesson-card text-decoration-none">
+                  <div class="lesson-content">
+                    <h4>{{ lesson.title }}</h4>
+                    <p class="lesson-reference">{{ lesson.reference }}</p>
+                  </div>
+                </RouterLink>
+                <div v-else class="lesson-card">
+                  <div class="lesson-content">
+                    <h4>{{ lesson.title }}</h4>
+                    <p class="lesson-reference">{{ lesson.reference }}</p>
+                  </div>
                 </div>
-              </div>
+              </template>
             </div>
           </div>
         </div>

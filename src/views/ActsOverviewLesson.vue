@@ -186,6 +186,17 @@ import { RouterLink } from 'vue-router'
                 </ol>
               </div>
             </div>
+
+            <!-- Next Lesson Link -->
+            <div class="next-lesson-card mb-5">
+              <h3 class="h4 mb-3">Next Lesson</h3>
+              <RouterLink to="/link-kids/pentecost" class="next-lesson-link">
+                <div class="next-lesson-content">
+                  <h4>The Day of Pentecost & God's Gift</h4>
+                  <p>Learn about the coming of the Holy Spirit and the birth of the church</p>
+                </div>
+              </RouterLink>
+            </div>
           </div>
         </div>
       </div>
@@ -343,5 +354,38 @@ import { RouterLink } from 'vue-router'
   border-radius: 0.25em;
   display: inline-block;
   margin-bottom: 0.1em;
+}
+
+.next-lesson-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.next-lesson-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.next-lesson-link:hover {
+  transform: translateX(10px);
+}
+
+.next-lesson-content {
+  padding: 1rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.next-lesson-content h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.next-lesson-content p {
+  color: #666;
+  margin-bottom: 0;
 }
 </style> 

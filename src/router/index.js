@@ -43,6 +43,11 @@ const router = createRouter({
       component: () => import('../views/ActsOverviewLesson.vue'),
     },
     {
+      path: '/link-kids/pentecost',
+      name: 'pentecost',
+      component: () => import('../views/ActsPentecostLesson.vue'),
+    },
+    {
       path: '/resources',
       name: 'resources',
       component: () => import('../views/ResourcesView.vue'),
