@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 const lessons = [
   { title: "A Journey through the Book of Acts Overview Lesson", reference: "" },
   { title: "The Day of Pentecost & God's Gift", reference: "Acts 2:1-21", path: "/link-kids/pentecost" },
-  { title: "Apostles Witness Jesus' Ascension", reference: "Acts 1" },
+  { title: "Apostles Witness Jesus' Ascension", reference: "Acts 1", path: "/link-kids/ascension" },
   { title: "The Birth of the Church on Pentecost", reference: "Acts 2" },
   { title: "Peter Heals the Crippled Beggar in Jesus' Name", reference: "Acts 3" },
   { title: "The Spirit gives boldness to Peter & John", reference: "Acts 4:1-31" },

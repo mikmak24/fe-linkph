@@ -114,16 +114,24 @@ import { RouterLink } from 'vue-router'
               <h3 class="h4 mb-3">Review Questions</h3>
               <div class="review-questions">
                 <ol>
-                  <li>What special celebration was taking place in our story? (Day of Pentecost)</li>
-                  <li>How did the Jewish people celebrate Pentecost? (By bringing a gift to offer to God)</li>
-                  <li>When the believers were gathered together what sound did the believers hear? (Loud wind)</li>
-                  <li>What did the believers see? (Flames of fire resting on their heads)</li>
-                  <li>Who filled each of the believers on the Day of Pentecost? (The Holy Spirit)</li>
-                  <li>Why were the people in Jerusalem confused? (They could hear the believers from Galilee speaking in the language they could understand)</li>
-                  <li>What did they hear the believers saying in their own language? (wonders of God)</li>
-                  <li>Which prophet wrote about God's promise to send the Holy Spirit? (Joel)</li>
+                  <li>What special day were the disciples celebrating when the Holy Spirit came? (Pentecost)</li>
+                  <li>What did the Holy Spirit look like when He came? (Tongues of fire)</li>
+                  <li>What special ability did the Holy Spirit give the disciples? (Ability to speak in other languages)</li>
+                  <li>What did Peter tell the people they needed to do to be saved? (Repent and be baptized)</li>
+                  <li>How many people believed in Jesus that day? (About 3,000)</li>
                 </ol>
               </div>
+            </div>
+
+            <!-- Next Lesson Link -->
+            <div class="next-lesson-card mb-5">
+              <h3 class="h4 mb-3">Next Lesson</h3>
+              <RouterLink to="/link-kids/ascension" class="next-lesson-link">
+                <div class="next-lesson-content">
+                  <h4>Apostles Witness Jesus' Ascension</h4>
+                  <p>Learn about Jesus' return to heaven and the promise of His return</p>
+                </div>
+              </RouterLink>
             </div>
           </div>
         </div>
@@ -195,5 +203,38 @@ import { RouterLink } from 'vue-router'
   .concept-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.next-lesson-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.next-lesson-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.next-lesson-link:hover {
+  transform: translateX(10px);
+}
+
+.next-lesson-content {
+  padding: 1rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.next-lesson-content h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.next-lesson-content p {
+  color: #666;
+  margin-bottom: 0;
 }
 </style> 
