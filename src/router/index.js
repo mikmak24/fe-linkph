@@ -45,12 +45,32 @@ const router = createRouter({
     {
       path: '/link-kids/pentecost',
       name: 'pentecost',
-      component: () => import('../views/ActsPentecostLesson.vue'),
+      component: () => import('../views/Kids/Lessons/BookOfActs/ActsPentecostLesson.vue'),
     },
     {
       path: '/link-kids/ascension',
       name: 'ascension',
-      component: () => import('../views/ActsAscensionLesson.vue'),
+      component: () => import('../views/Kids/Lessons/BookOfActs/ActsAscensionLesson.vue'),
+    },
+    {
+      path: '/link-kids/birth-of-church',
+      name: 'birthOfChurch',
+      component: () => import('../views/Kids/Lessons/BookOfActs/BirthOfChurchLesson.vue'),
+    },
+    {
+      path: '/link-kids/crippled-beggar',
+      name: 'crippledBeggar',
+      component: () => import('../views/Kids/Lessons/BookOfActs/CrippledBeggarLesson.vue'),
+    },
+    {
+      path: '/link-kids/peter-john-boldness',
+      name: 'peterJohnBoldness',
+      component: () => import('../views/Kids/Lessons/BookOfActs/PeterJohnBoldnessLesson.vue'),
+    },
+    {
+      path: '/link-kids/believers-devoted',
+      name: 'believersDevoted',
+      component: () => import('../views/Kids/Lessons/BookOfActs/BelieversDevotedLesson.vue'),
     },
     {
       path: '/resources',
@@ -85,8 +105,8 @@ const router = createRouter({
     // Catch all route - redirect to home
     {
       path: '/:pathMatch(.*)*',
-      redirect: '/'
-    }
+      redirect: '/',
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
