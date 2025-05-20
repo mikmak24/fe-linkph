@@ -73,6 +73,21 @@ const router = createRouter({
       component: () => import('../views/Kids/Lessons/BookOfActs/BelieversDevotedLesson.vue'),
     },
     {
+      path: '/link-kids/seven-men-chosen',
+      name: 'sevenMenChosen',
+      component: () => import('../views/Kids/Lessons/BookOfActs/SevenMenChosenLesson.vue'),
+    },
+    {
+      path: '/link-kids/stoning-of-stephen',
+      name: 'stoningOfStephen',
+      component: () => import('../views/Kids/Lessons/BookOfActs/StoningOfStephenLesson.vue'),
+    },
+    {
+      path: '/link-kids/persecution-scatter-church',
+      name: 'persecutionScatterChurch',
+      component: () => import('../views/Kids/Lessons/BookOfActs/PersecutionScattersLesson.vue'),
+    },
+    {
       path: '/resources',
       name: 'resources',
       component: () => import('../views/ResourcesView.vue'),
