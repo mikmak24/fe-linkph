@@ -52,10 +52,11 @@ onMounted(() => {
         const carouselElement = document.getElementById('heroCarousel');
         if (carouselElement) {
           const carousel = new bootstrap.Carousel(carouselElement, {
-            interval: 6000, // Longer interval between slides (6 seconds)
+            interval: 8000, // Longer interval between slides (8 seconds)
             ride: 'carousel',
             wrap: true,
-            pause: false // Don't pause on hover
+            pause: false, // Don't pause on hover
+            touch: false // Disable swiping on touch devices for smoother transitions
           });
         } else {
           console.warn('Carousel element not found in DOM');
@@ -119,6 +120,28 @@ onMounted(() => {
             <div class="contact-info">
               <p class="mb-1"><i class="bi bi-telephone me-2"></i>0939-6030-755</p>
               <p class="mb-1"><i class="bi bi-envelope me-2"></i>thelinkphilippines@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Series Section -->
+    <section class="series-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h2 class="section-title">We're excited to launch our May series:</h2>
+            <h3 class="series-title">"ACTS: Taking the Next Step"</h3>
+            <div class="series-description mt-4">
+              <p class="lead">
+                <i class="bi bi-book-half me-2"></i> Let's explore the bold faith and unstoppable movement of the early church—and discover what "next step" God is calling you to take.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="series-image-container">
+              <img src="@/assets/images/series/may-series-2025.jpg" alt="ACTS Series" class="img-fluid rounded shadow-lg">
             </div>
           </div>
         </div>
@@ -323,14 +346,33 @@ onMounted(() => {
 /* Smoother fade transition */
 .carousel-fade .carousel-item {
   opacity: 0;
-  transition-duration: 3s; /* Longer transition */
+  transition-duration: 2s; /* Slightly shorter but still smooth */
   transition-property: opacity;
   transition-timing-function: ease-in-out; /* Smoother easing */
+  z-index: 0; /* Ensure layering works properly */
 }
 
 .carousel-fade .carousel-item.active {
   opacity: 1;
   z-index: 1;
+}
+
+/* Create a cross-fade effect for the background images */
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+/* Ensure the transition container has proper stacking context */
+.carousel-inner {
+  background-color: rgba(12, 93, 86, 0.9); /* Match the overlay color */
 }
 
 /* Make the carousel indicators more subtle */
@@ -497,6 +539,42 @@ onMounted(() => {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
 }
 
+/* Series Section Styles */
+.series-section {
+  background-color: white;
+  position: relative;
+  padding: 5rem 0;
+}
+
+.series-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.series-description {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 1rem;
+}
+
+.series-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.series-image-container img {
+  transition: transform 0.5s ease;
+}
+
+.series-image-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Other styles */
 .feature-icon {
   color: var(--primary-color);
 }

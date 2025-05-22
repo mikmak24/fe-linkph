@@ -37,9 +37,6 @@
             <div class="mt-4">
               <div class="mission-values">
                 <div class="d-flex mb-3">
-                  <div class="icon-box me-3">
-                    <i class="fas fa-cross"></i>
-                  </div>
                   <div>
                     <h5>Our Vision</h5>
                     <p><strong>God First, Disciples Made</strong></p>
@@ -47,9 +44,6 @@
                   </div>
                 </div>
                 <div class="d-flex mb-3">
-                  <div class="icon-box me-3">
-                    <i class="fas fa-eye"></i>
-                  </div>
                   <div>
                     <h5>Our Mission</h5>
                     <p>
@@ -172,7 +166,7 @@
           <div class="col-md-6 mb-4">
             <div class="belief-item d-flex">
               <div class="belief-icon me-3">
-                <i class="fas fa-bible"></i>
+                <span class="number">1</span>
               </div>
               <div>
                 <h5>1. The Word of God</h5>
@@ -184,7 +178,7 @@
           <div class="col-md-6 mb-4">
             <div class="belief-item d-flex">
               <div class="belief-icon me-3">
-                <i class="fas fa-cross"></i>
+                <span class="number">2</span>
               </div>
               <div>
                 <h5>2. The Lordship of Jesus Christ</h5>
@@ -196,7 +190,7 @@
           <div class="col-md-6 mb-4">
             <div class="belief-item d-flex">
               <div class="belief-icon me-3">
-                <i class="fas fa-dove"></i>
+                <span class="number">3</span>
               </div>
               <div>
                 <h5>3. The Annointing of the Holy Spirit</h5>
@@ -208,7 +202,7 @@
           <div class="col-md-6 mb-4">
             <div class="belief-item d-flex">
               <div class="belief-icon me-3">
-                <i class="fas fa-users"></i>
+                <span class="number">4</span>
               </div>
               <div>
                 <h5>4. Connection</h5>
@@ -220,7 +214,7 @@
           <div class="col-md-6 mb-4">
             <div class="belief-item d-flex">
               <div class="belief-icon me-3">
-                <i class="fas fa-seedling"></i>
+                <span class="number">5</span>
               </div>
               <div>
                 <h5>5. Spiritual Growth</h5>
@@ -232,7 +226,7 @@
           <div class="col-md-6 mb-4">
             <div class="belief-item d-flex">
               <div class="belief-icon me-3">
-                <i class="fas fa-hands-helping"></i>
+                <span class="number">6</span>
               </div>
               <div>
                 <h5>6. Service</h5>
@@ -244,7 +238,7 @@
           <div class="col-md-6 mb-4">
             <div class="belief-item d-flex">
               <div class="belief-icon me-3">
-                <i class="fas fa-lightbulb"></i>
+                <span class="number">7</span>
               </div>
               <div>
                 <h5>7. Innovation</h5>
@@ -256,7 +250,7 @@
           <div class="col-md-6 mb-4">
             <div class="belief-item d-flex">
               <div class="belief-icon me-3">
-                <i class="fas fa-pray"></i>
+                <span class="number">8</span>
               </div>
               <div>
                 <h5>8. Priesthood of all Believers</h5>
@@ -268,7 +262,7 @@
           <div class="col-md-6 mb-4">
             <div class="belief-item d-flex">
               <div class="belief-icon me-3">
-                <i class="fas fa-gift"></i>
+                <span class="number">9</span>
               </div>
               <div>
                 <h5>9. Giving our Best</h5>
@@ -280,7 +274,7 @@
           <div class="col-md-6 mb-4">
             <div class="belief-item d-flex">
               <div class="belief-icon me-3">
-                <i class="fas fa-hands"></i>
+                <span class="number">10</span>
               </div>
               <div>
                 <h5>10. Unity in the Body of Christ</h5>
@@ -292,7 +286,7 @@
           <div class="col-md-6 mb-4">
             <div class="belief-item d-flex">
               <div class="belief-icon me-3">
-                <i class="fas fa-child"></i>
+                <span class="number">11</span>
               </div>
               <div>
                 <h5>11. The Now and The Next Generation</h5>
@@ -480,6 +474,11 @@ import { RouterLink } from 'vue-router'
   font-size: 1.2rem;
 }
 
+.icon-box .letter {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
 .team-member {
   transition: all 0.3s ease;
 }
@@ -522,6 +521,7 @@ import { RouterLink } from 'vue-router'
 .belief-icon {
   width: 50px;
   height: 50px;
+  min-width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -529,6 +529,12 @@ import { RouterLink } from 'vue-router'
   color: white;
   border-radius: 50%;
   font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.belief-icon .number {
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
 .belief-item {
