@@ -62,7 +62,14 @@ onUnmounted(() => {
       <div class="collapse navbar-collapse" :class="{ 'show': !isNavCollapsed }" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/" @click="isNavCollapsed = true; closeDropdowns()">
+            <RouterLink
+              class="nav-link"
+              to="/"
+              @click="
+                isNavCollapsed = true;
+                closeDropdowns()
+              "
+            >
               <i class="bi bi-house me-1"></i> Home
             </RouterLink>
           </li>
@@ -108,11 +115,16 @@ onUnmounted(() => {
                   <i class="bi bi-book me-1"></i> Bibliology
                 </RouterLink>
               </li>
-              <li>
-                <RouterLink class="dropdown-item" to="/one-on-one-guide" @click="isNavCollapsed = true; closeDropdowns()">
-                  <i class="bi bi-compass me-1"></i> One on One Guide for Growing Believers
-                </RouterLink>
-              </li>
+                <li>
+                  <RouterLink class="dropdown-item" to="/one-on-one-guide" @click="isNavCollapsed = true; closeDropdowns()">
+                    <i class="bi bi-compass me-1"></i> One on One Guide for Growing Believers
+                  </RouterLink>
+                </li>
+                <li>
+                  <RouterLink class="dropdown-item" to="/14-days-prayer" @click="isNavCollapsed = true; closeDropdowns()">
+                    <i class="bi bi-praying-hands me-1"></i> 14 Days Prayer
+                  </RouterLink>
+                </li>
             </ul>
           </li>
           <li class="nav-item">

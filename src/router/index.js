@@ -117,6 +117,16 @@ const router = createRouter({
       name: 'oneOnOneGuide',
       component: () => import('../views/OneOnOneGuideView.vue'),
     },
+    {
+      path: '/prayer-guide',
+      name: 'prayerGuide',
+      component: () => import('../views/PrayerGuideView.vue'),
+    },
+    {
+      path: '/14-days-prayer',
+      name: '14DaysPrayer',
+      component: () => import('../views/PrayerGuideView.vue'),
+    },
     // Catch all route - redirect to home
     {
       path: '/:pathMatch(.*)*',

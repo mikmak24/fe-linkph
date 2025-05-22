@@ -1,0 +1,6 @@
+{
+  "singleAttributePerLine": false,
+  "vueIndentScriptAndStyle": false,
+  "semi": true,
+  "printWidth": 120
+} 
