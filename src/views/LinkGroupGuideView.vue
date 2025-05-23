@@ -50,7 +50,7 @@
                         <!-- Image Container -->
                         <div class="image-container position-relative mb-3">
                           <img 
-                            :src="`/src/assets/images/link-group-guide/${guide}.png`" 
+                            :src="getImageUrl(guide)" 
                             :alt="`Link Group Guide ${guide}`"
                             class="img-fluid guide-image"
                             @click="showFullImage(guide)"
@@ -65,7 +65,7 @@
                         <!-- Download Button -->
                         <div class="text-center">
                           <a 
-                            :href="`/src/assets/images/link-group-guide/${guide}.png`" 
+                            :href="getImageUrl(guide)" 
                             :download="`Link_Group_Guide_${guide}.png`"
                             class="btn btn-primary btn-sm w-100"
                           >
@@ -111,8 +111,13 @@ const imageDialog = ref(null)
 const currentImage = ref('')
 const isDialogOpen = ref(false)
 
+// Function to get image URL using Vite's asset handling
+const getImageUrl = (guide) => {
+  return new URL(`../assets/images/link-group-guide/${guide}.png`, import.meta.url).href
+}
+
 const showFullImage = (guide) => {
-  currentImage.value = `/src/assets/images/link-group-guide/${guide}.png`
+  currentImage.value = getImageUrl(guide)
   isDialogOpen.value = true
   // Need to use nextTick to ensure the src is updated before showing the dialog
   nextTick(() => {
