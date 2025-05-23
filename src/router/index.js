@@ -133,6 +133,11 @@ const router = createRouter({
       component: () => import('../views/PrayerGuideView.vue'),
     },
     {
+      path: '/connect',
+      name: 'connect',
+      component: () => import('../views/ConnectView.vue'),
+    },
+    {
       path: '/link-group-guide',
       name: 'link-group-guide',
       component: () => import('../views/LinkGroupGuideView.vue')

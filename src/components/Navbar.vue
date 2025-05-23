@@ -108,6 +108,11 @@ onUnmounted(() => {
             </a>
             <ul class="dropdown-menu" :class="{ 'show': isDiscipleshipDropdownOpen }">
               <li>
+                <RouterLink class="dropdown-item" to="/connect" @click="isNavCollapsed = true; closeDropdowns()">
+                  <i class="bi bi-link-45deg me-1"></i> Connect
+                </RouterLink>
+              </li>
+              <li>
                 <RouterLink class="dropdown-item" to="/grow" @click="isNavCollapsed = true; closeDropdowns()">
                   <i class="bi bi-flower1 me-1"></i> Growing in Christ
                 </RouterLink>
