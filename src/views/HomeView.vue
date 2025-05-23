@@ -126,21 +126,29 @@ onMounted(() => {
       </div>
     </section>
 
-    <!-- Current Series Section -->
-    <section class="series-section py-5">
+    <!-- Series Section -->
+    <section class="series-section py-5 bg-gray-500">
       <div class="container">
+        <h2 class="section-title text-center mb-5">Monthly Series</h2>
         <div class="row align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <h2 class="section-title">We're excited to launch our May series:</h2>
-            <h3 class="series-title">"ACTS: Taking the Next Step"</h3>
-            <div class="series-description mt-4">
-              <p class="lead">
-                <i class="bi bi-book-half me-2"></i> Let's explore the bold faith and unstoppable movement of the early church—and discover what "next step" God is calling you to take.
-              </p>
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="series-content pe-lg-4">
+              <h3 class="series-title text-primary">We're excited to launch our May series:</h3>
+              <h4 class="series-subtitle">"ACTS: Taking the Next Step"</h4>
+              <div class="series-description mt-4">
+                <p class="lead">
+                  <i class="bi bi-book-half me-2"></i> Let's explore the bold faith and unstoppable movement of the early church—and discover what "next step" God is calling you to take.
+                </p>
+              </div>
+              <div class="series-details mt-4">
+                <p class="mb-2"><i class="bi bi-calendar-event me-2"></i>Every Sunday of May</p>
+                <p class="mb-2"><i class="bi bi-clock me-2"></i>10:00 AM</p>
+                <p class="mb-0"><i class="bi bi-geo-alt me-2"></i>Lopues East 3rd Floor Blue Hall</p>
+              </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="series-image-container">
+            <div class="series-image-wrapper">
               <img src="@/assets/images/series/may-series-2025.jpg" alt="ACTS Series" class="img-fluid rounded shadow-lg">
             </div>
           </div>
@@ -148,32 +156,73 @@ onMounted(() => {
       </div>
     </section>
 
-    <!-- Verse of the Day Section -->
-    <section class="verse-section py-5 bg-light">
-      <div class="container text-center">
-        <div class="decorative-line mb-4">
-          <i class="bi bi-book me-3"></i>
-          <span></span>
-          <h2 class="h4 mx-3 my-0">Daily Bible Verse</h2>
-          <span></span>
-          <i class="bi bi-book ms-3"></i>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="verse-container" :class="{ 'verse-visible': isVerseVisible }">
-              <i class="bi bi-quote verse-quote-icon"></i>
-              <blockquote class="blockquote">
-                <p>"{{ randomVerse.text }}"</p>
-                <footer class="blockquote-footer">{{ randomVerse.reference }}</footer>
-              </blockquote>
+    <!-- Announcements Section -->
+    <section class="announcements-section py-5 bg-gray-100">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Announcements</h2>
+        <div class="row align-items-start g-4">
+          <!-- First Announcement -->
+          <div class="col-lg-6 mb-4">
+            <div class="announcement-card h-100">
+              <div class="series-image-container">
+                <img src="@/assets/images/announcements/2.jpg" alt="Prayer Guide Announcement" class="img-fluid">
+              </div>
+              <div class="announcement-content scrollable-content">
+                <div class="content-wrapper">
+                  <h3 class="announcement-title">14 Days of Prayer Journey</h3>
+                  <div class="announcement-description mt-3">
+                    <p class="lead">
+                      Let's grow in prayer as we launch our 14 days of developing a habit to interceed. Daily guide will be updated everyday! Gather your family for a life changing experience!
+                    </p>
+                    <div class="event-details mt-4">
+                      <p><i class="bi bi-calendar-check text-success me-2"></i>Start: Monday, May 26, 2025</p>
+                      <p><i class="bi bi-calendar-check text-success me-2"></i>End: June 8, 2025</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <button @click="selectRandomVerse" class="btn btn-outline-primary mt-4">
-              <i class="bi bi-shuffle me-2"></i> Get Another Verse
-            </button>
+          </div>
+
+          <!-- Second Announcement -->
+          <div class="col-lg-6 mb-4">
+            <div class="announcement-card h-100">
+              <div class="series-image-container">
+                <img src="@/assets/images/announcements/1.jpg" alt="Mission Announcement" class="img-fluid">
+              </div>
+              <div class="announcement-content scrollable-content">
+                <div class="content-wrapper">
+                  <div class="mission-questions mb-4">
+                    <p class="lead question"><i class="bi bi-question-circle-fill text-primary me-2"></i>Are you a runner?</p>
+                    <p class="lead question"><i class="bi bi-question-circle-fill text-primary me-2"></i>Are you a mountaineer?</p>
+                    <p class="lead question"><i class="bi bi-question-circle-fill text-primary me-2"></i>Are you passionate about the homeless?</p>
+                    <p class="lead question"><i class="bi bi-heart-fill text-danger me-2"></i>And Love Jesus?</p>
+                  </div>
+                  <p class="mission-description">
+                    Let's bring the light of the cross together! We are excited for our journey on reaching the communities around us!
+                  </p>
+                  <div class="mission-steps mt-4">
+                    <p><i class="bi bi-pray text-success me-2"></i>Let's pray,</p>
+                    <p><i class="bi bi-calendar-check text-success me-2"></i>Let's plan,</p>
+                    <p><i class="bi bi-gear text-success me-2"></i>Let's prepare,</p>
+                    <p><i class="bi bi-megaphone text-success me-2"></i>Let's promote.</p>
+                  </div>
+                  <div class="contact-details mt-4 p-3 bg-light rounded">
+                    <h5 class="mb-3">Join the planning team by reaching us out here:</h5>
+                    <p><i class="bi bi-facebook me-2"></i><a href="https://www.facebook.com/LinkPHL" target="_blank" class="text-primary">Facebook.com/LinkPHL</a></p>
+                    <p><i class="bi bi-globe me-2"></i><a href="https://www.thelinkphilippines.com/" target="_blank" class="text-primary">thelinkphilippines.com</a></p>
+                    <p><i class="bi bi-envelope me-2"></i><a href="mailto:thelinkphilippines@gmail.com" class="text-primary">thelinkphilippines@gmail.com</a></p>
+                    <p class="mb-0"><i class="bi bi-telephone me-2"></i>0939-6030-755</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    
 
     <!-- Welcome Message Section -->
     <section class="section-padding">
@@ -193,7 +242,7 @@ onMounted(() => {
     </section>
 
     <!-- Services and Ministries Section -->
-    <section class="section-padding bg-light">
+    <section class="section-padding bg-gray-200">
       <div class="container">
         <div class="row text-center mb-5">
           <div class="col-lg-8 mx-auto">
@@ -469,7 +518,7 @@ onMounted(() => {
 }
 
 .verse-section {
-  background-color: #f8f9fa;
+  background-color: white;
   position: relative;
   overflow: hidden;
   padding: 5rem 0;
@@ -541,105 +590,185 @@ onMounted(() => {
 
 /* Series Section Styles */
 .series-section {
-  background-color: white;
   position: relative;
-  padding: 5rem 0;
+}
+
+.series-content {
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .series-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.series-subtitle {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color);
-  margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 
 .series-description {
   border-left: 4px solid var(--primary-color);
-  padding-left: 1rem;
+  padding-left: 1.5rem;
+}
+
+.series-details {
+  background-color: rgba(var(--bs-primary-rgb), 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.series-details p {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.series-image-wrapper {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.series-image-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.series-image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Section Background Colors */
+.bg-gray-100 {
+  background-color: #f8f9fa;
+}
+
+.bg-gray-200 {
+  background-color: #e9ecef;
+}
+
+/* Update other section backgrounds */
+.series-section {
+  position: relative;
+}
+
+.welcome-message-section {
+  background-color: #f8f9fa;
+}
+
+.services-section {
+  background-color: #e9ecef;
+}
+
+.announcements-section {
+  background-color: #f8f9fa;
+}
+
+.upcoming-events-section {
+  background-color: #e9ecef;
+}
+
+.cta-section {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+/* Remove unused styles */
+.bg-primary-subtle {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .series-content {
+    margin-bottom: 2rem;
+  }
+  
+  .series-subtitle {
+    font-size: 2rem;
+  }
+}
+
+/* Updated Announcements Section Styles */
+.announcement-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  min-height: 700px;
+  overflow: hidden;
 }
 
 .series-image-container {
   position: relative;
+  width: 100%;
+  height: auto;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+  border-radius: 15px 15px 0 0;
 }
 
 .series-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
   transition: transform 0.5s ease;
 }
 
-.series-image-container:hover img {
-  transform: scale(1.05);
-}
-
-/* Other styles */
-.feature-icon {
-  color: var(--primary-color);
-}
-
-.event-date {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: var(--accent-color);
-  color: var(--dark-color);
-  text-align: center;
-  padding: 10px 15px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-}
-
-.event-date .day {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.event-date .month {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-}
-
-.card {
-  transition: all 0.3s ease;
+.announcement-content {
+  flex: 1;
   overflow: hidden;
+  position: relative;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.scrollable-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  /* Styling the scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) #f0f0f0;
 }
 
-.card img {
-  transition: transform 0.5s ease;
+/* Webkit scrollbar styling */
+.scrollable-content::-webkit-scrollbar {
+  width: 6px;
 }
 
-.card:hover img {
-  transform: scale(1.05);
+.scrollable-content::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 3px;
 }
 
-.btn-light, .btn-outline-light {
-  border-radius: 30px;
-  padding: 0.75rem 1.75rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-light {
+.scrollable-content::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  color: white;
+  border-radius: 3px;
 }
 
-.btn-light:hover {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
-  transform: translateY(-2px);
+.content-wrapper {
+  padding-right: 10px;
 }
 
-.btn-outline-light:hover {
-  transform: translateY(-2px);
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .announcement-card {
+    min-height: auto;
+  }
+
+  .series-image-container {
+    height: auto;
+  }
+
+  .scrollable-content {
+    max-height: 400px;
+  }
 }
 </style>

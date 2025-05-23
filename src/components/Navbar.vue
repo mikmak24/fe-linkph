@@ -5,6 +5,8 @@ import { RouterLink } from 'vue-router'
 const isNavCollapsed = ref(true)
 const isScrolled = ref(false)
 const isKnowledgeDropdownOpen = ref(false)
+const isDiscipleshipDropdownOpen = ref(false)
+const isLinkKidsDropdownOpen = ref(false)
 
 const toggleNav = () => {
   isNavCollapsed.value = !isNavCollapsed.value
@@ -14,8 +16,18 @@ const toggleKnowledgeDropdown = () => {
   isKnowledgeDropdownOpen.value = !isKnowledgeDropdownOpen.value
 }
 
+const toggleDiscipleshipDropdown = () => {
+  isDiscipleshipDropdownOpen.value = !isDiscipleshipDropdownOpen.value
+}
+
+const toggleLinkKidsDropdown = () => {
+  isLinkKidsDropdownOpen.value = !isLinkKidsDropdownOpen.value
+}
+
 const closeDropdowns = () => {
   isKnowledgeDropdownOpen.value = false
+  isDiscipleshipDropdownOpen.value = false
+  isLinkKidsDropdownOpen.value = false
 }
 
 const handleScroll = () => {
@@ -83,20 +95,63 @@ onUnmounted(() => {
               <i class="bi bi-geo-alt me-1"></i> Visit
             </RouterLink>
           </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/grow" @click="isNavCollapsed = true; closeDropdowns()">
+          <li class="nav-item dropdown">
+            <a 
+              class="nav-link dropdown-toggle" 
+              href="#" 
+              role="button" 
+              @click.prevent="toggleDiscipleshipDropdown"
+              :class="{ 'show': isDiscipleshipDropdownOpen }"
+              aria-expanded="false"
+            >
               <i class="bi bi-flower1 me-1"></i> Discipleship
-            </RouterLink>
+            </a>
+            <ul class="dropdown-menu" :class="{ 'show': isDiscipleshipDropdownOpen }">
+              <li>
+                <RouterLink class="dropdown-item" to="/grow" @click="isNavCollapsed = true; closeDropdowns()">
+                  <i class="bi bi-flower1 me-1"></i> Growing in Christ
+                </RouterLink>
+              </li>
+              <li>
+                <RouterLink class="dropdown-item" to="/link-group-guide" @click="isNavCollapsed = true; closeDropdowns()">
+                  <i class="bi bi-people-fill me-1"></i> Link Group Guide
+                </RouterLink>
+              </li>
+              <li>
+                <RouterLink class="dropdown-item" to="/gallery" @click="isNavCollapsed = true; closeDropdowns()">
+                  <i class="bi bi-images me-1"></i> Church Life Gallery
+                </RouterLink>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link" to="/ministries" @click="isNavCollapsed = true; closeDropdowns()">
               <i class="bi bi-people me-1"></i> Ministries
             </RouterLink>
           </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/link-kids" @click="isNavCollapsed = true; closeDropdowns()">
+          <li class="nav-item dropdown">
+            <a 
+              class="nav-link dropdown-toggle" 
+              href="#" 
+              role="button" 
+              @click.prevent="toggleLinkKidsDropdown"
+              :class="{ 'show': isLinkKidsDropdownOpen }"
+              aria-expanded="false"
+            >
               <i class="bi bi-emoji-smile me-1"></i>Link Kids
-            </RouterLink>
+            </a>
+            <ul class="dropdown-menu" :class="{ 'show': isLinkKidsDropdownOpen }">
+              <li>
+                <RouterLink class="dropdown-item" to="/link-kids" @click="isNavCollapsed = true; closeDropdowns()">
+                  <i class="bi bi-house-heart me-1"></i> Link Kids Home
+                </RouterLink>
+              </li>
+              <li>
+                <RouterLink class="dropdown-item" to="/link-kids/book-of-acts" @click="isNavCollapsed = true; closeDropdowns()">
+                  <i class="bi bi-book-half me-1"></i> Lesson: Book of Acts
+                </RouterLink>
+              </li>
+            </ul>
           </li>
           <li class="nav-item dropdown">
             <a 
@@ -127,16 +182,6 @@ onUnmounted(() => {
                 </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/gallery" @click="isNavCollapsed = true; closeDropdowns()">
-              <i class="bi bi-images me-1"></i> Gallery
-            </RouterLink>
-          </li>
-          <!-- <li class="nav-item">
-            <RouterLink class="nav-link" to="/resources" @click="isNavCollapsed = true; closeDropdowns()">
-              <i class="bi bi-book me-1"></i> Resources
-            </RouterLink>
-          </li> -->
           <li class="nav-item">
             <RouterLink class="nav-link" to="/contact" @click="isNavCollapsed = true; closeDropdowns()">
               <i class="bi bi-envelope me-1"></i> Contact

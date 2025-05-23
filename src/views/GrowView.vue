@@ -9,7 +9,7 @@ import { RouterLink } from 'vue-router'
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <h1 class="fw-bold">Discipleship</h1>
+            <h1 class="fw-bold">Growing in Christ</h1>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><RouterLink to="/">Home</RouterLink></li>

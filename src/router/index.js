@@ -35,6 +35,11 @@ const router = createRouter({
     {
       path: '/link-kids',
       name: 'linkKids',
+      component: () => import('../views/LinkKidsHomeView.vue'),
+    },
+    {
+      path: '/link-kids/book-of-acts',
+      name: 'bookOfActs',
       component: () => import('../views/LinkKidsView.vue'),
     },
     {
@@ -126,6 +131,11 @@ const router = createRouter({
       path: '/14-days-prayer',
       name: '14DaysPrayer',
       component: () => import('../views/PrayerGuideView.vue'),
+    },
+    {
+      path: '/link-group-guide',
+      name: 'link-group-guide',
+      component: () => import('../views/LinkGroupGuideView.vue')
     },
     // Catch all route - redirect to home
     {
