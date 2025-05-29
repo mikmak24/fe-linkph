@@ -58,6 +58,11 @@ const router = createRouter({
       component: () => import('../views/lessons/TheBibleView.vue'),
     },
     {
+      path: '/link-group-guide/the-person-of-god',
+      name: 'thePersonOfGod',
+      component: () => import('../views/lessons/ThePersonOfGodView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),

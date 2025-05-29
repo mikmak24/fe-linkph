@@ -56,6 +56,19 @@
                   </div>
                 </RouterLink>
 
+                <RouterLink to="/link-group-guide/the-person-of-god" class="lesson-card">
+                  <div class="lesson-content">
+                    <h3>Lesson 4: The Person of God</h3>
+                    <p>Exploring the nature, attributes, and personality of God as revealed in Scripture.</p>
+                    <div class="lesson-meta">
+                      <span class="badge bg-primary">Basic Christian Teaching</span>
+                    </div>
+                  </div>
+                  <div class="lesson-arrow">
+                    <i class="bi bi-chevron-right"></i>
+                  </div>
+                </RouterLink>
+
                 <!-- Add more guides here as they become available -->
                 <div class="lesson-card coming-soon">
                   <div class="lesson-content">
@@ -205,4 +218,4 @@ import { RouterLink } from 'vue-router'
     display: none;
   }
 }
-</style> 
+</style>
