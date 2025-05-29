@@ -19,7 +19,7 @@
               <div class="lessons-list">
                 <RouterLink to="/link-group-guide/the-church" class="lesson-card">
                   <div class="lesson-content">
-                    <h3>The Church</h3>
+                    <h3>Lesson 1: The Church</h3>
                     <p>Understanding the meaning, purpose, and importance of the Church in Christian life.</p>
                     <div class="lesson-meta">
                       <span class="badge bg-primary">Basic Christian Teaching</span>
@@ -32,8 +32,21 @@
 
                 <RouterLink to="/link-group-guide/who-are-you-christian" class="lesson-card">
                   <div class="lesson-content">
-                    <h3>Who Are You, Christian?</h3>
+                    <h3>Lesson 2: Who Are You, Christian?</h3>
                     <p>Discovering your new identity in Christ and understanding what it means to be a Christian.</p>
+                    <div class="lesson-meta">
+                      <span class="badge bg-primary">Basic Christian Teaching</span>
+                    </div>
+                  </div>
+                  <div class="lesson-arrow">
+                    <i class="bi bi-chevron-right"></i>
+                  </div>
+                </RouterLink>
+
+                <RouterLink to="/link-group-guide/the-bible" class="lesson-card">
+                  <div class="lesson-content">
+                    <h3>Lesson 3: The Bible</h3>
+                    <p>Understanding the Word of God, its authority, and its role in the Christian life.</p>
                     <div class="lesson-meta">
                       <span class="badge bg-primary">Basic Christian Teaching</span>
                     </div>
