@@ -61,9 +61,7 @@ onUnmounted(() => {
   <nav class="navbar navbar-expand-lg sticky-top" :class="{ 'navbar-dark': isScrolled, 'navbar-light': !isScrolled }">
     <div class="container">
       <RouterLink class="navbar-brand" to="/">
-        <img src="@/assets/images/logo-navbar.png" alt="Link Church Logo" style="height: 40px; width: auto; margin-right: 5px;" />
         <strong>LINK <span class="brand-ph">PH</span></strong>
-
       </RouterLink>
       
       <button 
