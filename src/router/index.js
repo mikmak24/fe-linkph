@@ -33,6 +33,16 @@ const router = createRouter({
       component: () => import('../views/MinistriesView.vue'),
     },
     {
+      path: '/link-group',
+      name: 'linkGroup',
+      component: () => import('../views/ConnectView.vue'),
+    },
+    {
+      path: '/link-group-guide',
+      name: 'linkGroupGuide',
+      component: () => import('../views/LinkGroupGuideView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),
@@ -136,11 +146,6 @@ const router = createRouter({
       path: '/connect',
       name: 'connect',
       component: () => import('../views/ConnectView.vue'),
-    },
-    {
-      path: '/link-group-guide',
-      name: 'link-group-guide',
-      component: () => import('../views/LinkGroupGuideView.vue')
     },
     // Catch all route - redirect to home
     {

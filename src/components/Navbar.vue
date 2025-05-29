@@ -7,6 +7,7 @@ const isScrolled = ref(false)
 const isKnowledgeDropdownOpen = ref(false)
 const isDiscipleshipDropdownOpen = ref(false)
 const isLinkKidsDropdownOpen = ref(false)
+const isLinkGroupDropdownOpen = ref(false)
 
 const toggleNav = () => {
   isNavCollapsed.value = !isNavCollapsed.value
@@ -24,10 +25,15 @@ const toggleLinkKidsDropdown = () => {
   isLinkKidsDropdownOpen.value = !isLinkKidsDropdownOpen.value
 }
 
+const toggleLinkGroupDropdown = () => {
+  isLinkGroupDropdownOpen.value = !isLinkGroupDropdownOpen.value
+}
+
 const closeDropdowns = () => {
   isKnowledgeDropdownOpen.value = false
   isDiscipleshipDropdownOpen.value = false
   isLinkKidsDropdownOpen.value = false
+  isLinkGroupDropdownOpen.value = false
 }
 
 const handleScroll = () => {
@@ -108,18 +114,8 @@ onUnmounted(() => {
             </a>
             <ul class="dropdown-menu" :class="{ 'show': isDiscipleshipDropdownOpen }">
               <li>
-                <RouterLink class="dropdown-item" to="/connect" @click="isNavCollapsed = true; closeDropdowns()">
-                  <i class="bi bi-link-45deg me-1"></i> Connect
-                </RouterLink>
-              </li>
-              <li>
                 <RouterLink class="dropdown-item" to="/grow" @click="isNavCollapsed = true; closeDropdowns()">
                   <i class="bi bi-flower1 me-1"></i> Growing in Christ
-                </RouterLink>
-              </li>
-              <li>
-                <RouterLink class="dropdown-item" to="/link-group-guide" @click="isNavCollapsed = true; closeDropdowns()">
-                  <i class="bi bi-people-fill me-1"></i> Link Group Guide
                 </RouterLink>
               </li>
               <li>
@@ -133,6 +129,30 @@ onUnmounted(() => {
             <RouterLink class="nav-link" to="/ministries" @click="isNavCollapsed = true; closeDropdowns()">
               <i class="bi bi-people me-1"></i> Ministries
             </RouterLink>
+          </li>
+          <li class="nav-item dropdown">
+            <a 
+              class="nav-link dropdown-toggle" 
+              href="#" 
+              role="button" 
+              @click.prevent="toggleLinkGroupDropdown"
+              :class="{ 'show': isLinkGroupDropdownOpen }"
+              aria-expanded="false"
+            >
+              <i class="bi bi-people-fill me-1"></i> Link Group
+            </a>
+            <ul class="dropdown-menu" :class="{ 'show': isLinkGroupDropdownOpen }">
+              <li>
+                <RouterLink class="dropdown-item" to="/connect" @click="isNavCollapsed = true; closeDropdowns()">
+                  <i class="bi bi-link-45deg me-1"></i> Connect
+                </RouterLink>
+              </li>
+              <li>
+                <RouterLink class="dropdown-item" to="/link-group-guide" @click="isNavCollapsed = true; closeDropdowns()">
+                  <i class="bi bi-book-half me-1"></i> Guide
+                </RouterLink>
+              </li>
+            </ul>
           </li>
           <li class="nav-item dropdown">
             <a 

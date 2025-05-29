@@ -135,6 +135,7 @@
 <script setup>
 import { ref, onMounted, nextTick, computed } from 'vue'
 import jsPDF from 'jspdf'
+import { RouterLink } from 'vue-router'
 
 // This will automatically detect how many guide images are available
 const guides = ref([1, 2, 3, 4, 5]) // You can add more numbers as you add more guides
