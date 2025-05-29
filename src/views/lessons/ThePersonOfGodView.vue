@@ -312,8 +312,8 @@
                 </div>
               </div>
 
-              <!-- Discussion Questions -->
-              <div id="discussion" class="guide-section discussion-questions">
+              <!-- Link Questions -->
+              <div id="discussion" class="guide-section">
                 <div class="section-header">
                   <i class="bi bi-question-circle section-icon"></i>
                   <h3 class="section-title">Link Questions</h3>
@@ -321,13 +321,16 @@
                 <div class="section-content">
                   <div class="questions-card">
                     <div class="question-item">
-                      <h5>Where can reliable information be obtained about God?</h5>
+                      <h5><span class="highlight">1. How do you understand God's nature?</span></h5>
+                      <p>Which of God's attributes (eternal, unchangeable, omnipotent, etc.) do you find most meaningful in your life?</p>
                     </div>
                     <div class="question-item">
-                      <h5>Can we worship a God we don't know?</h5>
+                      <h5><span class="highlight">2. How does God's personality affect your relationship with Him?</span></h5>
+                      <p>How does understanding God as a person rather than just a force or power change how you relate to Him?</p>
                     </div>
                     <div class="question-item">
-                      <h5>What have you know that is meaningful on this lesson?</h5>
+                      <h5><span class="highlight">3. What does God's unity mean to you?</span></h5>
+                      <p>How does the understanding that there is only one true God impact your faith and daily life?</p>
                     </div>
                   </div>
                 </div>
@@ -493,20 +496,21 @@ import { RouterLink } from 'vue-router'
 }
 
 .question-item {
-  background: white;
+  background: #f8f9fa;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  margin-bottom: 1.5rem;
-}
-
-.question-item:last-child {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .question-item h5 {
   color: var(--primary-color);
   margin-bottom: 1rem;
+}
+
+.question-item p {
+  color: #4a5568;
+  margin-bottom: 0;
 }
 
 .highlight {

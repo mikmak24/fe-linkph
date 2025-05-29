@@ -69,6 +69,19 @@
                   </div>
                 </RouterLink>
 
+                <RouterLink to="/link-group-guide/but-i-am-a-good-person" class="lesson-card">
+                  <div class="lesson-content">
+                    <h3>Lesson 5: But I Am A Good Person</h3>
+                    <p>Examining our understanding of goodness through the lens of God's commandments and our need for a Savior.</p>
+                    <div class="lesson-meta">
+                      <span class="badge bg-primary">Basic Christian Teaching</span>
+                    </div>
+                  </div>
+                  <div class="lesson-arrow">
+                    <i class="bi bi-chevron-right"></i>
+                  </div>
+                </RouterLink>
+
                 <!-- Add more guides here as they become available -->
                 <div class="lesson-card coming-soon">
                   <div class="lesson-content">
