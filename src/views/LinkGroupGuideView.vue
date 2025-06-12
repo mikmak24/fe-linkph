@@ -94,6 +94,19 @@
                     <i class="bi bi-chevron-right"></i>
                   </div>
                 </RouterLink>
+
+                <RouterLink to="/link-group-guide/love" class="lesson-card">
+                  <div class="lesson-content">
+                    <h3>Lesson 7: Love</h3>
+                    <p>Exploring the meaning, importance, and characteristics of love as described in 1 Corinthians 13.</p>
+                    <div class="lesson-meta">
+                      <span class="badge bg-primary">Basic Christian Teaching</span>
+                    </div>
+                  </div>
+                  <div class="lesson-arrow">
+                    <i class="bi bi-chevron-right"></i>
+                  </div>
+                </RouterLink>
               </div>
             </div>
           </div>
