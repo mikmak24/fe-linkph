@@ -82,16 +82,18 @@
                   </div>
                 </RouterLink>
 
-                <!-- Add more guides here as they become available -->
-                <div class="lesson-card coming-soon">
+                <RouterLink to="/link-group-guide/praise" class="lesson-card">
                   <div class="lesson-content">
-                    <h3>More Guides Coming Soon</h3>
-                    <p>Stay tuned for more guides in the Basic Christian Teaching series.</p>
+                    <h3>Lesson 6: Praise</h3>
+                    <p>Understanding the meaning, importance, and ways of praising God in our daily lives.</p>
                     <div class="lesson-meta">
-                      <span class="badge bg-secondary">Coming Soon</span>
+                      <span class="badge bg-primary">Basic Christian Teaching</span>
                     </div>
                   </div>
-                </div>
+                  <div class="lesson-arrow">
+                    <i class="bi bi-chevron-right"></i>
+                  </div>
+                </RouterLink>
               </div>
             </div>
           </div>

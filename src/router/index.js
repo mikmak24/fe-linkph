@@ -68,6 +68,11 @@ const router = createRouter({
       component: () => import('../views/lessons/ButIAmAGoodPersonView.vue'),
     },
     {
+      path: '/link-group-guide/praise',
+      name: 'praise',
+      component: () => import('../views/lessons/PraiseView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),
