@@ -138,6 +138,21 @@ const router = createRouter({
       component: () => import('../views/Kids/Lessons/BookOfActs/PersecutionScattersLesson.vue'),
     },
     {
+      path: '/link-worship',
+      name: 'linkWorship',
+      component: () => import('../views/LinkWorshipHomeView.vue'),
+    },
+    {
+      path: '/link-worship/songs',
+      name: 'worshipSongs',
+      component: () => import('../views/WorshipSongsView.vue'),
+    },
+    {
+      path: '/link-worship/here-i-am-to-worship',
+      name: 'hereIAmToWorship',
+      component: () => import('../views/HereIAmToWorshipView.vue'),
+    },
+    {
       path: '/resources',
       name: 'resources',
       component: () => import('../views/ResourcesView.vue'),

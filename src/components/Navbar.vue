@@ -8,6 +8,7 @@ const isKnowledgeDropdownOpen = ref(false)
 const isDiscipleshipDropdownOpen = ref(false)
 const isLinkKidsDropdownOpen = ref(false)
 const isLinkGroupDropdownOpen = ref(false)
+const isLinkWorshipDropdownOpen = ref(false)
 
 const toggleNav = () => {
   isNavCollapsed.value = !isNavCollapsed.value
@@ -29,11 +30,16 @@ const toggleLinkGroupDropdown = () => {
   isLinkGroupDropdownOpen.value = !isLinkGroupDropdownOpen.value
 }
 
+const toggleLinkWorshipDropdown = () => {
+  isLinkWorshipDropdownOpen.value = !isLinkWorshipDropdownOpen.value
+}
+
 const closeDropdowns = () => {
   isKnowledgeDropdownOpen.value = false
   isDiscipleshipDropdownOpen.value = false
   isLinkKidsDropdownOpen.value = false
   isLinkGroupDropdownOpen.value = false
+  isLinkWorshipDropdownOpen.value = false
 }
 
 const handleScroll = () => {
@@ -173,6 +179,30 @@ onUnmounted(() => {
               <li>
                 <RouterLink class="dropdown-item" to="/link-kids/book-of-acts" @click="isNavCollapsed = true; closeDropdowns()">
                   <i class="bi bi-book-half me-1"></i> Lesson: Book of Acts
+                </RouterLink>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a 
+              class="nav-link dropdown-toggle" 
+              href="#" 
+              role="button" 
+              @click.prevent="toggleLinkWorshipDropdown"
+              :class="{ 'show': isLinkWorshipDropdownOpen }"
+              aria-expanded="false"
+            >
+              <i class="bi bi-music-note-beamed me-1"></i>Link Worship
+            </a>
+            <ul class="dropdown-menu" :class="{ 'show': isLinkWorshipDropdownOpen }">
+              <li>
+                <RouterLink class="dropdown-item" to="/link-worship" @click="isNavCollapsed = true; closeDropdowns()">
+                  <i class="bi bi-house-heart me-1"></i> Link Worship Home
+                </RouterLink>
+              </li>
+              <li>
+                <RouterLink class="dropdown-item" to="/link-worship/songs" @click="isNavCollapsed = true; closeDropdowns()">
+                  <i class="bi bi-music-note me-1"></i> Worship Songs
                 </RouterLink>
               </li>
             </ul>
