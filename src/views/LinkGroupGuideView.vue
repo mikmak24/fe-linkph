@@ -107,6 +107,19 @@
                     <i class="bi bi-chevron-right"></i>
                   </div>
                 </RouterLink>
+
+                <RouterLink to="/link-group-guide/life" class="lesson-card">
+                  <div class="lesson-content">
+                    <h3>Lesson 8: Life</h3>
+                    <p>Understanding the meaning, purpose, and significance of life from a biblical perspective.</p>
+                    <div class="lesson-meta">
+                      <span class="badge bg-primary">Basic Christian Teaching</span>
+                    </div>
+                  </div>
+                  <div class="lesson-arrow">
+                    <i class="bi bi-chevron-right"></i>
+                  </div>
+                </RouterLink>
               </div>
             </div>
           </div>
