@@ -120,6 +120,19 @@
                     <i class="bi bi-chevron-right"></i>
                   </div>
                 </RouterLink>
+
+                <RouterLink to="/link-group-guide/death" class="lesson-card">
+                  <div class="lesson-content">
+                    <h3>Lesson 9: Death</h3>
+                    <p>Understanding death from a biblical perspective - its origin, cause, description, and the remedy through Christ.</p>
+                    <div class="lesson-meta">
+                      <span class="badge bg-primary">Basic Christian Teaching</span>
+                    </div>
+                  </div>
+                  <div class="lesson-arrow">
+                    <i class="bi bi-chevron-right"></i>
+                  </div>
+                </RouterLink>
               </div>
             </div>
           </div>

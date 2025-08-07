@@ -83,6 +83,11 @@ const router = createRouter({
       component: () => import('../views/lessons/LifeView.vue'),
     },
     {
+      path: '/link-group-guide/death',
+      name: 'death',
+      component: () => import('../views/lessons/DeathView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),
