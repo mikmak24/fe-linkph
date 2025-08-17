@@ -160,23 +160,34 @@ onMounted(() => {
     <section class="announcements-section py-5 bg-gray-100">
       <div class="container">
         <h2 class="section-title text-center mb-5">Announcements</h2>
-        <div class="row align-items-start g-4">
-          <!-- First Announcement -->
+        <div class="row align-items-stretch g-4">
+          <!-- Prayer Schedule Announcement -->
           <div class="col-lg-6 mb-4">
             <div class="announcement-card h-100">
               <div class="series-image-container">
-                <img src="@/assets/images/announcements/2.jpg" alt="Prayer Guide Announcement" class="img-fluid">
+                <img src="@/assets/images/announcements/prayer_schedule.jpg" alt="Saturday Prayer Schedule" class="img-fluid">
               </div>
               <div class="announcement-content scrollable-content">
                 <div class="content-wrapper">
-                  <h3 class="announcement-title">14 Days of Prayer Journey</h3>
+                  <h3 class="announcement-title">Saturday Prayer Schedule</h3>
                   <div class="announcement-description mt-3">
                     <p class="lead">
-                      Let's grow in prayer as we launch our 14 days of developing a habit to interceed. Daily guide will be updated everyday! Gather your family for a life changing experience!
+                      Join us for our regular Saturday prayer gatherings as we seek God together and intercede for our community.
                     </p>
-                    <div class="event-details mt-4">
-                      <p><i class="bi bi-calendar-check text-success me-2"></i>Start: Monday, May 26, 2025</p>
-                      <p><i class="bi bi-calendar-check text-success me-2"></i>End: June 8, 2025</p>
+                    <div class="prayer-schedule mt-4">
+                      <div class="schedule-item mb-3 p-3 bg-light rounded">
+                        <h5 class="text-primary mb-2">Regular Saturdays</h5>
+                        <p class="mb-1"><i class="bi bi-geo-alt text-success me-2"></i>Lopues East, 3rd Floor, Blue Hall</p>
+                        <p class="mb-0"><i class="bi bi-clock text-success me-2"></i>5:45 PM</p>
+                      </div>
+                      <div class="schedule-item p-3 bg-light rounded">
+                        <h5 class="text-primary mb-2">First Saturday of the Month</h5>
+                        <p class="mb-1"><i class="bi bi-geo-alt text-success me-2"></i>Lopues East, 2nd Floor, Old Parking Lot</p>
+                        <p class="mb-0"><i class="bi bi-clock text-success me-2"></i>5:30 AM</p>
+                      </div>
+                    </div>
+                    <div class="prayer-encouragement mt-4 p-3 bg-primary bg-opacity-10 rounded">
+                      <p class="mb-0 text-primary"><i class="bi bi-heart-fill me-2"></i>Come experience the power of corporate prayer!</p>
                     </div>
                   </div>
                 </div>
@@ -184,35 +195,38 @@ onMounted(() => {
             </div>
           </div>
 
-          <!-- Second Announcement -->
+          <!-- Uplift RUN Club Announcement -->
           <div class="col-lg-6 mb-4">
             <div class="announcement-card h-100">
               <div class="series-image-container">
-                <img src="@/assets/images/announcements/1.jpg" alt="Mission Announcement" class="img-fluid">
+                <img src="@/assets/images/announcements/uplift.jpg" alt="RUN Club by Club Uplift Philippines" class="img-fluid">
               </div>
               <div class="announcement-content scrollable-content">
                 <div class="content-wrapper">
-                  <div class="mission-questions mb-4">
-                    <p class="lead question"><i class="bi bi-question-circle-fill text-primary me-2"></i>Are you a runner?</p>
-                    <p class="lead question"><i class="bi bi-question-circle-fill text-primary me-2"></i>Are you a mountaineer?</p>
-                    <p class="lead question"><i class="bi bi-question-circle-fill text-primary me-2"></i>Are you passionate about the homeless?</p>
-                    <p class="lead question"><i class="bi bi-heart-fill text-danger me-2"></i>And Love Jesus?</p>
-                  </div>
-                  <p class="mission-description">
-                    Let's bring the light of the cross together! We are excited for our journey on reaching the communities around us!
-                  </p>
-                  <div class="mission-steps mt-4">
-                    <p><i class="bi bi-pray text-success me-2"></i>Let's pray,</p>
-                    <p><i class="bi bi-calendar-check text-success me-2"></i>Let's plan,</p>
-                    <p><i class="bi bi-gear text-success me-2"></i>Let's prepare,</p>
-                    <p><i class="bi bi-megaphone text-success me-2"></i>Let's promote.</p>
-                  </div>
-                  <div class="contact-details mt-4 p-3 bg-light rounded">
-                    <h5 class="mb-3">Join the planning team by reaching us out here:</h5>
-                    <p><i class="bi bi-facebook me-2"></i><a href="https://www.facebook.com/LinkPHL" target="_blank" class="text-primary">Facebook.com/LinkPHL</a></p>
-                    <p><i class="bi bi-globe me-2"></i><a href="https://www.thelinkphilippines.com/" target="_blank" class="text-primary">thelinkphilippines.com</a></p>
-                    <p><i class="bi bi-envelope me-2"></i><a href="mailto:thelinkphilippines@gmail.com" class="text-primary">thelinkphilippines@gmail.com</a></p>
-                    <p class="mb-0"><i class="bi bi-telephone me-2"></i>0939-6030-755</p>
+                  <h3 class="announcement-title">RUN Club by Club Uplift Philippines</h3>
+                  <div class="announcement-description mt-3">
+                    <p class="lead">
+                      Calling all runners! Join our RUN Club for easy running sessions and build community while staying fit.
+                    </p>
+                    <div class="run-schedule mt-4">
+                      <div class="schedule-highlight p-3 bg-warning bg-opacity-10 rounded border border-warning">
+                        <h5 class="text-warning mb-2"><i class="bi bi-calendar-event me-2"></i>Every Monday & Thursday</h5>
+                        <p class="mb-1"><i class="bi bi-clock text-warning me-2"></i>7:00 PM</p>
+                        <p class="mb-0 text-warning fw-bold">EASY RUN</p>
+                      </div>
+                    </div>
+                    <div class="join-info mt-4">
+                      <h5 class="mb-3">How to Join:</h5>
+                      <div class="qr-section text-center mb-3">
+                        <p class="text-muted mb-2">Scan the QR code in the image to join!</p>
+                        <div class="qr-placeholder p-3 bg-light rounded d-inline-block">
+                          <i class="bi bi-qr-code" style="font-size: 2rem; color: #6c757d;"></i>
+                        </div>
+                      </div>
+                      <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Perfect for runners of all levels</p>
+                      <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Build community and stay healthy</p>
+                      <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Open to everyone who loves Jesus</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -703,6 +717,7 @@ onMounted(() => {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
   min-height: 700px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -713,6 +728,7 @@ onMounted(() => {
   overflow: hidden;
   margin-bottom: 0;
   border-radius: 15px 15px 0 0;
+  flex-shrink: 0;
 }
 
 .series-image-container img {
@@ -727,12 +743,16 @@ onMounted(() => {
   flex: 1;
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .scrollable-content {
   flex: 1;
   overflow-y: auto;
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
   /* Styling the scrollbar */
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color) #f0f0f0;
@@ -770,5 +790,40 @@ onMounted(() => {
   .scrollable-content {
     max-height: 400px;
   }
+}
+
+/* New styles for prayer schedule and run club announcements */
+.prayer-schedule .schedule-item {
+  border-left: 3px solid var(--primary-color);
+  transition: transform 0.2s ease;
+}
+
+.prayer-schedule .schedule-item:hover {
+  transform: translateX(5px);
+}
+
+.prayer-encouragement {
+  border-left: 4px solid var(--primary-color);
+}
+
+.run-schedule .schedule-highlight {
+  border-left: 4px solid #ffc107;
+}
+
+.qr-placeholder {
+  min-width: 80px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.join-info p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.join-info .bi-arrow-right {
+  font-size: 0.8rem;
 }
 </style>
