@@ -88,6 +88,11 @@ const router = createRouter({
       component: () => import('../views/lessons/DeathView.vue'),
     },
     {
+      path: '/link-group-guide/what-happens-when-one-believes',
+      name: 'whatHappensWhenOneBelieves',
+      component: () => import('../views/lessons/WhatHappensWhenOneBelievesView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),

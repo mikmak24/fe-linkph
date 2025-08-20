@@ -133,6 +133,19 @@
                     <i class="bi bi-chevron-right"></i>
                   </div>
                 </RouterLink>
+
+                <RouterLink to="/link-group-guide/what-happens-when-one-believes" class="lesson-card">
+                  <div class="lesson-content">
+                    <h3>Lesson 10: What Happens When One Believes on the Lord</h3>
+                    <p>Discover the 38 amazing things that happen when someone believes on the Lord Jesus Christ as their Savior.</p>
+                    <div class="lesson-meta">
+                      <span class="badge bg-primary">Basic Christian Teaching</span>
+                    </div>
+                  </div>
+                  <div class="lesson-arrow">
+                    <i class="bi bi-chevron-right"></i>
+                  </div>
+                </RouterLink>
               </div>
             </div>
           </div>
