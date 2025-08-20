@@ -242,8 +242,8 @@ const visiblePages = computed(() => {
 const goToPage = (page) => {
   if (page >= 1 && page <= totalPages.value) {
     currentPage.value = page
-    // Scroll to top of lessons list
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    // Remove automatic scrolling to prevent mobile issues
+    // window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 }
 </script>
@@ -364,12 +364,19 @@ const goToPage = (page) => {
   border: 1px solid #dee2e6;
   padding: 0.5rem 0.75rem;
   transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
 }
 
 .page-link:hover {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
   color: white;
+}
+
+.page-link:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
 }
 
 .page-item.active .page-link {
@@ -383,6 +390,7 @@ const goToPage = (page) => {
   pointer-events: none;
   background-color: #fff;
   border-color: #dee2e6;
+  cursor: not-allowed;
 }
 
 /* Responsive adjustments */
@@ -398,11 +406,19 @@ const goToPage = (page) => {
   .pagination {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0.25rem;
   }
   
   .page-link {
     padding: 0.375rem 0.5rem;
     font-size: 0.875rem;
+    min-width: 40px;
+    text-align: center;
+  }
+  
+  .pagination-wrapper {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
   }
 }
 </style>
