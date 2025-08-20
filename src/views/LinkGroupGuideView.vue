@@ -1,10 +1,16 @@
 <template>
-  <div class="link-group-guide">
+  <div>
     <!-- Hero Section -->
     <section class="hero-section text-center py-5">
       <div class="container">
         <h1 class="display-4 fw-bold mb-4">Link Group Guide</h1>
-        <p class="lead mb-4">Basic Christian Teaching</p>
+        <p class="lead mb-4">Biblical small groups grounded in the teachings of the Bible</p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item"><RouterLink to="/" class="text-white">Home</RouterLink></li>
+            <li class="breadcrumb-item active text-white" aria-current="page">Link Group Guide</li>
+          </ol>
+        </nav>
       </div>
     </section>
 
@@ -14,138 +20,85 @@
         <div class="row justify-content-center">
           <div class="col-12 col-lg-10">
             <div class="study-guide">
-              <h2 class="text-center mb-5">Available Guides</h2>
-              
-              <div class="lessons-list">
-                <RouterLink to="/link-group-guide/the-church" class="lesson-card">
-                  <div class="lesson-content">
-                    <h3>Lesson 1: The Church</h3>
-                    <p>Understanding the meaning, purpose, and importance of the Church in Christian life.</p>
-                    <div class="lesson-meta">
-                      <span class="badge bg-primary">Basic Christian Teaching</span>
-                    </div>
-                  </div>
-                  <div class="lesson-arrow">
-                    <i class="bi bi-chevron-right"></i>
-                  </div>
-                </RouterLink>
+              <div class="guide-intro mb-5">
+                <h2 class="section-title mb-4">Available Lessons</h2>
+                <p class="lead mb-4">
+                  Our Link Group lessons are designed to ground biblical believers and develop disciples that make disciples. 
+                  Each lesson is structured for 45-60 minute group study sessions.
+                </p>
+              </div>
 
-                <RouterLink to="/link-group-guide/who-are-you-christian" class="lesson-card">
-                  <div class="lesson-content">
-                    <h3>Lesson 2: Who Are You, Christian?</h3>
-                    <p>Discovering your new identity in Christ and understanding what it means to be a Christian.</p>
-                    <div class="lesson-meta">
-                      <span class="badge bg-primary">Basic Christian Teaching</span>
+              <!-- Lessons List -->
+              <div class="lessons-list mb-4">
+                <div 
+                  v-for="lesson in paginatedLessons" 
+                  :key="lesson.id"
+                  class="lesson-card"
+                >
+                  <RouterLink :to="lesson.path" class="lesson-link">
+                    <div class="lesson-content">
+                      <h3>{{ lesson.title }}</h3>
+                      <p>{{ lesson.description }}</p>
+                      <div class="lesson-meta">
+                        <span class="badge bg-primary">{{ lesson.category }}</span>
+                      </div>
                     </div>
-                  </div>
-                  <div class="lesson-arrow">
-                    <i class="bi bi-chevron-right"></i>
-                  </div>
-                </RouterLink>
+                    <div class="lesson-arrow">
+                      <i class="bi bi-chevron-right"></i>
+                    </div>
+                  </RouterLink>
+                </div>
+              </div>
 
-                <RouterLink to="/link-group-guide/the-bible" class="lesson-card">
-                  <div class="lesson-content">
-                    <h3>Lesson 3: The Bible</h3>
-                    <p>Understanding the Word of God, its authority, and its role in the Christian life.</p>
-                    <div class="lesson-meta">
-                      <span class="badge bg-primary">Basic Christian Teaching</span>
-                    </div>
-                  </div>
-                  <div class="lesson-arrow">
-                    <i class="bi bi-chevron-right"></i>
-                  </div>
-                </RouterLink>
+              <!-- Pagination -->
+              <div class="pagination-wrapper" v-if="totalPages > 1">
+                <nav aria-label="Lesson pagination">
+                  <ul class="pagination justify-content-center">
+                    <!-- Previous Button -->
+                    <li class="page-item" :class="{ disabled: currentPage === 1 }">
+                      <button 
+                        class="page-link" 
+                        @click="goToPage(currentPage - 1)"
+                        :disabled="currentPage === 1"
+                      >
+                        <i class="bi bi-chevron-left"></i> Previous
+                      </button>
+                    </li>
 
-                <RouterLink to="/link-group-guide/the-person-of-god" class="lesson-card">
-                  <div class="lesson-content">
-                    <h3>Lesson 4: The Person of God</h3>
-                    <p>Exploring the nature, attributes, and personality of God as revealed in Scripture.</p>
-                    <div class="lesson-meta">
-                      <span class="badge bg-primary">Basic Christian Teaching</span>
-                    </div>
-                  </div>
-                  <div class="lesson-arrow">
-                    <i class="bi bi-chevron-right"></i>
-                  </div>
-                </RouterLink>
+                    <!-- Page Numbers -->
+                    <li 
+                      v-for="page in visiblePages" 
+                      :key="page"
+                      class="page-item"
+                      :class="{ active: page === currentPage }"
+                    >
+                      <button 
+                        class="page-link" 
+                        @click="goToPage(page)"
+                      >
+                        {{ page }}
+                      </button>
+                    </li>
 
-                <RouterLink to="/link-group-guide/but-i-am-a-good-person" class="lesson-card">
-                  <div class="lesson-content">
-                    <h3>Lesson 5: But I Am A Good Person</h3>
-                    <p>Examining our understanding of goodness through the lens of God's commandments and our need for a Savior.</p>
-                    <div class="lesson-meta">
-                      <span class="badge bg-primary">Basic Christian Teaching</span>
-                    </div>
-                  </div>
-                  <div class="lesson-arrow">
-                    <i class="bi bi-chevron-right"></i>
-                  </div>
-                </RouterLink>
+                    <!-- Next Button -->
+                    <li class="page-item" :class="{ disabled: currentPage === totalPages }">
+                      <button 
+                        class="page-link" 
+                        @click="goToPage(currentPage + 1)"
+                        :disabled="currentPage === totalPages"
+                      >
+                        Next <i class="bi bi-chevron-right"></i>
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
 
-                <RouterLink to="/link-group-guide/praise" class="lesson-card">
-                  <div class="lesson-content">
-                    <h3>Lesson 6: Praise</h3>
-                    <p>Understanding the meaning, importance, and ways of praising God in our daily lives.</p>
-                    <div class="lesson-meta">
-                      <span class="badge bg-primary">Basic Christian Teaching</span>
-                    </div>
-                  </div>
-                  <div class="lesson-arrow">
-                    <i class="bi bi-chevron-right"></i>
-                  </div>
-                </RouterLink>
-
-                <RouterLink to="/link-group-guide/love" class="lesson-card">
-                  <div class="lesson-content">
-                    <h3>Lesson 7: Love</h3>
-                    <p>Exploring the meaning, importance, and characteristics of love as described in 1 Corinthians 13.</p>
-                    <div class="lesson-meta">
-                      <span class="badge bg-primary">Basic Christian Teaching</span>
-                    </div>
-                  </div>
-                  <div class="lesson-arrow">
-                    <i class="bi bi-chevron-right"></i>
-                  </div>
-                </RouterLink>
-
-                <RouterLink to="/link-group-guide/life" class="lesson-card">
-                  <div class="lesson-content">
-                    <h3>Lesson 8: Life</h3>
-                    <p>Understanding the meaning, purpose, and significance of life from a biblical perspective.</p>
-                    <div class="lesson-meta">
-                      <span class="badge bg-primary">Basic Christian Teaching</span>
-                    </div>
-                  </div>
-                  <div class="lesson-arrow">
-                    <i class="bi bi-chevron-right"></i>
-                  </div>
-                </RouterLink>
-
-                <RouterLink to="/link-group-guide/death" class="lesson-card">
-                  <div class="lesson-content">
-                    <h3>Lesson 9: Death</h3>
-                    <p>Understanding death from a biblical perspective - its origin, cause, description, and the remedy through Christ.</p>
-                    <div class="lesson-meta">
-                      <span class="badge bg-primary">Basic Christian Teaching</span>
-                    </div>
-                  </div>
-                  <div class="lesson-arrow">
-                    <i class="bi bi-chevron-right"></i>
-                  </div>
-                </RouterLink>
-
-                <RouterLink to="/link-group-guide/what-happens-when-one-believes" class="lesson-card">
-                  <div class="lesson-content">
-                    <h3>Lesson 10: What Happens When One Believes on the Lord</h3>
-                    <p>Discover the 38 amazing things that happen when someone believes on the Lord Jesus Christ as their Savior.</p>
-                    <div class="lesson-meta">
-                      <span class="badge bg-primary">Basic Christian Teaching</span>
-                    </div>
-                  </div>
-                  <div class="lesson-arrow">
-                    <i class="bi bi-chevron-right"></i>
-                  </div>
-                </RouterLink>
+                <!-- Page Info -->
+                <div class="text-center mt-3">
+                  <small class="text-muted">
+                    Showing {{ startIndex + 1 }}-{{ endIndex }} of {{ totalLessons }} lessons
+                  </small>
+                </div>
               </div>
             </div>
           </div>
@@ -156,7 +109,143 @@
 </template>
 
 <script setup>
+import { ref, computed } from 'vue'
 import { RouterLink } from 'vue-router'
+
+// Lessons data
+const lessons = [
+  {
+    id: 1,
+    title: 'Lesson 1: The Bible',
+    description: 'Understanding the Word of God and its importance in our lives.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/bible'
+  },
+  {
+    id: 2,
+    title: 'Lesson 2: The Church',
+    description: 'Exploring the meaning and purpose of the church in God\'s plan.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/church'
+  },
+  {
+    id: 3,
+    title: 'Lesson 3: The Person of God',
+    description: 'Understanding who God is and His nature as revealed in Scripture.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/person-of-god'
+  },
+  {
+    id: 4,
+    title: 'Lesson 4: Who Are You Christian?',
+    description: 'Discovering your identity and purpose as a follower of Christ.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/who-are-you-christian'
+  },
+  {
+    id: 5,
+    title: 'Lesson 5: But I Am A Good Person',
+    description: 'Understanding salvation and why good works alone cannot save us.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/but-i-am-a-good-person'
+  },
+  {
+    id: 6,
+    title: 'Lesson 6: Praise',
+    description: 'Understanding the meaning, importance, and ways of praising God in our daily lives.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/praise'
+  },
+  {
+    id: 7,
+    title: 'Lesson 7: Love',
+    description: 'Exploring the meaning, importance, and characteristics of love as described in 1 Corinthians 13.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/love'
+  },
+  {
+    id: 8,
+    title: 'Lesson 8: Life',
+    description: 'Understanding the meaning, purpose, and significance of life from a biblical perspective.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/life'
+  },
+  {
+    id: 9,
+    title: 'Lesson 9: Death',
+    description: 'Understanding death from a biblical perspective - its origin, cause, description, and the remedy through Christ.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/death'
+  },
+  {
+    id: 10,
+    title: 'Lesson 10: What Happens When One Believes on the Lord',
+    description: 'Discover the 38 amazing things that happen when someone believes on the Lord Jesus Christ as their Savior.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/what-happens-when-one-believes'
+  },
+  {
+    id: 11,
+    title: 'Lesson 11: Heaven',
+    description: 'Explore the biblical teaching about heaven - its origin, nature, characteristics, inhabitants, and the perfect place it is.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/heaven'
+  },
+  {
+    id: 12,
+    title: 'Lesson 12: Hell',
+    description: 'Understanding the biblical teaching about hell - its definition, origin, description, duration, and the reality of eternal punishment.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/hell'
+  },
+  {
+    id: 13,
+    title: 'Lesson 13: Angels',
+    description: 'Exploring the biblical teaching about angels - their nature, roles in Old and New Testaments, and their relationship to God and humanity.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/angels'
+  }
+]
+
+// Pagination state
+const currentPage = ref(1)
+const lessonsPerPage = 10
+
+// Computed properties for pagination
+const totalLessons = computed(() => lessons.length)
+const totalPages = computed(() => Math.ceil(totalLessons.value / lessonsPerPage))
+const startIndex = computed(() => (currentPage.value - 1) * lessonsPerPage)
+const endIndex = computed(() => Math.min(startIndex.value + lessonsPerPage, totalLessons.value))
+
+const paginatedLessons = computed(() => {
+  return lessons.slice(startIndex.value, endIndex.value)
+})
+
+const visiblePages = computed(() => {
+  const pages = []
+  const maxVisible = 5
+  let start = Math.max(1, currentPage.value - Math.floor(maxVisible / 2))
+  let end = Math.min(totalPages.value, start + maxVisible - 1)
+  
+  if (end - start + 1 < maxVisible) {
+    start = Math.max(1, end - maxVisible + 1)
+  }
+  
+  for (let i = start; i <= end; i++) {
+    pages.push(i)
+  }
+  
+  return pages
+})
+
+// Methods
+const goToPage = (page) => {
+  if (page >= 1 && page <= totalPages.value) {
+    currentPage.value = page
+    // Scroll to top of lessons list
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+}
 </script>
 
 <style scoped>
@@ -204,6 +293,7 @@ import { RouterLink } from 'vue-router'
   color: inherit;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  margin-bottom: 1rem;
 }
 
 .lesson-card:hover {
@@ -213,76 +303,106 @@ import { RouterLink } from 'vue-router'
   color: inherit;
 }
 
-.lesson-card.coming-soon {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
-.lesson-card.coming-soon:hover {
-  transform: none;
-  box-shadow: none;
-  border-color: transparent;
-}
-
-.lesson-icon {
-  width: 60px;
-  height: 60px;
-  background: var(--primary-color);
-  border-radius: 50%;
+.lesson-link {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-right: 1.5rem;
-  flex-shrink: 0;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
-.lesson-icon i {
-  font-size: 1.5rem;
-  color: white;
+.lesson-link:hover {
+  color: inherit;
+  text-decoration: none;
 }
 
 .lesson-content {
-  flex-grow: 1;
+  flex: 1;
+  margin-right: 1rem;
 }
 
 .lesson-content h3 {
   color: var(--primary-color);
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .lesson-content p {
-  margin-bottom: 0.5rem;
-  color: #4a5568;
+  color: #6c757d;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
 }
 
 .lesson-meta {
-  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
 .lesson-arrow {
   color: var(--primary-color);
   font-size: 1.5rem;
-  margin-left: 1rem;
+  transition: transform 0.3s ease;
 }
 
+.lesson-card:hover .lesson-arrow {
+  transform: translateX(5px);
+}
+
+/* Pagination Styles */
+.pagination-wrapper {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.pagination {
+  margin-bottom: 1rem;
+}
+
+.page-link {
+  color: var(--primary-color);
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .study-guide {
-    padding: 1.5rem;
-  }
-  
   .lesson-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem;
+    padding: 1rem;
   }
   
-  .lesson-icon {
-    margin: 0 auto 1rem;
+  .lesson-content h3 {
+    font-size: 1.1rem;
   }
   
-  .lesson-arrow {
-    display: none;
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .page-link {
+    padding: 0.375rem 0.5rem;
+    font-size: 0.875rem;
   }
 }
 </style>

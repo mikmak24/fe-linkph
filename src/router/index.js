@@ -93,6 +93,21 @@ const router = createRouter({
       component: () => import('../views/lessons/WhatHappensWhenOneBelievesView.vue'),
     },
     {
+      path: '/link-group-guide/heaven',
+      name: 'heaven',
+      component: () => import('../views/lessons/HeavenView.vue'),
+    },
+    {
+      path: '/link-group-guide/hell',
+      name: 'hell',
+      component: () => import('../views/lessons/HellView.vue'),
+    },
+    {
+      path: '/link-group-guide/angels',
+      name: 'angels',
+      component: () => import('../views/lessons/AngelsView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),
