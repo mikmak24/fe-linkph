@@ -11,10 +11,10 @@
             <li class="breadcrumb-item">
               <RouterLink to="/link-group-guide" class="text-white">Link Group Guide</RouterLink>
             </li>
-            <li class="breadcrumb-item active text-white" aria-current="page">Lesson 2: Who Are You, Christian?</li>
+            <li class="breadcrumb-item active text-white" aria-current="page">Lesson 4: Who Are You, Christian?</li>
           </ol>
         </nav>
-        <h1 class="display-4 fw-bold mb-4">Lesson 2: Who Are You, Christian?</h1>
+        <h1 class="display-4 fw-bold mb-4">Lesson 4: Who Are You, Christian?</h1>
         <p class="lead mb-4">Basic Christian Teaching</p>
         <div class="guide-meta">
           <span class="badge bg-light text-primary me-2">

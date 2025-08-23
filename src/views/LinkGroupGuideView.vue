@@ -119,21 +119,21 @@ const lessons = [
     title: 'Lesson 1: The Bible',
     description: 'Understanding the Word of God and its importance in our lives.',
     category: 'Basic Christian Teaching',
-    path: '/link-group-guide/bible'
+    path: '/link-group-guide/the-bible'
   },
   {
     id: 2,
     title: 'Lesson 2: The Church',
     description: 'Exploring the meaning and purpose of the church in God\'s plan.',
     category: 'Basic Christian Teaching',
-    path: '/link-group-guide/church'
+    path: '/link-group-guide/the-church'
   },
   {
     id: 3,
     title: 'Lesson 3: The Person of God',
     description: 'Understanding who God is and His nature as revealed in Scripture.',
     category: 'Basic Christian Teaching',
-    path: '/link-group-guide/person-of-god'
+    path: '/link-group-guide/the-person-of-god'
   },
   {
     id: 4,
@@ -208,7 +208,7 @@ const lessons = [
 ]
 
 // Pagination state
-const currentPage = ref(1)
+const currentPage = ref(parseInt(localStorage.getItem('linkGroupCurrentPage')) || 1)
 const lessonsPerPage = 10
 
 // Computed properties for pagination
@@ -242,6 +242,8 @@ const visiblePages = computed(() => {
 const goToPage = (page) => {
   if (page >= 1 && page <= totalPages.value) {
     currentPage.value = page
+    // Save current page to localStorage
+    localStorage.setItem('linkGroupCurrentPage', page.toString())
     // Remove automatic scrolling to prevent mobile issues
     // window.scrollTo({ top: 0, behavior: 'smooth' })
   }
