@@ -21,64 +21,7 @@ import { RouterLink } from 'vue-router'
       </div>
     </section>
 
-    <!-- Service Times Section -->
-    <section class="section-padding">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <h2 class="section-title">Join Us for Worship</h2>
-            <p class="lead mb-4">We'd love to have you join us for a weekend service</p>
-            
-            <div class="service-times mb-4">
-              <div class="service-item d-flex align-items-center mb-3">
-                <div class="service-icon me-3">
-                  <i class="bi bi-calendar-event"></i>
-                </div>
-                <div>
-                  <h5 class="mb-1">Sunday Service</h5>
-                  <p class="mb-0">10:00 AM - Blue Hall</p>
-                </div>
-              </div>
-              
-              <div class="service-item d-flex align-items-center mb-3">
-                <div class="service-icon me-3">
-                  <i class="bi bi-person"></i>
-                </div>
-                <div>
-                  <h5 class="mb-1">Children's Ministry</h5>
-                  <p class="mb-0">10:00 AM - Kids Area</p>
-                </div>
-              </div>
-              
-              <!-- <div class="service-item d-flex align-items-center mb-3">
-                <div class="service-icon me-3">
-                  <i class="bi bi-people"></i>
-                </div>
-                <div>
-                  <h5 class="mb-1">Youth Service</h5>
-                  <p class="mb-0">6:00 PM - Youth Center</p>
-                </div>
-              </div> -->
-              
-              <div class="service-item d-flex align-items-center">
-                <div class="service-icon me-3">
-                  <i class="bi bi-book"></i>
-                </div>
-                <div>
-                  <h5 class="mb-1">Link Groups</h5>
-                  <p class="mb-0">Anytime - To be announced</p>
-                </div>
-              </div>
-            </div>
-            
-            <RouterLink to="/contact" class="btn btn-primary">Contact Us for More Information</RouterLink>
-          </div>
-          <div class="col-lg-6">
-            <img src="@/assets/images/votd-1.jpg" alt="Sunday Worship" class="img-fluid rounded shadow-lg">
-          </div>
-        </div>
-      </div>
-    </section>
+  
 
     <!-- What to Expect Section -->
     <section class="section-padding bg-light">
@@ -149,7 +92,7 @@ import { RouterLink } from 'vue-router'
                 </div>
                 <div>
                   <h5>Church Address</h5>
-                  <p>Bacolod City, Negros Occidental 6100</p>
+                  <p>East View Hotel 6th Floor, Bacolod City, Negros Occidental 6100</p>
                 </div>
               </div>
               
@@ -174,12 +117,12 @@ import { RouterLink } from 'vue-router'
               </div>
             </div>
             
-            <a href="https://maps.google.com" target="_blank" class="btn btn-primary">Get Directions</a>
+            <a href="https://maps.app.goo.gl/MZEHWhdahThX5Ua8A" target="_blank" class="btn btn-primary">Get Directions</a>
           </div>
           <div class="col-lg-6 order-lg-1">
             <div class="map-container rounded shadow-lg">
               <!-- Replace with actual Google Maps embed -->
-              <img src="@/assets/images/img-6.jpg" alt="Church Location" class="img-fluid rounded">
+              <img src="@/assets/images/new-location.jpg" alt="Church Location" class="img-fluid rounded">
             </div>
           </div>
         </div>

@@ -36,7 +36,7 @@ import { RouterLink } from 'vue-router'
                 </div>
                 <div>
                   <h5 class="mb-1">Church Address</h5>
-                  <p class="mb-0">Bacolod City, Negros Occidental 6100</p>
+                  <p class="mb-0">East View Hotel 6th Floor, Bacolod City, Negros Occidental 6100</p>
                 </div>
               </div>
               
@@ -128,7 +128,7 @@ import { RouterLink } from 'vue-router'
           <div class="col-lg-10 mx-auto">
             <div class="map-container rounded shadow-lg overflow-hidden">
               <!-- Replace with actual Google Maps embed of Bacolod City -->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125412.93332427266!2d122.91313583880088!3d10.67142275855809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed6ced0f6ec7d%3A0x90f258f2783761ce!2sBacolod%2C%20Negros%20Occidental!5e0!3m2!1sen!2sph!4v1673524532012!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4737.748947439181!2d122.96541887581594!3d10.66519588947693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed1966b88f3fb%3A0xd52ad0484f64d4b5!2sEast%20View%20Hotel!5e1!3m2!1sen!2sph!4v1759051551150!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>

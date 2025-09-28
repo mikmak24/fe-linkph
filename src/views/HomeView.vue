@@ -129,11 +129,11 @@ onMounted(() => {
     <!-- Series Section -->
     <section class="series-section py-5 bg-gray-500">
       <div class="container">
-        <h2 class="section-title text-center mb-5">Monthly Series</h2>
+        <h2 class="section-title text-center mb-5">The Book of ACTS Series</h2>
         <div class="row align-items-center">
           <div class="col-lg-6 mb-4 mb-lg-0">
             <div class="series-content pe-lg-4">
-              <h3 class="series-title text-primary">We're excited to launch our May series:</h3>
+            
               <h4 class="series-subtitle">"ACTS: Taking the Next Step"</h4>
               <div class="series-description mt-4">
                 <p class="lead">
@@ -141,15 +141,15 @@ onMounted(() => {
                 </p>
               </div>
               <div class="series-details mt-4">
-                <p class="mb-2"><i class="bi bi-calendar-event me-2"></i>Every Sunday of May</p>
+                <p class="mb-2"><i class="bi bi-calendar-event me-2"></i>Every Sunday</p>
                 <p class="mb-2"><i class="bi bi-clock me-2"></i>10:00 AM</p>
-                <p class="mb-0"><i class="bi bi-geo-alt me-2"></i>Lopues East 3rd Floor Blue Hall</p>
+                <p class="mb-0"><i class="bi bi-geo-alt me-2"></i>East View Hotel 6th Floor</p>
               </div>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="series-image-wrapper">
-              <img src="@/assets/images/series/may-series-2025.jpg" alt="ACTS Series" class="img-fluid rounded shadow-lg">
+              <img src="@/assets/images/series/acts-series.jpg" alt="ACTS Series" class="img-fluid rounded shadow-lg">
             </div>
           </div>
         </div>
@@ -161,33 +161,50 @@ onMounted(() => {
       <div class="container">
         <h2 class="section-title text-center mb-5">Announcements</h2>
         <div class="row align-items-stretch g-4">
-          <!-- Prayer Schedule Announcement -->
-          <div class="col-lg-6 mb-4">
+          <!-- Dawnwatch Prayer Announcement -->
+          <div class="col-lg-4 mb-4">
             <div class="announcement-card h-100">
               <div class="series-image-container">
-                <img src="@/assets/images/announcements/prayer_schedule.jpg" alt="Saturday Prayer Schedule" class="img-fluid">
+                <img src="@/assets/images/announcements/dawnwatch.jpg" alt="Dawnwatch Prayer" class="img-fluid">
               </div>
-              <div class="announcement-content scrollable-content">
+              <div class="announcement-content">
                 <div class="content-wrapper">
-                  <h3 class="announcement-title">Saturday Prayer Schedule</h3>
+                  <h3 class="announcement-title">Dawnwatch Prayer</h3>
                   <div class="announcement-description mt-3">
                     <p class="lead">
-                      Join us for our regular Saturday prayer gatherings as we seek God together and intercede for our community.
+                      Start your month with God! Join us for this special early morning prayer gathering as we seek His presence and intercede for our community.
                     </p>
-                    <div class="prayer-schedule mt-4">
-                      <div class="schedule-item mb-3 p-3 bg-light rounded">
-                        <h5 class="text-primary mb-2">Regular Saturdays</h5>
-                        <p class="mb-1"><i class="bi bi-geo-alt text-success me-2"></i>Lopues East, 3rd Floor, Blue Hall</p>
-                        <p class="mb-0"><i class="bi bi-clock text-success me-2"></i>5:45 PM</p>
-                      </div>
-                      <div class="schedule-item p-3 bg-light rounded">
-                        <h5 class="text-primary mb-2">First Saturday of the Month</h5>
-                        <p class="mb-1"><i class="bi bi-geo-alt text-success me-2"></i>Lopues East, 2nd Floor, Old Parking Lot</p>
-                        <p class="mb-0"><i class="bi bi-clock text-success me-2"></i>5:30 AM</p>
-                      </div>
+                    <div class="prayer-info mt-4">
+                      <p class="mb-2"><i class="bi bi-clock text-primary me-2"></i>5:30 AM</p>
+                      <p class="mb-2"><i class="bi bi-calendar-event text-primary me-2"></i>First Saturday Only</p>
+                      <p class="mb-0"><i class="bi bi-geo-alt text-primary me-2"></i>East View Hotel, 6th Floor</p>
                     </div>
                     <div class="prayer-encouragement mt-4 p-3 bg-primary bg-opacity-10 rounded">
-                      <p class="mb-0 text-primary"><i class="bi bi-heart-fill me-2"></i>Come experience the power of corporate prayer!</p>
+                      <p class="mb-0 text-primary"><i class="bi bi-sunrise me-2"></i>Begin each month in prayer and fellowship!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Consecration Prayer Announcement -->
+          <div class="col-lg-4 mb-4">
+            <div class="announcement-card h-100">
+              <div class="series-image-container">
+                <img src="@/assets/images/announcements/consecration.jpg" alt="Consecration Prayer" class="img-fluid">
+              </div>
+              <div class="announcement-content">
+                <div class="content-wrapper">
+                  <h3 class="announcement-title">Consecration Prayer</h3>
+                  <div class="announcement-description mt-3">
+                    <p class="lead">
+                      A time of dedicated prayer and consecration as we commit ourselves to God's purposes.
+                    </p>
+                    <div class="prayer-info mt-4">
+                      <p class="mb-2"><i class="bi bi-clock text-primary me-2"></i>5:45 PM</p>
+                      <p class="mb-2"><i class="bi bi-calendar-event text-primary me-2"></i>Every Saturday</p>
+                      <p class="mb-0"><i class="bi bi-geo-alt text-primary me-2"></i>East View Hotel, 6th Floor</p>
                     </div>
                   </div>
                 </div>
@@ -196,25 +213,19 @@ onMounted(() => {
           </div>
 
           <!-- Uplift RUN Club Announcement -->
-          <div class="col-lg-6 mb-4">
+          <div class="col-lg-4 mb-4">
             <div class="announcement-card h-100">
               <div class="series-image-container">
                 <img src="@/assets/images/announcements/uplift.jpg" alt="RUN Club by Club Uplift Philippines" class="img-fluid">
               </div>
-              <div class="announcement-content scrollable-content">
+              <div class="announcement-content">
                 <div class="content-wrapper">
                   <h3 class="announcement-title">RUN Club by Club Uplift Philippines</h3>
                   <div class="announcement-description mt-3">
                     <p class="lead">
                       Calling all runners! Join our RUN Club for easy running sessions and build community while staying fit.
                     </p>
-                    <div class="run-schedule mt-4">
-                      <div class="schedule-highlight p-3 bg-warning bg-opacity-10 rounded border border-warning">
-                        <h5 class="text-warning mb-2"><i class="bi bi-calendar-event me-2"></i>Every Monday & Thursday</h5>
-                        <p class="mb-1"><i class="bi bi-clock text-warning me-2"></i>7:00 PM</p>
-                        <p class="mb-0 text-warning fw-bold">EASY RUN</p>
-                      </div>
-                    </div>
+                 
                     <div class="join-info mt-4">
                       <h5 class="mb-3">How to Join:</h5>
                       <div class="qr-section text-center mb-3">
@@ -334,7 +345,7 @@ onMounted(() => {
                 <h5 class="card-title">Sunday Worship Service</h5>
                 <p class="card-text">Join us for praise and worship, followed by a message from God's Word.</p>
                 <p class="text-muted"><i class="bi bi-clock me-2"></i>10:00 AM</p>
-                <p class="text-muted"><i class="bi bi-geo-alt me-2"></i>Lopues East 3rd Floor, Blue Hall</p>
+                <p class="text-muted"><i class="bi bi-geo-alt me-2"></i>East View Hotel 6th Floor</p>
               </div>
             </div>
           </div>
@@ -716,7 +727,6 @@ onMounted(() => {
   background: white;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
-  min-height: 700px;
   height: 100%;
   overflow: hidden;
 }
@@ -745,6 +755,7 @@ onMounted(() => {
   position: relative;
   display: flex;
   flex-direction: column;
+  padding: 1.5rem;
 }
 
 .scrollable-content {
@@ -774,7 +785,9 @@ onMounted(() => {
 }
 
 .content-wrapper {
-  padding-right: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Responsive adjustments */
@@ -787,12 +800,24 @@ onMounted(() => {
     height: auto;
   }
 
-  .scrollable-content {
-    max-height: 400px;
+  .announcement-content {
+    padding: 1rem;
   }
 }
 
 /* New styles for prayer schedule and run club announcements */
+.prayer-info {
+  background-color: rgba(var(--bs-primary-rgb), 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.prayer-info p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
 .prayer-schedule .schedule-item {
   border-left: 3px solid var(--primary-color);
   transition: transform 0.2s ease;
