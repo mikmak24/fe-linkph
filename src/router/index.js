@@ -108,6 +108,16 @@ const router = createRouter({
       component: () => import('../views/lessons/AngelsView.vue'),
     },
     {
+      path: '/link-group-guide/predestination-election',
+      name: 'predestinationElection',
+      component: () => import('../views/lessons/PredestinationElectionView.vue'),
+    },
+    {
+      path: '/link-group-guide/assurance-of-salvation',
+      name: 'assuranceOfSalvation',
+      component: () => import('../views/lessons/AssuranceOfSalvationView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),

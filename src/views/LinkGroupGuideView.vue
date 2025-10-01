@@ -204,6 +204,20 @@ const lessons = [
     description: 'Exploring the biblical teaching about angels - their nature, roles in Old and New Testaments, and their relationship to God and humanity.',
     category: 'Basic Christian Teaching',
     path: '/link-group-guide/angels'
+  },
+  {
+    id: 14,
+    title: 'Lesson 14: Predestination & Election',
+    description: 'Understanding predestination and election - God\'s sovereign choice and how it relates to human responsibility and salvation.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/predestination-election'
+  },
+  {
+    id: 15,
+    title: 'Lesson 15: Assurance of Salvation',
+    description: 'Understanding assurance of salvation - how to know with confidence that you are saved and the basis for this assurance.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/assurance-of-salvation'
   }
 ]
 
