@@ -218,6 +218,20 @@ const lessons = [
     description: 'Understanding assurance of salvation - how to know with confidence that you are saved and the basis for this assurance.',
     category: 'Basic Christian Teaching',
     path: '/link-group-guide/assurance-of-salvation'
+  },
+  {
+    id: 16,
+    title: 'Lesson 16: Forgiveness',
+    description: 'Understanding forgiveness - the author, channel, foundation, completeness, possession, conditions, and frequency of forgiveness.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/forgiveness'
+  },
+  {
+    id: 17,
+    title: 'Lesson 17: The Age to Come',
+    description: 'Understanding the ages - this present evil age, the end of this age, and the age to come in God\'s plan.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/the-age-to-come'
   }
 ]
 
