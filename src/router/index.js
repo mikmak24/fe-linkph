@@ -128,6 +128,11 @@ const router = createRouter({
       component: () => import('../views/lessons/TheAgeToComeView.vue'),
     },
     {
+      path: '/link-group-guide/existence-of-god',
+      name: 'existenceOfGod',
+      component: () => import('../views/lessons/ExistenceOfGodView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),

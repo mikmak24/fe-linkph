@@ -232,6 +232,13 @@ const lessons = [
     description: 'Understanding the ages - this present evil age, the end of this age, and the age to come in God\'s plan.',
     category: 'Basic Christian Teaching',
     path: '/link-group-guide/the-age-to-come'
+  },
+  {
+    id: 18,
+    title: 'Lesson 18: Existence of God',
+    description: 'Exploring the proofs for God\'s existence - from Scripture, conscience, cause, design, morality, life, and congruity.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/existence-of-god'
   }
 ]
 
