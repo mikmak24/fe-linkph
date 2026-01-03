@@ -246,6 +246,13 @@ const lessons = [
     description: 'Understanding the person, nature, unity, and attributes of God - His natural and moral characteristics as revealed in Scripture.',
     category: 'Basic Christian Teaching',
     path: '/link-group-guide/god-the-father'
+  },
+  {
+    id: 20,
+    title: 'Lesson 20: God is a Balanced Being',
+    description: 'Understanding how God\'s attributes work in perfect harmony - His holiness, love, faithfulness, mercy, and justice balanced together.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/god-is-a-balanced-being'
   }
 ]
 

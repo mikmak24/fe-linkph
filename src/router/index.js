@@ -138,6 +138,11 @@ const router = createRouter({
       component: () => import('../views/lessons/ThePersonOfGodView.vue'),
     },
     {
+      path: '/link-group-guide/god-is-a-balanced-being',
+      name: 'godIsABalancedBeing',
+      component: () => import('../views/lessons/GodIsABalancedBeingView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),
