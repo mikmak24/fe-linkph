@@ -133,6 +133,11 @@ const router = createRouter({
       component: () => import('../views/lessons/ExistenceOfGodView.vue'),
     },
     {
+      path: '/link-group-guide/god-the-father',
+      name: 'godTheFather',
+      component: () => import('../views/lessons/ThePersonOfGodView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),

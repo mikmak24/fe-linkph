@@ -239,6 +239,13 @@ const lessons = [
     description: 'Exploring the proofs for God\'s existence - from Scripture, conscience, cause, design, morality, life, and congruity.',
     category: 'Basic Christian Teaching',
     path: '/link-group-guide/existence-of-god'
+  },
+  {
+    id: 19,
+    title: 'Lesson 19: The Person of God',
+    description: 'Understanding the person, nature, unity, and attributes of God - His natural and moral characteristics as revealed in Scripture.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/god-the-father'
   }
 ]
 
