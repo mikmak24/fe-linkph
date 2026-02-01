@@ -24,6 +24,15 @@
             <i class="bi bi-people me-1"></i> Group Study
           </span>
         </div>
+        <div class="mt-4">
+          <a
+            :href="lessonPdfUrl"
+            download="Lesson_18_Existence_of_God.pdf"
+            class="btn btn-download-pdf"
+          >
+            <i class="bi bi-file-earmark-pdf me-2"></i> Download PDF
+          </a>
+        </div>
       </div>
     </section>
 
@@ -196,6 +205,7 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+import lessonPdfUrl from '@/assets/lessons/Lesson_18_Existence_of_God.pdf'
 </script>
 
 <style scoped>
@@ -214,6 +224,29 @@ import { RouterLink } from 'vue-router'
   right: 0;
   height: 50px;
   background: linear-gradient(to bottom right, transparent 49%, white 51%);
+}
+
+.btn-download-pdf {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  background-color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-download-pdf:hover {
+  color: #1a1a2e;
+  background-color: #f0f0f0;
+  border-color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
 }
 
 .content-section {
