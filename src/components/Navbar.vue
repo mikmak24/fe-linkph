@@ -4,6 +4,7 @@ import { RouterLink } from 'vue-router'
 
 const isNavCollapsed = ref(true)
 const isScrolled = ref(false)
+const isAboutDropdownOpen = ref(false)
 const isKnowledgeDropdownOpen = ref(false)
 const isDiscipleshipDropdownOpen = ref(false)
 const isLinkKidsDropdownOpen = ref(false)
@@ -12,6 +13,10 @@ const isLinkWorshipDropdownOpen = ref(false)
 
 const toggleNav = () => {
   isNavCollapsed.value = !isNavCollapsed.value
+}
+
+const toggleAboutDropdown = () => {
+  isAboutDropdownOpen.value = !isAboutDropdownOpen.value
 }
 
 const toggleKnowledgeDropdown = () => {
@@ -35,6 +40,7 @@ const toggleLinkWorshipDropdown = () => {
 }
 
 const closeDropdowns = () => {
+  isAboutDropdownOpen.value = false
   isKnowledgeDropdownOpen.value = false
   isDiscipleshipDropdownOpen.value = false
   isLinkKidsDropdownOpen.value = false
@@ -96,15 +102,39 @@ onUnmounted(() => {
               <i class="bi bi-house me-1"></i> Home
             </RouterLink>
           </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/about" @click="isNavCollapsed = true; closeDropdowns()">
-              <i class="bi bi-building me-1"></i> About
-            </RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/visit" @click="isNavCollapsed = true; closeDropdowns()">
-              <i class="bi bi-geo-alt me-1"></i> Visit
-            </RouterLink>
+          <li class="nav-item dropdown">
+            <a 
+              class="nav-link dropdown-toggle" 
+              href="#" 
+              role="button" 
+              @click.prevent="toggleAboutDropdown"
+              :class="{ 'show': isAboutDropdownOpen }"
+              aria-expanded="false"
+            >
+              <i class="bi bi-info-circle me-1"></i> About
+            </a>
+            <ul class="dropdown-menu" :class="{ 'show': isAboutDropdownOpen }">
+              <li>
+                <RouterLink class="dropdown-item" to="/about" @click="isNavCollapsed = true; closeDropdowns()">
+                  <i class="bi bi-building me-1"></i> About
+                </RouterLink>
+              </li>
+              <li>
+                <RouterLink class="dropdown-item" to="/visit" @click="isNavCollapsed = true; closeDropdowns()">
+                  <i class="bi bi-geo-alt me-1"></i> Visit
+                </RouterLink>
+              </li>
+              <li>
+                <RouterLink class="dropdown-item" to="/ministries" @click="isNavCollapsed = true; closeDropdowns()">
+                  <i class="bi bi-people me-1"></i> Ministries
+                </RouterLink>
+              </li>
+              <li>
+                <RouterLink class="dropdown-item" to="/faithful-foundation-adopt-a-lot" @click="isNavCollapsed = true; closeDropdowns()">
+                  <i class="bi bi-tree me-1"></i> Adopt a Lot
+                </RouterLink>
+              </li>
+            </ul>
           </li>
           <li class="nav-item dropdown">
             <a 
@@ -129,11 +159,6 @@ onUnmounted(() => {
                 </RouterLink>
               </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/ministries" @click="isNavCollapsed = true; closeDropdowns()">
-              <i class="bi bi-people me-1"></i> Ministries
-            </RouterLink>
           </li>
           <li class="nav-item dropdown">
             <a 

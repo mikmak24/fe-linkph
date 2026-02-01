@@ -262,6 +262,11 @@ const router = createRouter({
       name: 'connect',
       component: () => import('../views/ConnectView.vue'),
     },
+    {
+      path: '/faithful-foundation-adopt-a-lot',
+      name: 'faithfulFoundationAdoptALot',
+      component: () => import('../views/FaithfulFoundationAdoptALotView.vue'),
+    },
     // Catch all route - redirect to home
     {
       path: '/:pathMatch(.*)*',
