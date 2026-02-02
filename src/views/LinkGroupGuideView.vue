@@ -253,6 +253,20 @@ const lessons = [
     description: 'Understanding how God\'s attributes work in perfect harmony - His holiness, love, faithfulness, mercy, and justice balanced together.',
     category: 'Basic Christian Teaching',
     path: '/link-group-guide/god-is-a-balanced-being'
+  },
+  {
+    id: 21,
+    title: 'Lesson 21: The Trinity',
+    description: 'The doctrine of the Trinity — one God in three Persons: Father, Son, and Holy Spirit; basis, illustrations, and attributes.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/the-trinity'
+  },
+  {
+    id: 22,
+    title: 'Lesson 22: God the Father',
+    description: 'Names, Fatherhood and Silence of God — the names of God, the Fatherhood of God, and understanding the silence of God.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/names-fatherhood-silence-of-god'
   }
 ]
 

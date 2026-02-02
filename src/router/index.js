@@ -143,6 +143,16 @@ const router = createRouter({
       component: () => import('../views/lessons/GodIsABalancedBeingView.vue'),
     },
     {
+      path: '/link-group-guide/the-trinity',
+      name: 'theTrinity',
+      component: () => import('../views/lessons/TheTrinityView.vue'),
+    },
+    {
+      path: '/link-group-guide/names-fatherhood-silence-of-god',
+      name: 'namesFatherhoodSilenceOfGod',
+      component: () => import('../views/lessons/NamesFatherhoodSilenceView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),
