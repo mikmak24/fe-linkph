@@ -10,9 +10,10 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
       <div class="hero-overlay"></div>
       <div class="container hero-content">
         <span class="hero-badge">Church Project</span>
-        <h1 class="hero-title">Faithful Foundation<br /><span class="hero-title-accent">Adopt a Lot</span></h1>
+        <h1 class="hero-title">Faithful Foundations<br /><span class="hero-title-accent">Adopt a Lot</span></h1>
+        <p class="hero-tagline">“Building on Christ, securing our future.”</p>
         <p class="hero-lead">
-          This is the 2,000 square meter lot where Link Church PH will build. Partner with us by adopting square meters at ₱7,000 each—and help lay the foundation for our future home.
+          An Adopt a Lot Project. This is the 2,000 sqm lot where Link Church PH will build. Partner with us by adopting square meters at ₱7,000 each.
         </p>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
@@ -25,20 +26,18 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
 
     <!-- Video Section -->
     <section class="section section-video">
-      <div class="container">
-        <div class="video-wrapper">
-          <div class="video-card">
-            <video
-              class="project-video"
-              :src="adoptALotVideo"
-              controls
-              playsinline
-              poster=""
-            >
-              Your browser does not support the video tag.
-            </video>
-            <p class="video-caption">Faithful Foundation — Adopt a Lot</p>
-          </div>
+      <div class="video-wrapper">
+        <div class="video-card">
+          <video
+            class="project-video"
+            :src="adoptALotVideo"
+            controls
+            playsinline
+            poster=""
+          >
+            Your browser does not support the video tag.
+          </video>
+          <p class="video-caption">Faithful Foundations — Adopt a Lot</p>
         </div>
       </div>
     </section>
@@ -71,92 +70,145 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
           </div>
           <div class="payment-terms">
             <i class="bi bi-calendar-check me-2"></i>
-            <span>Payment terms: <strong>3</strong>, <strong>6</strong>, or <strong>12 months</strong> to pay</span>
+            <span>Lot price per sqm is payable for <strong>7–12 months</strong>. Payable up to <strong>15 months</strong> for minimum income earners.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About the Project -->
+    <!-- What Faithful Foundations Mean -->
     <section class="section section-about">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-5 mb-5 mb-lg-0">
-            <span class="section-label">Our Vision</span>
-            <h2 class="section-title">Where We Will Build</h2>
-            <p class="text-muted mb-4">
-              This 2,000 square meter lot is the future home of Link Church PH. Through Faithful Foundation Adopt a Lot, we are raising funds to acquire this land—one square meter at a time. Each square meter costs ₱7,000, and every adoption brings us closer to owning the ground where our church will stand.
-            </p>
-            <p class="mb-0">
-              When you adopt a square meter (or more), you are helping secure the land where we will worship, disciple, and serve for generations. Your partnership lays a literal foundation for what God is building through Link Church PH.
-            </p>
+        <span class="section-label">The Name</span>
+        <h2 class="section-title text-center mb-5">What “Faithful Foundations” Mean</h2>
+
+        <div class="row mb-5">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="meaning-card">
+              <h3 class="meaning-title">Faithful</h3>
+              <p class="mb-0">Shows that God will always provide and that our church is committed to taking care of the vision He’s given us.</p>
+            </div>
           </div>
-          <div class="col-lg-6 offset-lg-1">
-            <div class="impact-grid">
-              <div class="impact-card">
-                <div class="impact-icon">
-                  <i class="bi bi-building"></i>
-                </div>
-                <h3>Our Future Home</h3>
-                <p>This is the lot where Link Church PH will build—a permanent place for worship, ministry, and community.</p>
-              </div>
-              <div class="impact-card">
-                <div class="impact-icon">
-                  <i class="bi bi-currency-exchange"></i>
-                </div>
-                <h3>₱7,000 per Square Meter</h3>
-                <p>Adopt one or more square meters at ₱7,000 each. Every square meter counts toward the total.</p>
-              </div>
-              <div class="impact-card">
-                <div class="impact-icon">
-                  <i class="bi bi-heart"></i>
-                </div>
-                <h3>Partner with Us</h3>
-                <p>Your giving helps secure the 2,000 sqm lot and lays the foundation for generations to come.</p>
-              </div>
+          <div class="col-lg-6">
+            <div class="meaning-card">
+              <h3 class="meaning-title">Foundations</h3>
+              <p class="mb-0">Reminds us that anything that lasts needs a strong start; built on faith, prayer, unity, and God’s Word.</p>
             </div>
           </div>
         </div>
+
+        <div class="verse-block">
+          <p class="mb-3">In the Bible, a “foundation” isn’t just about a building—it’s about the truth, strength, and faith that everything in God’s work stands on.</p>
+          <blockquote class="scripture">
+            <p>“The only true foundation is Jesus Christ.”</p>
+            <footer>— 1 Corinthians 3:11</footer>
+          </blockquote>
+          <p class="mb-0 mt-3">So, “Faithful Foundations” means we’re building our church on Jesus, who is solid and unshakable. Just like a building needs a strong base to stand, this project is about setting a strong start by getting the land and bringing the church together in faith and unity to make our dream happen.</p>
+        </div>
       </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="section section-how bg-light">
+    <!-- Foundation Project Lot -->
+    <section class="section section-lot-label bg-light">
+      <div class="container text-center">
+        <span class="section-label">Foundation Project</span>
+        <h2 class="section-title mb-0">LOT: 2,000 sqm</h2>
+      </div>
+    </section>
+
+    <!-- How to Adopt-a-Lot -->
+    <section class="section section-how">
       <div class="container">
         <div class="text-center mb-5">
           <span class="section-label">Get Involved</span>
-          <h2 class="section-title">How It Works</h2>
-          <p class="lead text-muted mx-auto" style="max-width: 600px;">
-            Partner with us by adopting square meters at ₱7,000 each. Watch the video, then reach out to give or learn more.
+          <h2 class="section-title">How to Adopt-a-Lot?</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="step-card">
+              <span class="step-num">01</span>
+              <h4>Price per sqm</h4>
+              <p class="mb-0">Each 1 sqm lot will be priced at a minimum of ₱7,000 per sqm.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="step-card">
+              <span class="step-num">02</span>
+              <h4>Choose your lot</h4>
+              <p class="mb-0">Choose a 1 sqm lot from 1–2000.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="step-card">
+              <span class="step-num">03</span>
+              <h4>Minimum adoption</h4>
+              <p class="mb-0">Minimum lot to be adopted: 1 or more.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="step-card">
+              <span class="step-num">04</span>
+              <h4>Payment terms</h4>
+              <p class="mb-0">Lot price per sqm is payable for <strong>7–12 months</strong>. Payable up to <strong>15 months</strong> for minimum income earners.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="step-card">
+              <span class="step-num">05</span>
+              <h4>No limit</h4>
+              <p class="mb-0">There’s no limitation on adopting a lot as long as it does not feel like a burden.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="step-card step-card-accent">
+              <span class="step-num">06</span>
+              <h4>Plant a seed</h4>
+              <p class="mb-0">Adopting a lot means planting a seed and watching it grow. It’s easier for everyone to help.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Adopt a Lot -->
+    <section class="section section-why bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">The Why</span>
+          <h2 class="section-title">Why Adopt a Lot?</h2>
+          <p class="lead text-muted mx-auto" style="max-width: 640px;">
+            Adopting a lot for a future church is good because:
           </p>
         </div>
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-6 col-lg-3">
-            <div class="step-card">
-              <span class="step-num">1</span>
-              <h4>Watch & Pray</h4>
-              <p>Watch the project video and pray about how many square meters you or your group can adopt.</p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="why-card">
+              <div class="why-icon"><i class="bi bi-piggy-bank"></i></div>
+              <p class="mb-0">Instead of raising all the money at once, people can give for small parts of the lot. Everyone feels part of it.</p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="step-card">
-              <span class="step-num">2</span>
-              <h4>Connect</h4>
-              <p>Reach out to Link Church PH and tell us you want to adopt square meters for the church lot.</p>
+          <div class="col-md-6 col-lg-4">
+            <div class="why-card">
+              <div class="why-icon"><i class="bi bi-house-heart"></i></div>
+              <p class="mb-0">You’re not just giving money. You’re helping build God’s house.</p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="step-card">
-              <span class="step-num">3</span>
-              <h4>Give</h4>
-              <p>Give ₱7,000 per square meter (e.g. 1 sqm = ₱7,000, 10 sqm = ₱70,000). You can pay in <strong>3</strong>, <strong>6</strong>, or <strong>12 months</strong>. Every sqm counts.</p>
+          <div class="col-md-6 col-lg-4">
+            <div class="why-card">
+              <div class="why-icon"><i class="bi bi-people"></i></div>
+              <p class="mb-0">It brings the church family closer. When we work together, we grow together.</p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="step-card">
-              <span class="step-num">4</span>
-              <h4>Build</h4>
-              <p>Together we secure the 2,000 sqm lot—the future site where Link Church PH will build.</p>
+          <div class="col-md-6 col-lg-4">
+            <div class="why-card">
+              <div class="why-icon"><i class="bi bi-award"></i></div>
+              <p class="mb-0">It leaves a lasting legacy. One day, you can say, “I helped make this church possible.”</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="why-card">
+              <div class="why-icon"><i class="bi bi-heart"></i></div>
+              <p class="mb-0">It grows our faith. We trust God to bless and multiply what we give.</p>
             </div>
           </div>
         </div>
@@ -171,7 +223,7 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
             <div class="col-lg-8">
               <h2 class="cta-title">Ready to adopt square meters?</h2>
               <p class="cta-text mb-0">
-                Contact us to give toward the lot (₱7,000 per square meter). Payment can be spread over <strong>3</strong>, <strong>6</strong>, or <strong>12 months</strong>. This is where Link Church PH will build.
+                Contact us to give toward the lot (₱7,000 per sqm). Payable in <strong>7–12 months</strong>, or up to <strong>15 months</strong> for minimum income earners. This is where Link Church PH will build.
               </p>
             </div>
             <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
@@ -235,6 +287,13 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
 .hero-title-accent {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  font-style: italic;
+  opacity: 0.95;
+  margin-bottom: 0.5rem;
 }
 
 .hero-lead {
@@ -338,23 +397,21 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
   margin-bottom: 1rem;
 }
 
-/* Video */
+/* Video - full width */
 .section-video {
-  padding-top: 60px;
+  padding-top: 0;
   padding-bottom: 60px;
 }
 
 .video-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 .video-card {
-  background: #fff;
-  border-radius: 16px;
+  background: #0a0a0a;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 0;
 }
 
 .project-video {
@@ -371,6 +428,72 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
   color: var(--color-text);
   opacity: 0.85;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
+  background: #fff;
+  text-align: center;
+}
+
+/* What Faithful Foundations Mean */
+.meaning-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+
+.meaning-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.meaning-card p {
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.verse-block {
+  background: rgba(12, 93, 86, 0.06);
+  border-radius: 12px;
+  padding: 1.75rem 2rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.verse-block p {
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.scripture {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border-radius: 8px;
+  border: none;
+}
+
+.scripture p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.scripture footer {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  opacity: 0.85;
+}
+
+.section-lot-label {
+  padding: 50px 0 !important;
+}
+
+.section-lot-label .section-title {
+  margin-bottom: 0;
 }
 
 /* About */
@@ -466,6 +589,44 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
   color: var(--color-text);
   opacity: 0.88;
   line-height: 1.55;
+}
+
+.step-card-accent {
+  border-color: rgba(12, 93, 86, 0.2);
+  background: rgba(12, 93, 86, 0.04);
+}
+
+/* Why Adopt a Lot */
+.why-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  height: 100%;
+  transition: box-shadow 0.25s ease;
+}
+
+.why-card:hover {
+  box-shadow: 0 8px 30px rgba(12, 93, 86, 0.08);
+}
+
+.why-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.why-card p {
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 /* CTA */
