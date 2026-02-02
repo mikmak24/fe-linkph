@@ -16,27 +16,39 @@ const toggleNav = () => {
 }
 
 const toggleAboutDropdown = () => {
-  isAboutDropdownOpen.value = !isAboutDropdownOpen.value
+  const wasOpen = isAboutDropdownOpen.value
+  closeDropdowns()
+  if (!wasOpen) isAboutDropdownOpen.value = true
 }
 
 const toggleKnowledgeDropdown = () => {
-  isKnowledgeDropdownOpen.value = !isKnowledgeDropdownOpen.value
+  const wasOpen = isKnowledgeDropdownOpen.value
+  closeDropdowns()
+  if (!wasOpen) isKnowledgeDropdownOpen.value = true
 }
 
 const toggleDiscipleshipDropdown = () => {
-  isDiscipleshipDropdownOpen.value = !isDiscipleshipDropdownOpen.value
+  const wasOpen = isDiscipleshipDropdownOpen.value
+  closeDropdowns()
+  if (!wasOpen) isDiscipleshipDropdownOpen.value = true
 }
 
 const toggleLinkKidsDropdown = () => {
-  isLinkKidsDropdownOpen.value = !isLinkKidsDropdownOpen.value
+  const wasOpen = isLinkKidsDropdownOpen.value
+  closeDropdowns()
+  if (!wasOpen) isLinkKidsDropdownOpen.value = true
 }
 
 const toggleLinkGroupDropdown = () => {
-  isLinkGroupDropdownOpen.value = !isLinkGroupDropdownOpen.value
+  const wasOpen = isLinkGroupDropdownOpen.value
+  closeDropdowns()
+  if (!wasOpen) isLinkGroupDropdownOpen.value = true
 }
 
 const toggleLinkWorshipDropdown = () => {
-  isLinkWorshipDropdownOpen.value = !isLinkWorshipDropdownOpen.value
+  const wasOpen = isLinkWorshipDropdownOpen.value
+  closeDropdowns()
+  if (!wasOpen) isLinkWorshipDropdownOpen.value = true
 }
 
 const closeDropdowns = () => {

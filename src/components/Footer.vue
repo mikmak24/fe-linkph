@@ -42,7 +42,7 @@ import { RouterLink } from 'vue-router'
           <p>We would love to hear from you! Whether you have questions about our services, want to get involved, or simply want to learn more, feel free to reach out:</p>
           <p><i class="bi bi-envelope me-2"></i> thelinkphilippines@gmail.com</p>
           <p><i class="bi bi-telephone me-2"></i> 0939-6030-755</p>
-          <p><i class="bi bi-geo-alt me-2"></i>East View Hotel 6th Floor, Bacolod City</p>
+          <p><i class="bi bi-geo-alt me-2"></i>Ayala Cinema 2, Bacolod City</p>
           <p>Thank you for visiting Link Church. We look forward to welcoming you into our community!</p>
         </div>
       </div>
@@ -70,6 +70,14 @@ import { RouterLink } from 'vue-router'
 <style scoped>
 .footer {
   background-color: var(--primary-color) !important;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: none;
 }
 
 .footer-bottom {

@@ -143,7 +143,7 @@ onMounted(() => {
               <div class="series-details mt-4">
                 <p class="mb-2"><i class="bi bi-calendar-event me-2"></i>Every Sunday</p>
                 <p class="mb-2"><i class="bi bi-clock me-2"></i>10:00 AM</p>
-                <p class="mb-0"><i class="bi bi-geo-alt me-2"></i>East View Hotel 6th Floor</p>
+                <p class="mb-0"><i class="bi bi-geo-alt me-2"></i>Ayala Cinema 2</p>
               </div>
             </div>
           </div>
@@ -177,7 +177,7 @@ onMounted(() => {
                     <div class="prayer-info mt-4">
                       <p class="mb-2"><i class="bi bi-clock text-primary me-2"></i>5:30 AM</p>
                       <p class="mb-2"><i class="bi bi-calendar-event text-primary me-2"></i>First Saturday Only</p>
-                      <p class="mb-0"><i class="bi bi-geo-alt text-primary me-2"></i>East View Hotel, 6th Floor</p>
+                      <p class="mb-0"><i class="bi bi-geo-alt text-primary me-2"></i>Ayala Cinema 2</p>
                     </div>
                     <div class="prayer-encouragement mt-4 p-3 bg-primary bg-opacity-10 rounded">
                       <p class="mb-0 text-primary"><i class="bi bi-sunrise me-2"></i>Begin each month in prayer and fellowship!</p>
@@ -204,7 +204,7 @@ onMounted(() => {
                     <div class="prayer-info mt-4">
                       <p class="mb-2"><i class="bi bi-clock text-primary me-2"></i>5:45 PM</p>
                       <p class="mb-2"><i class="bi bi-calendar-event text-primary me-2"></i>Every Saturday</p>
-                      <p class="mb-0"><i class="bi bi-geo-alt text-primary me-2"></i>East View Hotel, 6th Floor</p>
+                      <p class="mb-0"><i class="bi bi-geo-alt text-primary me-2"></i>Ayala Cinema 2</p>
                     </div>
                   </div>
                 </div>
@@ -345,7 +345,7 @@ onMounted(() => {
                 <h5 class="card-title">Sunday Worship Service</h5>
                 <p class="card-text">Join us for praise and worship, followed by a message from God's Word.</p>
                 <p class="text-muted"><i class="bi bi-clock me-2"></i>10:00 AM</p>
-                <p class="text-muted"><i class="bi bi-geo-alt me-2"></i>East View Hotel 6th Floor</p>
+                <p class="text-muted"><i class="bi bi-geo-alt me-2"></i>Ayala Cinema 2</p>
               </div>
             </div>
           </div>

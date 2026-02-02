@@ -92,7 +92,7 @@ import { RouterLink } from 'vue-router'
                 </div>
                 <div>
                   <h5>Church Address</h5>
-                  <p>East View Hotel 6th Floor, Bacolod City, Negros Occidental 6100</p>
+                  <p>Ayala Cinema 2, Bacolod City, Negros Occidental 6100</p>
                 </div>
               </div>
               
