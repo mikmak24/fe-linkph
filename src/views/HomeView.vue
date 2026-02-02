@@ -174,14 +174,7 @@ onMounted(() => {
                     <p class="lead">
                       Start your month with God! Join us for this special early morning prayer gathering as we seek His presence and intercede for our community.
                     </p>
-                    <div class="prayer-info mt-4">
-                      <p class="mb-2"><i class="bi bi-clock text-primary me-2"></i>5:30 AM</p>
-                      <p class="mb-2"><i class="bi bi-calendar-event text-primary me-2"></i>First Saturday Only</p>
-                      <p class="mb-0"><i class="bi bi-geo-alt text-primary me-2"></i>Ayala Cinema 2</p>
-                    </div>
-                    <div class="prayer-encouragement mt-4 p-3 bg-primary bg-opacity-10 rounded">
-                      <p class="mb-0 text-primary"><i class="bi bi-sunrise me-2"></i>Begin each month in prayer and fellowship!</p>
-                    </div>
+                
                   </div>
                 </div>
               </div>
@@ -201,11 +194,7 @@ onMounted(() => {
                     <p class="lead">
                       A time of dedicated prayer and consecration as we commit ourselves to God's purposes.
                     </p>
-                    <div class="prayer-info mt-4">
-                      <p class="mb-2"><i class="bi bi-clock text-primary me-2"></i>5:45 PM</p>
-                      <p class="mb-2"><i class="bi bi-calendar-event text-primary me-2"></i>Every Saturday</p>
-                      <p class="mb-0"><i class="bi bi-geo-alt text-primary me-2"></i>Ayala Cinema 2</p>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -220,24 +209,13 @@ onMounted(() => {
               </div>
               <div class="announcement-content">
                 <div class="content-wrapper">
-                  <h3 class="announcement-title">RUN Club by Club Uplift Philippines</h3>
+                  <h3 class="announcement-title">Club Uplift Philippines</h3>
                   <div class="announcement-description mt-3">
                     <p class="lead">
                       Calling all runners! Join our RUN Club for easy running sessions and build community while staying fit.
                     </p>
                  
-                    <div class="join-info mt-4">
-                      <h5 class="mb-3">How to Join:</h5>
-                      <div class="qr-section text-center mb-3">
-                        <p class="text-muted mb-2">Scan the QR code in the image to join!</p>
-                        <div class="qr-placeholder p-3 bg-light rounded d-inline-block">
-                          <i class="bi bi-qr-code" style="font-size: 2rem; color: #6c757d;"></i>
-                        </div>
-                      </div>
-                      <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Perfect for runners of all levels</p>
-                      <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Build community and stay healthy</p>
-                      <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Open to everyone who loves Jesus</p>
-                    </div>
+                  
                   </div>
                 </div>
               </div>
