@@ -239,6 +239,18 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
 </template>
 
 <style scoped>
+/* Force readable text on light backgrounds (avoids invisible text when device uses prefers-color-scheme: dark) */
+.faithful-foundation-page {
+  --page-heading: #1a1a1a;
+  --page-text: #333333;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.faithful-foundation-page .lead.text-muted {
+  color: #555 !important;
+}
+
 .hero {
   position: relative;
   padding: 120px 0 60px;
@@ -363,7 +375,7 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
 
 .detail-label {
   font-size: 0.9rem;
-  color: var(--color-text);
+  color: var(--page-text);
   opacity: 0.85;
 }
 
@@ -373,7 +385,7 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   text-align: center;
   font-size: 0.95rem;
-  color: var(--color-text);
+  color: var(--page-text);
 }
 
 .payment-terms strong {
@@ -393,7 +405,7 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
 .section-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: var(--color-heading, #1a1a1a);
+  color: var(--page-heading);
   margin-bottom: 1rem;
 }
 
@@ -425,7 +437,7 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
   padding: 1rem 1.5rem;
   margin: 0;
   font-size: 0.9rem;
-  color: var(--color-text);
+  color: var(--page-text);
   opacity: 0.85;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   background: #fff;
@@ -450,7 +462,7 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
 }
 
 .meaning-card p {
-  color: var(--color-text);
+  color: var(--page-text);
   line-height: 1.6;
   font-size: 0.95rem;
 }
@@ -463,7 +475,7 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
 }
 
 .verse-block p {
-  color: var(--color-text);
+  color: var(--page-text);
   line-height: 1.6;
 }
 
@@ -484,7 +496,7 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
 
 .scripture footer {
   font-size: 0.9rem;
-  color: var(--color-text);
+  color: var(--page-text);
   opacity: 0.85;
 }
 
@@ -535,14 +547,14 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
 .impact-card h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--color-heading);
+  color: var(--page-heading);
   margin-bottom: 0.35rem;
 }
 
 .impact-card p {
   margin: 0;
   font-size: 0.95rem;
-  color: var(--color-text);
+  color: var(--page-text);
   opacity: 0.9;
   line-height: 1.5;
 }
@@ -579,14 +591,14 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
 .step-card h4 {
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--color-heading);
+  color: var(--page-heading);
   margin-bottom: 0.5rem;
 }
 
 .step-card p {
   margin: 0;
   font-size: 0.9rem;
-  color: var(--color-text);
+  color: var(--page-text);
   opacity: 0.88;
   line-height: 1.55;
 }
@@ -624,7 +636,7 @@ import adoptALotVideo from '@/assets/videos/faithfull_foundation_adopt_a_lot.mp4
 }
 
 .why-card p {
-  color: var(--color-text);
+  color: var(--page-text);
   line-height: 1.6;
   font-size: 0.95rem;
 }
