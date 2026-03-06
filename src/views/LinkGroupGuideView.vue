@@ -267,6 +267,13 @@ const lessons = [
     description: 'Names, Fatherhood and Silence of God — the names of God, the Fatherhood of God, and understanding the silence of God.',
     category: 'Basic Christian Teaching',
     path: '/link-group-guide/names-fatherhood-silence-of-god'
+  },
+  {
+    id: 23,
+    title: 'Lesson 23: The Fear of the Lord',
+    description: 'The fear of the Lord — its meaning, what we are not to fear, why it is commanded, and the results of fearing God.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/fear-of-the-lord'
   }
 ]
 

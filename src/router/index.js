@@ -153,6 +153,11 @@ const router = createRouter({
       component: () => import('../views/lessons/NamesFatherhoodSilenceView.vue'),
     },
     {
+      path: '/link-group-guide/fear-of-the-lord',
+      name: 'fearOfTheLord',
+      component: () => import('../views/lessons/FearOfTheLordView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),
