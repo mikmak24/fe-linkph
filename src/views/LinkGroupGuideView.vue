@@ -274,6 +274,13 @@ const lessons = [
     description: 'The fear of the Lord — its meaning, what we are not to fear, why it is commanded, and the results of fearing God.',
     category: 'Basic Christian Teaching',
     path: '/link-group-guide/fear-of-the-lord'
+  },
+  {
+    id: 24,
+    title: 'Lesson 24: Prophecies and Life of Christ',
+    description: 'God the Son — prophecies concerning Christ\'s origin and life, the life of Christ, and the miracles of Jesus.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/prophecies-life-of-christ'
   }
 ]
 
