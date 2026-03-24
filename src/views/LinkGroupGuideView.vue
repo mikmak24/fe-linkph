@@ -281,6 +281,13 @@ const lessons = [
     description: 'God the Son — prophecies concerning Christ\'s origin and life, the life of Christ, and the miracles of Jesus.',
     category: 'Basic Christian Teaching',
     path: '/link-group-guide/prophecies-life-of-christ'
+  },
+  {
+    id: 25,
+    title: 'Lesson 25: The Virgin Birth of Christ',
+    description: 'God the Son — the virgin birth foretold and fulfilled, its purpose, importance, significance, and objections to the doctrine.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/virgin-birth-of-christ'
   }
 ]
 

@@ -163,6 +163,11 @@ const router = createRouter({
       component: () => import('../views/lessons/PropheciesLifeOfChristView.vue'),
     },
     {
+      path: '/link-group-guide/virgin-birth-of-christ',
+      name: 'virginBirthOfChrist',
+      component: () => import('../views/lessons/VirginBirthOfChristView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),
