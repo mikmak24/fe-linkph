@@ -168,6 +168,11 @@ const router = createRouter({
       component: () => import('../views/lessons/VirginBirthOfChristView.vue'),
     },
     {
+      path: '/link-group-guide/deity-of-christ',
+      name: 'deityOfChrist',
+      component: () => import('../views/lessons/DeityOfChristView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),

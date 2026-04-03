@@ -288,6 +288,13 @@ const lessons = [
     description: 'God the Son — the virgin birth foretold and fulfilled, its purpose, importance, significance, and objections to the doctrine.',
     category: 'Basic Christian Teaching',
     path: '/link-group-guide/virgin-birth-of-christ'
+  },
+  {
+    id: 26,
+    title: 'Lesson 26: The Deity of Christ',
+    description: 'God the Son — fifteen proofs of the deity of Christ and the exclusive attributes that belong to God alone.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/deity-of-christ'
   }
 ]
 
