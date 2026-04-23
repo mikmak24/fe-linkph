@@ -302,6 +302,13 @@ const lessons = [
     description: 'God the Son — twenty-one objections to Christ\'s deity with brief biblical replies.',
     category: 'Basic Christian Teaching',
     path: '/link-group-guide/arguments-against-deity-of-christ'
+  },
+  {
+    id: 28,
+    title: 'Lesson 28: The Relationship of the Son to the Father',
+    description: 'God the Son — Christ\'s equality with the Father in deity and His voluntary subordination in incarnation.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/relationship-son-to-father'
   }
 ]
 

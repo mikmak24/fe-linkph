@@ -178,6 +178,11 @@ const router = createRouter({
       component: () => import('../views/lessons/ArgumentsAgainstDeityOfChristView.vue'),
     },
     {
+      path: '/link-group-guide/relationship-son-to-father',
+      name: 'relationshipSonToFather',
+      component: () => import('../views/lessons/RelationshipSonToFatherView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),
