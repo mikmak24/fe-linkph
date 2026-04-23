@@ -295,6 +295,13 @@ const lessons = [
     description: 'God the Son — fifteen proofs of the deity of Christ and the exclusive attributes that belong to God alone.',
     category: 'Basic Christian Teaching',
     path: '/link-group-guide/deity-of-christ'
+  },
+  {
+    id: 27,
+    title: 'Lesson 27: Arguments against the Deity of Christ',
+    description: 'God the Son — twenty-one objections to Christ\'s deity with brief biblical replies.',
+    category: 'Basic Christian Teaching',
+    path: '/link-group-guide/arguments-against-deity-of-christ'
   }
 ]
 

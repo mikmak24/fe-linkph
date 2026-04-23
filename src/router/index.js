@@ -173,6 +173,11 @@ const router = createRouter({
       component: () => import('../views/lessons/DeityOfChristView.vue'),
     },
     {
+      path: '/link-group-guide/arguments-against-deity-of-christ',
+      name: 'argumentsAgainstDeityOfChrist',
+      component: () => import('../views/lessons/ArgumentsAgainstDeityOfChristView.vue'),
+    },
+    {
       path: '/link-kids',
       name: 'linkKids',
       component: () => import('../views/LinkKidsHomeView.vue'),
