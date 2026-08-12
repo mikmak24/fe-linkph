@@ -62,7 +62,7 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <img src="@/assets/images/img-2.jpg" alt="About LINK PH" class="img-fluid rounded shadow-lg">
+            <img src="@/assets/images/about/1.jpg" alt="About LINK PH" class="img-fluid rounded shadow-lg">
             <div class="church-verse mt-4 p-4 bg-light rounded">
               <h5 class="mb-3">Our Church Verse</h5>
               <blockquote class="blockquote">

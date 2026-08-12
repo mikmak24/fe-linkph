@@ -122,7 +122,7 @@ import { RouterLink } from 'vue-router'
           <div class="col-lg-6 order-lg-1">
             <div class="map-container rounded shadow-lg">
               <!-- Replace with actual Google Maps embed -->
-              <img src="@/assets/images/new-location.jpg" alt="Church Location" class="img-fluid rounded">
+              <img src="@/assets/images/visit/1.jpg" alt="Church Location" class="img-fluid rounded">
             </div>
           </div>
         </div>
