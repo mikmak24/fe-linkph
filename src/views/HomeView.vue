@@ -4,10 +4,15 @@ import { RouterLink } from 'vue-router'
 import bibleVersesData from '@/assets/data/bible-verses.json'
 
 // Import images directly
-import slideA from '@/assets/images/slideshows/a.jpg'
-import slideB from '@/assets/images/slideshows/b.jpg'
-import slideC from '@/assets/images/slideshows/c.jpg'
-import slideD from '@/assets/images/slideshows/d.jpg'
+import slide1 from '@/assets/images/homepage/1.jpg'
+import slide2 from '@/assets/images/homepage/2.jpg'
+import slide3 from '@/assets/images/homepage/3.jpg'
+import slide4 from '@/assets/images/homepage/4.jpg'
+import slide5 from '@/assets/images/homepage/5.jpg'
+import slide6 from '@/assets/images/homepage/6.jpg'
+import slide7 from '@/assets/images/homepage/7.jpg'
+import slide8 from '@/assets/images/homepage/8.jpg'
+import slide9 from '@/assets/images/homepage/9.jpg'
 
 // Create a reactive reference for the selected verse
 const randomVerse = ref({
@@ -33,10 +38,15 @@ const isVerseVisible = ref(false);
 
 // Slideshow functionality using Bootstrap
 const slides = [
-  { id: 0, url: slideA },
-  { id: 1, url: slideB },
-  { id: 2, url: slideC },
-  { id: 3, url: slideD }
+  { id: 0, url: slide1 },
+  { id: 1, url: slide2 },
+  { id: 2, url: slide3 },
+  { id: 3, url: slide4 },
+  { id: 4, url: slide5 },
+  { id: 5, url: slide6 },
+  { id: 6, url: slide7 },
+  { id: 7, url: slide8 },
+  { id: 8, url: slide9 }
 ];
 
 // Initialize carousel and verse when component mounts
@@ -161,61 +171,102 @@ onMounted(() => {
       <div class="container">
         <h2 class="section-title text-center mb-5">Announcements</h2>
         <div class="row align-items-stretch g-4">
-          <!-- Dawnwatch Prayer Announcement -->
-          <div class="col-lg-4 mb-4">
+          <!-- Worship Audition -->
+          <div class="col-md-6 col-lg-3 mb-4">
             <div class="announcement-card h-100">
               <div class="series-image-container">
-                <img src="@/assets/images/announcements/dawnwatch.jpg" alt="Dawnwatch Prayer" class="img-fluid">
+                <img src="@/assets/images/news-8-12-2026/link-worship.jpg" alt="Link Worship Audition" class="img-fluid">
               </div>
               <div class="announcement-content">
                 <div class="content-wrapper">
-                  <h3 class="announcement-title">Dawnwatch Prayer</h3>
+                  <h3 class="announcement-title">Link Worship Audition</h3>
                   <div class="announcement-description mt-3">
                     <p class="lead">
-                      Start your month with God! Join us for this special early morning prayer gathering as we seek His presence and intercede for our community.
+                      Do you have a heart for worship and a passion for music? This is your opportunity to use your gifts to glorify God and serve His Church.
                     </p>
-                
+                    <p>Whether you're a singer or musician, we'd love to see you at our next audition!</p>
+                    <div class="announcement-details mt-3">
+                      <p class="mb-1"><i class="bi bi-calendar-event me-2"></i>Saturday, August 15, 2026</p>
+                      <p class="mb-1"><i class="bi bi-clock me-2"></i>3:00 PM</p>
+                      <p class="mb-1"><i class="bi bi-geo-alt me-2"></i>Link Church Office</p>
+                    </div>
+                    <p class="announcement-quote mt-3 mb-0">
+                      <em>"Whatever you do, do it all for the glory of God."</em> — 1 Corinthians 10:31
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Consecration Prayer Announcement -->
-          <div class="col-lg-4 mb-4">
+          <!-- Consecration Prayer -->
+          <div class="col-md-6 col-lg-3 mb-4">
             <div class="announcement-card h-100">
               <div class="series-image-container">
-                <img src="@/assets/images/announcements/consecration.jpg" alt="Consecration Prayer" class="img-fluid">
+                <img src="@/assets/images/news-8-12-2026/link-consecration.jpg" alt="Consecration Prayer" class="img-fluid">
               </div>
               <div class="announcement-content">
                 <div class="content-wrapper">
                   <h3 class="announcement-title">Consecration Prayer</h3>
                   <div class="announcement-description mt-3">
                     <p class="lead">
-                      A time of dedicated prayer and consecration as we commit ourselves to God's purposes.
+                      A time to pause, pray, and draw closer to God. Join us this Saturday as we seek His presence together. 💚
                     </p>
-                    
+                    <div class="announcement-details mt-3">
+                      <p class="mb-1"><i class="bi bi-clock me-2"></i>6:30–7:30 PM</p>
+                      <p class="mb-1"><i class="bi bi-geo-alt me-2"></i>Link Church Center</p>
+                    </div>
+                    <p class="mb-0 mt-3">See you there!</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Uplift RUN Club Announcement -->
-          <div class="col-lg-4 mb-4">
+          <!-- Family Day -->
+          <div class="col-md-6 col-lg-3 mb-4">
             <div class="announcement-card h-100">
               <div class="series-image-container">
-                <img src="@/assets/images/announcements/uplift.jpg" alt="RUN Club by Club Uplift Philippines" class="img-fluid">
+                <img src="@/assets/images/news-8-12-2026/link-family-day.jpg" alt="Family Day" class="img-fluid">
               </div>
               <div class="announcement-content">
                 <div class="content-wrapper">
-                  <h3 class="announcement-title">Club Uplift Philippines</h3>
+                  <h3 class="announcement-title">Family Day</h3>
                   <div class="announcement-description mt-3">
                     <p class="lead">
-                      Calling all runners! Join our RUN Club for easy running sessions and build community while staying fit.
+                      Family Day is almost here! 🌿💚 Join us for a day filled with prayer, worship, fellowship, fun, and baptism as we gather together as one family in Christ.
                     </p>
-                 
-                  
+                    <div class="announcement-details mt-3">
+                      <p class="mb-1"><i class="bi bi-calendar-event me-2"></i>August 21, 2026</p>
+                      <p class="mb-1"><i class="bi bi-clock me-2"></i>8:00 AM – 4:30 PM</p>
+                      <p class="mb-1"><i class="bi bi-geo-alt me-2"></i>NEW LOCATION: Bantug Lake Ranch – Barnhouse</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Uplift Basketball -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="announcement-card h-100">
+              <div class="series-image-container">
+                <img src="@/assets/images/news-8-12-2026/link-uplift-basketball.jpg" alt="Uplift Basketball" class="img-fluid">
+              </div>
+              <div class="announcement-content">
+                <div class="content-wrapper">
+                  <h3 class="announcement-title">Uplift Basketball</h3>
+                  <div class="announcement-description mt-3">
+                    <p class="lead">
+                      Game ta! 🏀🔥 Join us every 2nd week of the month for Uplift Basketball.
+                    </p>
+                    <div class="announcement-details mt-3">
+                      <p class="mb-1"><i class="bi bi-calendar-event me-2"></i>Every 2nd week of the month</p>
+                      <p class="mb-1"><i class="bi bi-currency-dollar me-2"></i>Court rental: ₱50–₱100 per person</p>
+                    </div>
+                    <p class="mb-0 mt-3">
+                      Message Clark Jr. Canlog for more details or join the Uplift Basketball GC through the QR code. See you on the court!
+                    </p>
                   </div>
                 </div>
               </div>
@@ -296,64 +347,6 @@ onMounted(() => {
             <h2 class="mb-4">Become Part of Our Community</h2>
             <p class="lead mb-4">We'd love to have you join us this Sunday and experience the love and grace of God through worship and fellowship.</p>
             <RouterLink to="/contact" class="btn btn-light btn-lg">Contact Us</RouterLink>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Upcoming Events Section -->
-    <section class="section-padding">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-lg-8">
-            <h2 class="section-title">Upcoming Events</h2>
-          </div>
-          <div class="col-lg-4 text-lg-end">
-            <RouterLink to="/resources" class="btn btn-outline-primary">View All Events</RouterLink>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-img-top position-relative">
-                <img src="@/assets/images/img-2.jpg"  alt="Sunday Worship" class="img-fluid">
-               
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Sunday Worship Service</h5>
-                <p class="card-text">Join us for praise and worship, followed by a message from God's Word.</p>
-                <p class="text-muted"><i class="bi bi-clock me-2"></i>10:00 AM</p>
-                <p class="text-muted"><i class="bi bi-geo-alt me-2"></i>Ayala Cinema 2</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-img-top position-relative">
-                <img src="@/assets/images/img-3.jpg" alt="Bible Study" class="img-fluid">
-              
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Weekly Link Group,</h5>
-                <p class="card-text">A deeper dive into God's Word to strengthen your faith and understanding.</p>
-                <p class="text-muted"><i class="bi bi-clock me-2"></i>Flexible Time</p>
-                <p class="text-muted"><i class="bi bi-geo-alt me-2"></i>To be announced</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-img-top position-relative">
-                <img src="@/assets/images/img-4.jpg" alt="Youth Group" class="img-fluid">
-              
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Volunteer Day Out</h5>
-                <p class="card-text">A day of fun, fellowship, and spiritual growth for the members of Link Church.</p>
-                <p class="text-muted"><i class="bi bi-clock me-2"></i>To be announced</p>
-                <p class="text-muted"><i class="bi bi-geo-alt me-2"></i>To be announced</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -673,10 +666,6 @@ onMounted(() => {
   background-color: #f8f9fa;
 }
 
-.upcoming-events-section {
-  background-color: #e9ecef;
-}
-
 .cta-section {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
 }
@@ -766,6 +755,25 @@ onMounted(() => {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.announcement-details {
+  background-color: rgba(var(--bs-primary-rgb), 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.announcement-details p {
+  font-size: 0.95rem;
+  color: var(--primary-color);
+}
+
+.announcement-quote {
+  font-size: 0.9rem;
+  color: #666;
+  border-left: 3px solid var(--primary-color);
+  padding-left: 1rem;
 }
 
 /* Responsive adjustments */
