@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import { EMAIL_ADDRESS, PHONE_NUMBER } from '@/constants/contact'
 </script>
 
 <template>
@@ -46,7 +47,7 @@ import { RouterLink } from 'vue-router'
                 </div>
                 <div>
                   <h5 class="mb-1">Phone</h5>
-                  <p class="mb-0">0939-6030-755</p>
+                  <p class="mb-0">{{ PHONE_NUMBER }}</p>
                 </div>
               </div>
               
@@ -56,7 +57,7 @@ import { RouterLink } from 'vue-router'
                 </div>
                 <div>
                   <h5 class="mb-1">Email</h5>
-                  <p class="mb-0">thelinkphilippines@gmail.com</p>
+                  <p class="mb-0">{{ EMAIL_ADDRESS }}</p>
                 </div>
               </div>
             </div>
@@ -169,7 +170,7 @@ import { RouterLink } from 'vue-router'
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#contactFAQ">
                   <div class="accordion-body">
-                    Prayer requests can be submitted by contacting us via email at thelinkphilippines@gmail.com, by calling 0930-6030-755, or by filling out a prayer card during Sunday service. Our prayer team commits to praying for each request received.
+                    Prayer requests can be submitted by contacting us via email at {{ EMAIL_ADDRESS }}, by calling {{ PHONE_NUMBER }}, or by filling out a prayer card during Sunday service. Our prayer team commits to praying for each request received.
                   </div>
                 </div>
               </div>

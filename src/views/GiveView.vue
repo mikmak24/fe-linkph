@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import { EMAIL_ADDRESS } from '@/constants/contact'
 </script>
 
 <template>
@@ -267,7 +268,7 @@ import { RouterLink } from 'vue-router'
                   <ul class="mb-0">
                     <li>Please include your name in the reference field when making transfers.</li>
                     <li>If giving for a specific purpose (e.g., missions, building fund), please indicate this in the reference field.</li>
-                    <li>For assistance with bank transfers, please contact our finance team at finance@linkph.org.</li>
+                    <li>For assistance with bank transfers, please contact our finance team at {{ EMAIL_ADDRESS }}.</li>
                   </ul>
                 </div>
               </div>
@@ -396,7 +397,7 @@ import { RouterLink } from 'vue-router'
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#givingFAQ">
                   <div class="accordion-body">
-                    Yes, we provide annual giving statements for tax purposes. These are typically sent out in January for the previous year's giving. If you need a statement at any other time, please contact our finance team at finance@linkph.org.
+                    Yes, we provide annual giving statements for tax purposes. These are typically sent out in January for the previous year's giving. If you need a statement at any other time, please contact our finance team at {{ EMAIL_ADDRESS }}.
                   </div>
                 </div>
               </div>

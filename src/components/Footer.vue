@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import { EMAIL_ADDRESS, PHONE_NUMBER } from '@/constants/contact'
 </script>
 
 <template>
@@ -40,8 +41,8 @@ import { RouterLink } from 'vue-router'
         <div class="col-lg-4">
           <h5 class="mb-4">Contact Us</h5>
           <p>We would love to hear from you! Whether you have questions about our services, want to get involved, or simply want to learn more, feel free to reach out:</p>
-          <p><i class="bi bi-envelope me-2"></i> thelinkphilippines@gmail.com</p>
-          <p><i class="bi bi-telephone me-2"></i> 0939-6030-755</p>
+          <p><i class="bi bi-envelope me-2"></i> {{ EMAIL_ADDRESS }}</p>
+          <p><i class="bi bi-telephone me-2"></i> {{ PHONE_NUMBER }}</p>
           <p><i class="bi bi-geo-alt me-2"></i>Ayala Cinema 2, Bacolod City</p>
           <p>Thank you for visiting Link Church. We look forward to welcoming you into our community!</p>
         </div>

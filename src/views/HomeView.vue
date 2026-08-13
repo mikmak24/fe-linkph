@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
+import { EMAIL_ADDRESS, PHONE_NUMBER } from '@/constants/contact'
 import bibleVersesData from '@/assets/data/bible-verses.json'
 
 // Import images directly
@@ -128,8 +129,8 @@ onMounted(() => {
               <router-link to="/about" class="btn btn-outline-light btn-lg">Learn More</router-link>
             </div>
             <div class="contact-info">
-              <p class="mb-1"><i class="bi bi-telephone me-2"></i>0939-6030-755</p>
-              <p class="mb-1"><i class="bi bi-envelope me-2"></i>thelinkphilippines@gmail.com</p>
+              <p class="mb-1"><i class="bi bi-telephone me-2"></i>{{ PHONE_NUMBER }}</p>
+              <p class="mb-1"><i class="bi bi-envelope me-2"></i>{{ EMAIL_ADDRESS }}</p>
             </div>
           </div>
         </div>

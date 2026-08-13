@@ -401,8 +401,8 @@
             <h2 class="mb-4">Contact Us</h2>
             <p class="lead mb-4">We would love to hear from you! Whether you have questions about our services, want to get involved, or simply want to learn more, feel free to reach out.</p>
             <div class="contact-details mb-4">
-              <p><i class="fas fa-envelope me-2"></i> thelinkphilippines@gmail.com</p>
-              <p><i class="fas fa-phone me-2"></i> 0939-6030-755</p>
+              <p><i class="fas fa-envelope me-2"></i> {{ EMAIL_ADDRESS }}</p>
+              <p><i class="fas fa-phone me-2"></i> {{ PHONE_NUMBER }}</p>
               <p><i class="fas fa-map-marker-alt me-2"></i> Bacolod City, Negros Occidental 6100</p>
             </div>
             <RouterLink to="/contact" class="btn btn-light btn-lg">Contact Us</RouterLink>
@@ -415,6 +415,7 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+import { EMAIL_ADDRESS, PHONE_NUMBER } from '@/constants/contact'
 </script>
 
 <style scoped>
