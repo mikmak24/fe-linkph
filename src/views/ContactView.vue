@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import { EMAIL_ADDRESS, PHONE_NUMBER } from '@/constants/contact'
+import { EMAIL_ADDRESS, PHONE_NUMBER, MAPS_EMBED_URL, GOOGLE_MAPS_PLACE_URL } from '@/constants/contact'
 </script>
 
 <template>
@@ -121,16 +121,16 @@ import { EMAIL_ADDRESS, PHONE_NUMBER } from '@/constants/contact'
         <div class="row mb-5">
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-title text-center">Find Us</h2>
-            <p class="lead">We're located in Bacolod City</p>
+            <p class="lead">We're located in Lot 25 Block 85, Burgos St., Villamonte Bacolod City</p>
           </div>
         </div>
         
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <div class="map-container rounded shadow-lg overflow-hidden">
-              <!-- Replace with actual Google Maps embed of Bacolod City -->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4737.748947439181!2d122.96541887581594!3d10.66519588947693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed1966b88f3fb%3A0xd52ad0484f64d4b5!2sEast%20View%20Hotel!5e1!3m2!1sen!2sph!4v1759051551150!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-container rounded shadow-lg overflow-hidden mb-3">
+              <iframe :src="MAPS_EMBED_URL" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+           
           </div>
         </div>
       </div>

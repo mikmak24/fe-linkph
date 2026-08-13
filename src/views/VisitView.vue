@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import { GOOGLE_MAPS_PLACE_URL } from '@/constants/contact'
 </script>
 
 <template>
@@ -117,7 +118,7 @@ import { RouterLink } from 'vue-router'
               </div>
             </div>
             
-            <a href="https://maps.app.goo.gl/MZEHWhdahThX5Ua8A" target="_blank" class="btn btn-primary">Get Directions</a>
+            <a :href="GOOGLE_MAPS_PLACE_URL" target="_blank" class="btn btn-primary">Get Directions</a>
           </div>
           <div class="col-lg-6 order-lg-1">
             <div class="map-container rounded shadow-lg">

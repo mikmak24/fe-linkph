@@ -1,6 +1,9 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-import { RouterLink } from 'vue-router'
+import { ref, watch, onMounted, onUnmounted } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
+
+const route = useRoute()
+const navRef = ref(null)
 
 const isNavCollapsed = ref(true)
 const isScrolled = ref(false)
@@ -11,46 +14,6 @@ const isLinkKidsDropdownOpen = ref(false)
 const isLinkGroupDropdownOpen = ref(false)
 const isLinkWorshipDropdownOpen = ref(false)
 
-const toggleNav = () => {
-  isNavCollapsed.value = !isNavCollapsed.value
-}
-
-const toggleAboutDropdown = () => {
-  const wasOpen = isAboutDropdownOpen.value
-  closeDropdowns()
-  if (!wasOpen) isAboutDropdownOpen.value = true
-}
-
-const toggleKnowledgeDropdown = () => {
-  const wasOpen = isKnowledgeDropdownOpen.value
-  closeDropdowns()
-  if (!wasOpen) isKnowledgeDropdownOpen.value = true
-}
-
-const toggleDiscipleshipDropdown = () => {
-  const wasOpen = isDiscipleshipDropdownOpen.value
-  closeDropdowns()
-  if (!wasOpen) isDiscipleshipDropdownOpen.value = true
-}
-
-const toggleLinkKidsDropdown = () => {
-  const wasOpen = isLinkKidsDropdownOpen.value
-  closeDropdowns()
-  if (!wasOpen) isLinkKidsDropdownOpen.value = true
-}
-
-const toggleLinkGroupDropdown = () => {
-  const wasOpen = isLinkGroupDropdownOpen.value
-  closeDropdowns()
-  if (!wasOpen) isLinkGroupDropdownOpen.value = true
-}
-
-const toggleLinkWorshipDropdown = () => {
-  const wasOpen = isLinkWorshipDropdownOpen.value
-  closeDropdowns()
-  if (!wasOpen) isLinkWorshipDropdownOpen.value = true
-}
-
 const closeDropdowns = () => {
   isAboutDropdownOpen.value = false
   isKnowledgeDropdownOpen.value = false
@@ -60,29 +23,96 @@ const closeDropdowns = () => {
   isLinkWorshipDropdownOpen.value = false
 }
 
+const closeAll = () => {
+  isNavCollapsed.value = true
+  closeDropdowns()
+}
+
+const toggleNav = (e) => {
+  if (e) e.stopPropagation()
+  isNavCollapsed.value = !isNavCollapsed.value
+}
+
+const toggleAboutDropdown = (e) => {
+  if (e) e.stopPropagation()
+  const wasOpen = isAboutDropdownOpen.value
+  closeDropdowns()
+  if (!wasOpen) isAboutDropdownOpen.value = true
+}
+
+const toggleKnowledgeDropdown = (e) => {
+  if (e) e.stopPropagation()
+  const wasOpen = isKnowledgeDropdownOpen.value
+  closeDropdowns()
+  if (!wasOpen) isKnowledgeDropdownOpen.value = true
+}
+
+const toggleDiscipleshipDropdown = (e) => {
+  if (e) e.stopPropagation()
+  const wasOpen = isDiscipleshipDropdownOpen.value
+  closeDropdowns()
+  if (!wasOpen) isDiscipleshipDropdownOpen.value = true
+}
+
+const toggleLinkKidsDropdown = (e) => {
+  if (e) e.stopPropagation()
+  const wasOpen = isLinkKidsDropdownOpen.value
+  closeDropdowns()
+  if (!wasOpen) isLinkKidsDropdownOpen.value = true
+}
+
+const toggleLinkGroupDropdown = (e) => {
+  if (e) e.stopPropagation()
+  const wasOpen = isLinkGroupDropdownOpen.value
+  closeDropdowns()
+  if (!wasOpen) isLinkGroupDropdownOpen.value = true
+}
+
+const toggleLinkWorshipDropdown = (e) => {
+  if (e) e.stopPropagation()
+  const wasOpen = isLinkWorshipDropdownOpen.value
+  closeDropdowns()
+  if (!wasOpen) isLinkWorshipDropdownOpen.value = true
+}
+
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50
-  const navbar = document.querySelector('.navbar')
-  if (isScrolled.value) {
-    navbar.classList.add('scrolled')
-  } else {
-    navbar.classList.remove('scrolled')
+  const navbar = navRef.value || document.querySelector('.navbar')
+  if (navbar) {
+    if (isScrolled.value) {
+      navbar.classList.add('scrolled')
+    } else {
+      navbar.classList.remove('scrolled')
+    }
   }
 }
 
+const handleClickOutside = (event) => {
+  if (navRef.value && !navRef.value.contains(event.target)) {
+    closeAll()
+  }
+}
+
+// Watch route changes to automatically collapse menu and reset state
+watch(() => route.fullPath, () => {
+  closeAll()
+  window.scrollTo(0, 0)
+})
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
-  // Initial check
+  document.addEventListener('click', handleClickOutside)
   handleScroll()
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  document.removeEventListener('click', handleClickOutside)
 })
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg sticky-top" :class="{ 'navbar-dark': isScrolled, 'navbar-light': !isScrolled }">
+  <nav ref="navRef" class="navbar navbar-expand-lg sticky-top" :class="{ 'navbar-dark': isScrolled, 'navbar-light': !isScrolled }">
     <div class="container">
       <RouterLink class="navbar-brand" to="/">
         <img src="@/assets/images/logo-navbar.png" alt="Link Church Logo" style="height: 40px; width: auto; margin-right: 5px;" />
@@ -397,6 +427,13 @@ onUnmounted(() => {
 
 .btn-accent:hover {
   transform: translateY(-2px);
+}
+
+@media (min-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 991.98px) {
