@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { onMounted } from 'vue'
+import teacherInvitation from '@/assets/videos/link_kids/link-kids-teacher-invitation-web.mp4'
+import pintaRecap from '@/assets/videos/link_kids/link-kids-pinta-recap-web.mp4'
 
 onMounted(() => {
   // Initialize Bootstrap accordion if needed
@@ -60,6 +62,52 @@ onMounted(() => {
                 style="min-height: 400px;"
               >
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Link Kids Stories Section -->
+    <section class="kids-stories-section section-padding">
+      <div class="container">
+        <div class="kids-stories-heading text-center mx-auto mb-5">
+          <p class="kids-section-kicker mb-2">Link Kids stories</p>
+          <h2 class="section-title text-center mb-3">A place to learn, create, and belong</h2>
+          <p class="lead mb-0">See the joyful moments that make Link Kids a welcoming space for children and the people who serve them.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <article class="kids-video-card h-100">
+              <div class="kids-video-frame">
+                <video class="kids-video" controls playsinline preload="metadata" aria-label="Play Link Kids Pinta recap">
+                  <source :src="pintaRecap" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="kids-video-content">
+                <p class="kids-video-label mb-2"><i class="bi bi-stars me-2" aria-hidden="true"></i>Celebrating creativity</p>
+                <h3>Link Kids Pinta Recap</h3>
+                <p class="mb-0">A glimpse of the color, creativity, and connection children share when they learn and grow together.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6">
+            <article class="kids-video-card h-100">
+              <div class="kids-video-frame">
+                <video class="kids-video" controls playsinline preload="metadata" aria-label="Play Link Kids teacher invitation">
+                  <source :src="teacherInvitation" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="kids-video-content kids-video-content-invitation">
+                <p class="kids-video-label mb-2"><i class="bi bi-heart-fill me-2" aria-hidden="true"></i>Serve with Link Kids</p>
+                <h3>Give one hour. Help shape a life.</h3>
+                <p>Every child deserves people who will point them toward Jesus with care, patience, and joy.</p>
+                <RouterLink to="/contact" class="btn btn-outline-primary mt-2">Become a volunteer <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></RouterLink>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -256,6 +304,69 @@ onMounted(() => {
   padding: 60px 0;
 }
 
+.kids-stories-section {
+  background: linear-gradient(180deg, #f8fbfa 0%, #eef6f3 100%);
+}
+
+.kids-stories-heading {
+  max-width: 720px;
+}
+
+.kids-section-kicker,
+.kids-video-label {
+  color: var(--primary-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.kids-video-card {
+  background: #ffffff;
+  border: 1px solid rgba(12, 93, 86, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(3, 63, 58, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.kids-video-card:hover {
+  box-shadow: 0 18px 38px rgba(3, 63, 58, 0.14);
+  transform: translateY(-3px);
+}
+
+.kids-video-frame {
+  aspect-ratio: 16 / 9;
+  background: #102522;
+  line-height: 0;
+}
+
+.kids-video {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.kids-video-content {
+  padding: 1.5rem;
+}
+
+.kids-video-content h3 {
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.kids-video-content p:not(.kids-video-label) {
+  color: #5d6967;
+}
+
+.kids-video-content-invitation .btn {
+  font-weight: 600;
+}
+
 .value-icon {
   font-size: 2rem;
   color: var(--primary-color);
@@ -330,6 +441,18 @@ onMounted(() => {
   .section-padding {
     padding: 40px 0;
   }
+
+  .kids-stories-heading {
+    margin-bottom: 2rem !important;
+  }
+
+  .kids-video-card:hover {
+    transform: none;
+  }
+
+  .kids-video-content {
+    padding: 1.2rem;
+  }
 }
 
 .accordion-button {
@@ -367,4 +490,4 @@ onMounted(() => {
 .accordion-item:hover {
   transform: translateY(-2px);
 }
-</style> 
+</style>

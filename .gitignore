@@ -32,3 +32,5 @@ coverage
 # Keep source event footage local; commit only web-optimized exports.
 src/assets/videos/events/*
 !src/assets/videos/events/*-web.mp4
+src/assets/videos/link_kids/*
+!src/assets/videos/link_kids/*-web.mp4
