@@ -43,7 +43,7 @@ import { EMAIL_ADDRESS, PHONE_NUMBER } from '@/constants/contact'
           <p>We would love to hear from you! Whether you have questions about our services, want to get involved, or simply want to learn more, feel free to reach out:</p>
           <p><i class="bi bi-envelope me-2"></i> {{ EMAIL_ADDRESS }}</p>
           <p><i class="bi bi-telephone me-2"></i> {{ PHONE_NUMBER }}</p>
-          <p><i class="bi bi-geo-alt me-2"></i>Ayala Cinema 2, Bacolod City</p>
+          <p><i class="bi bi-geo-alt me-2"></i>Lot 25 Block 85, Burgos St., Villamonte Bacolod City</p>
           <p>Thank you for visiting Link Church. We look forward to welcoming you into our community!</p>
         </div>
       </div>

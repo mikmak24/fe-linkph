@@ -14,6 +14,10 @@ import slide6 from '@/assets/images/homepage/6.jpg'
 import slide7 from '@/assets/images/homepage/7.jpg'
 import slide8 from '@/assets/images/homepage/8.jpg'
 import slide9 from '@/assets/images/homepage/9.jpg'
+import workWorshipWealthRecap from '@/assets/videos/events/01-work-worship-wealth-web.mp4'
+import fathersDayRecap from '@/assets/videos/events/02-fathers-day-web.mp4'
+import mothersDayRecap from '@/assets/videos/events/03-mothers-day-web.mp4'
+import linkLegacyRecap from '@/assets/videos/events/04-link-legacy-web.mp4'
 
 // Create a reactive reference for the selected verse
 const randomVerse = ref({
@@ -49,6 +53,33 @@ const slides = [
   { id: 7, url: slide8 },
   { id: 8, url: slide9 }
 ];
+
+const eventVideos = [
+  {
+    title: 'Work, Worship & Wealth',
+    description: 'Where faith fuels work and wealth follows purpose.',
+    source: workWorshipWealthRecap,
+    type: 'video/mp4'
+  },
+  {
+    title: "Father's Day Celebration",
+    description: 'Celebrating the fathers and father figures who lead with love and faith.',
+    source: fathersDayRecap,
+    type: 'video/mp4'
+  },
+  {
+    title: "Mother's Day Celebration",
+    description: 'A joyful tribute to the mothers who nurture our homes and church family.',
+    source: mothersDayRecap,
+    type: 'video/mp4'
+  },
+  {
+    title: 'Link Legacy',
+    description: 'A warm gathering for married couples to grow in faith, friendship, and purpose together.',
+    source: linkLegacyRecap,
+    type: 'video/mp4'
+  }
+]
 
 // Initialize carousel and verse when component mounts
 onMounted(() => {
@@ -277,7 +308,57 @@ onMounted(() => {
       </div>
     </section>
 
-    
+    <!-- Life at Link Section -->
+    <section class="life-at-link-section section-padding">
+      <div class="container">
+        <div class="life-at-link-heading row align-items-end g-3 mb-5">
+          <div class="col-lg-7">
+            <p class="section-kicker mb-2">Life at Link</p>
+            <h2 class="section-title mb-0">Moments that bring us together</h2>
+          </div>
+          <div class="col-lg-5">
+            <p class="life-at-link-intro mb-0">From special celebrations to meaningful gatherings, see how God is at work in our church family.</p>
+          </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-7">
+            <article class="event-video-card event-video-card-featured h-100">
+              <div class="event-video-frame">
+                <video class="event-video" controls playsinline preload="metadata" aria-label="Play Work, Worship and Wealth recap">
+                  <source :src="eventVideos[0].source" :type="eventVideos[0].type">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="event-video-content">
+                <p class="event-video-label mb-2"><i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>Featured recap</p>
+                <h3>{{ eventVideos[0].title }}</h3>
+                <p class="mb-0">{{ eventVideos[0].description }}</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="row g-4 h-100">
+              <div v-for="event in eventVideos.slice(1)" :key="event.title" class="col-12">
+                <article class="event-video-card event-video-card-compact">
+                  <div class="event-video-frame">
+                    <video class="event-video" controls playsinline preload="metadata" :aria-label="`Play ${event.title} recap`">
+                      <source :src="event.source" :type="event.type">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div class="event-video-content">
+                    <h3>{{ event.title }}</h3>
+                    <p class="mb-0">{{ event.description }}</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Welcome Message Section -->
     <section class="section-padding">
@@ -667,6 +748,98 @@ onMounted(() => {
   background-color: #f8f9fa;
 }
 
+.life-at-link-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8f7 100%);
+}
+
+.life-at-link-heading {
+  max-width: 1080px;
+}
+
+.section-kicker,
+.event-video-label {
+  color: var(--primary-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.life-at-link-intro {
+  color: #52615f;
+  font-size: 1.08rem;
+}
+
+.event-video-card {
+  background: #ffffff;
+  border: 1px solid rgba(12, 93, 86, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(3, 63, 58, 0.08);
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.event-video-card:hover {
+  box-shadow: 0 18px 38px rgba(3, 63, 58, 0.14);
+  transform: translateY(-3px);
+}
+
+.event-video-frame {
+  background: #102522;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.event-video-card-featured .event-video-frame {
+  aspect-ratio: 16 / 9;
+}
+
+.event-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.event-video-content {
+  padding: 1.4rem 1.5rem 1.5rem;
+}
+
+.event-video-content h3 {
+  color: var(--secondary-color);
+  font-size: 1.35rem;
+  margin-bottom: 0.45rem;
+}
+
+.event-video-content p:not(.event-video-label) {
+  color: #5d6967;
+}
+
+.event-video-card-compact {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  height: 100%;
+}
+
+.event-video-card-compact .event-video-frame {
+  aspect-ratio: 4 / 3;
+}
+
+.event-video-card-compact .event-video-content {
+  align-self: center;
+  padding: 1.25rem;
+}
+
+.event-video-card-compact .event-video-content h3 {
+  font-size: 1.1rem;
+}
+
+.event-video-card-compact .event-video-content p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
 .cta-section {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
 }
@@ -779,6 +952,27 @@ onMounted(() => {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .life-at-link-heading {
+    margin-bottom: 2rem !important;
+  }
+
+  .event-video-card:hover {
+    transform: none;
+  }
+
+  .event-video-card-compact {
+    display: block;
+  }
+
+  .event-video-card-compact .event-video-frame {
+    aspect-ratio: 16 / 9;
+  }
+
+  .event-video-content,
+  .event-video-card-compact .event-video-content {
+    padding: 1.15rem 1.2rem 1.25rem;
+  }
+
   .announcement-card {
     min-height: auto;
   }

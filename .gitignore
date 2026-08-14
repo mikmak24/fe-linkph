@@ -28,3 +28,7 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# Keep source event footage local; commit only web-optimized exports.
+src/assets/videos/events/*
+!src/assets/videos/events/*-web.mp4
