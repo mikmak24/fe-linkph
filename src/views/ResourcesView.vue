@@ -197,7 +197,7 @@ import { RouterLink } from 'vue-router'
           <div class="col-md-6 mb-4">
             <div class="resource-card d-flex bg-white rounded shadow-sm p-4 h-100">
               <div class="resource-icon me-4">
-                <i class="bi bi-journal-text fa-3x text-primary"></i>
+                <i class="bi bi-journal-text fs-1 text-primary"></i>
               </div>
               <div class="resource-content">
                 <h4>Basic Christian Doctrine</h4>
@@ -210,7 +210,7 @@ import { RouterLink } from 'vue-router'
           <div class="col-md-6 mb-4">
             <div class="resource-card d-flex bg-white rounded shadow-sm p-4 h-100">
               <div class="resource-icon me-4">
-                <i class="bi bi-praying-hands fa-3x text-primary"></i>
+                <i class="bi bi-praying-hands fs-1 text-primary"></i>
               </div>
               <div class="resource-content">
                 <h4>Prayer Guide</h4>
@@ -223,7 +223,7 @@ import { RouterLink } from 'vue-router'
           <div class="col-md-6 mb-4">
             <div class="resource-card d-flex bg-white rounded shadow-sm p-4 h-100">
               <div class="resource-icon me-4">
-                <i class="bi bi-people fa-3x text-primary"></i>
+                <i class="bi bi-people fs-1 text-primary"></i>
               </div>
               <div class="resource-content">
                 <h4>Small Group Studies</h4>
@@ -236,7 +236,7 @@ import { RouterLink } from 'vue-router'
           <div class="col-md-6 mb-4">
             <div class="resource-card d-flex bg-white rounded shadow-sm p-4 h-100">
               <div class="resource-icon me-4">
-                <i class="bi bi-heart fa-3x text-primary"></i>
+                <i class="bi bi-heart fs-1 text-primary"></i>
               </div>
               <div class="resource-content">
                 <h4>Discipleship Materials</h4>
@@ -269,8 +269,8 @@ import { RouterLink } from 'vue-router'
                 </div>
                 <div class="event-details flex-grow-1">
                   <h5 class="mb-1">Family Sunday Service</h5>
-                  <p class="mb-0 text-muted"><i class="far fa-clock me-2"></i>10:00 AM - 12:00 PM</p>
-                  <p class="mb-0 text-muted"><i class="fas fa-map-marker-alt me-2"></i>Main Sanctuary</p>
+                  <p class="mb-0 text-muted"><i class="bi bi-clock me-2"></i>10:00 AM - 12:00 PM</p>
+                  <p class="mb-0 text-muted"><i class="bi bi-geo-alt me-2"></i>Main Sanctuary</p>
                 </div>
                 <div class="event-action">
                   <a href="#" class="btn btn-outline-primary">Details</a>
@@ -284,8 +284,8 @@ import { RouterLink } from 'vue-router'
                 </div>
                 <div class="event-details flex-grow-1">
                   <h5 class="mb-1">Prayer Summit</h5>
-                  <p class="mb-0 text-muted"><i class="far fa-clock me-2"></i>7:00 PM - 9:00 PM</p>
-                  <p class="mb-0 text-muted"><i class="fas fa-map-marker-alt me-2"></i>Prayer Room</p>
+                  <p class="mb-0 text-muted"><i class="bi bi-clock me-2"></i>7:00 PM - 9:00 PM</p>
+                  <p class="mb-0 text-muted"><i class="bi bi-geo-alt me-2"></i>Prayer Room</p>
                 </div>
                 <div class="event-action">
                   <a href="#" class="btn btn-outline-primary">Details</a>
@@ -299,8 +299,8 @@ import { RouterLink } from 'vue-router'
                 </div>
                 <div class="event-details flex-grow-1">
                   <h5 class="mb-1">Youth Night</h5>
-                  <p class="mb-0 text-muted"><i class="far fa-clock me-2"></i>6:30 PM - 8:30 PM</p>
-                  <p class="mb-0 text-muted"><i class="fas fa-map-marker-alt me-2"></i>Youth Center</p>
+                  <p class="mb-0 text-muted"><i class="bi bi-clock me-2"></i>6:30 PM - 8:30 PM</p>
+                  <p class="mb-0 text-muted"><i class="bi bi-geo-alt me-2"></i>Youth Center</p>
                 </div>
                 <div class="event-action">
                   <a href="#" class="btn btn-outline-primary">Details</a>
@@ -314,8 +314,8 @@ import { RouterLink } from 'vue-router'
                 </div>
                 <div class="event-details flex-grow-1">
                   <h5 class="mb-1">Community Outreach</h5>
-                  <p class="mb-0 text-muted"><i class="far fa-clock me-2"></i>9:00 AM - 1:00 PM</p>
-                  <p class="mb-0 text-muted"><i class="fas fa-map-marker-alt me-2"></i>Downtown Park</p>
+                  <p class="mb-0 text-muted"><i class="bi bi-clock me-2"></i>9:00 AM - 1:00 PM</p>
+                  <p class="mb-0 text-muted"><i class="bi bi-geo-alt me-2"></i>Downtown Park</p>
                 </div>
                 <div class="event-action">
                   <a href="#" class="btn btn-outline-primary">Details</a>
@@ -462,4 +462,4 @@ import { RouterLink } from 'vue-router'
 .event-item:hover {
   transform: translateX(5px);
 }
-</style> 
+</style>

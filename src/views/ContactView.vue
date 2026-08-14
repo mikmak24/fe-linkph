@@ -33,7 +33,7 @@ import { EMAIL_ADDRESS, PHONE_NUMBER, MAPS_EMBED_URL, GOOGLE_MAPS_PLACE_URL } fr
             <div class="contact-info mb-5">
               <div class="contact-item d-flex mb-4">
                 <div class="contact-icon me-3">
-                  <i class="fas fa-map-marker-alt"></i>
+                  <i class="bi bi-geo-alt"></i>
                 </div>
                 <div>
                   <h5 class="mb-1">Church Address</h5>
@@ -43,7 +43,7 @@ import { EMAIL_ADDRESS, PHONE_NUMBER, MAPS_EMBED_URL, GOOGLE_MAPS_PLACE_URL } fr
               
               <div class="contact-item d-flex mb-4">
                 <div class="contact-icon me-3">
-                  <i class="fas fa-phone-alt"></i>
+                  <i class="bi bi-telephone"></i>
                 </div>
                 <div>
                   <h5 class="mb-1">Phone</h5>
@@ -53,7 +53,7 @@ import { EMAIL_ADDRESS, PHONE_NUMBER, MAPS_EMBED_URL, GOOGLE_MAPS_PLACE_URL } fr
               
               <div class="contact-item d-flex mb-4">
                 <div class="contact-icon me-3">
-                  <i class="fas fa-envelope"></i>
+                  <i class="bi bi-envelope"></i>
                 </div>
                 <div>
                   <h5 class="mb-1">Email</h5>
@@ -64,9 +64,9 @@ import { EMAIL_ADDRESS, PHONE_NUMBER, MAPS_EMBED_URL, GOOGLE_MAPS_PLACE_URL } fr
             
             <div class="social-links">
               <h5 class="mb-3">Connect With Us</h5>
-              <a href="https://www.facebook.com/LinkPHL" target="_blank" class="social-link me-2" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="social-link me-2" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="social-link me-2" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.facebook.com/LinkPHL" target="_blank" class="social-link me-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-link me-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="social-link me-2" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
             </div>
           </div>
           
@@ -78,7 +78,7 @@ import { EMAIL_ADDRESS, PHONE_NUMBER, MAPS_EMBED_URL, GOOGLE_MAPS_PLACE_URL } fr
               <div class="involvement-options">
                 <div class="involvement-item d-flex mb-4">
                   <div class="involvement-icon me-3">
-                    <i class="fas fa-hands-helping"></i>
+                    <i class="bi bi-heart"></i>
                   </div>
                   <div>
                     <h5 class="mb-1">Volunteer Opportunities</h5>
@@ -88,20 +88,20 @@ import { EMAIL_ADDRESS, PHONE_NUMBER, MAPS_EMBED_URL, GOOGLE_MAPS_PLACE_URL } fr
                 
                 <div class="involvement-item d-flex mb-4">
                   <div class="involvement-icon me-3">
-                    <i class="fas fa-users"></i>
+                    <i class="bi bi-people"></i>
                   </div>
                   <div>
                     <h5 class="mb-1">Join a Group</h5>
                     <p class="mb-0">Find a small group that fits your interests and schedule.</p>
                     <a href="https://forms.gle/HHZcr9Z6kcv1KnRm7" target="_blank" class="btn btn-primary mt-3">
-                      <i class="fas fa-external-link-alt me-2"></i>Join a Link Group
+                      <i class="bi bi-box-arrow-up-right me-2"></i>Join a Link Group
                     </a>
                   </div>
                 </div>
                 
                 <div class="involvement-item d-flex">
                   <div class="involvement-icon me-3">
-                    <i class="fas fa-calendar-check"></i>
+                    <i class="bi bi-calendar-check"></i>
                   </div>
                   <div>
                     <h5 class="mb-1">Attend Events</h5>
@@ -229,7 +229,7 @@ import { EMAIL_ADDRESS, PHONE_NUMBER, MAPS_EMBED_URL, GOOGLE_MAPS_PLACE_URL } fr
             <div>
               <RouterLink to="/visit" class="btn btn-light btn-lg me-3 mb-3 mb-md-0">Plan Your Visit</RouterLink>
               <a href="https://www.facebook.com/LinkPHL" target="_blank" class="btn btn-outline-light btn-lg">
-                <i class="fab fa-facebook-f me-2"></i>Follow Us on Facebook
+                <i class="bi bi-facebook me-2"></i>Follow Us on Facebook
               </a>
             </div>
           </div>
@@ -363,4 +363,4 @@ import { EMAIL_ADDRESS, PHONE_NUMBER, MAPS_EMBED_URL, GOOGLE_MAPS_PLACE_URL } fr
 .cta-section {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
 }
-</style> 
+</style>

@@ -85,7 +85,7 @@ onMounted(() => {
                   <div class="gallery-info">
                     <h5>{{ image.alt }}</h5>
                     <button class="btn-view" @click="openModal(image)">
-                      <i class="fas fa-search-plus"></i>
+                      <i class="bi bi-zoom-in"></i>
                     </button>
                   </div>
                 </div>
@@ -115,7 +115,7 @@ onMounted(() => {
                   <div class="gallery-info">
                     <h5>{{ image.alt }}</h5>
                     <button class="btn-view" @click="openModal(image)">
-                      <i class="fas fa-search-plus"></i>
+                      <i class="bi bi-zoom-in"></i>
                     </button>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ onMounted(() => {
       <div class="modal-overlay" @click="closeModal"></div>
       <div class="modal-content">
         <button class="modal-close" @click="closeModal">
-          <i class="fas fa-times"></i>
+          <i class="bi bi-x-lg"></i>
         </button>
         <div class="modal-body">
           <img :src="currentImage?.src" :alt="currentImage?.alt" class="img-fluid">
@@ -365,4 +365,4 @@ onMounted(() => {
     max-height: 60vh;
   }
 }
-</style> 
+</style>

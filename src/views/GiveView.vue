@@ -57,7 +57,7 @@ import { EMAIL_ADDRESS } from '@/constants/contact'
           <div class="col-md-6 col-lg-3 mb-4">
             <div class="give-method-card p-4 bg-white rounded shadow-sm h-100 text-center">
               <div class="give-icon mb-3">
-                <i class="fas fa-church fa-3x"></i>
+                <i class="bi bi-house-heart fs-1"></i>
               </div>
               <h4 class="mb-3">In Person</h4>
               <p>You can give during our Sunday services or drop by our church office during business hours.</p>
@@ -68,7 +68,7 @@ import { EMAIL_ADDRESS } from '@/constants/contact'
           <div class="col-md-6 col-lg-3 mb-4">
             <div class="give-method-card p-4 bg-white rounded shadow-sm h-100 text-center">
               <div class="give-icon mb-3">
-                <i class="fas fa-globe fa-3x"></i>
+                <i class="bi bi-globe fs-1"></i>
               </div>
               <h4 class="mb-3">Online</h4>
               <p>Give securely online through our giving platform. One-time or recurring options available.</p>
@@ -79,7 +79,7 @@ import { EMAIL_ADDRESS } from '@/constants/contact'
           <div class="col-md-6 col-lg-3 mb-4">
             <div class="give-method-card p-4 bg-white rounded shadow-sm h-100 text-center">
               <div class="give-icon mb-3">
-                <i class="fas fa-mobile-alt fa-3x"></i>
+                <i class="bi bi-phone fs-1"></i>
               </div>
               <h4 class="mb-3">Mobile App</h4>
               <p>Download our mobile app to give conveniently from your smartphone anytime, anywhere.</p>
@@ -90,7 +90,7 @@ import { EMAIL_ADDRESS } from '@/constants/contact'
           <div class="col-md-6 col-lg-3 mb-4">
             <div class="give-method-card p-4 bg-white rounded shadow-sm h-100 text-center">
               <div class="give-icon mb-3">
-                <i class="fas fa-money-check fa-3x"></i>
+                <i class="bi bi-cash-stack fs-1"></i>
               </div>
               <h4 class="mb-3">Bank Transfer</h4>
               <p>Set up direct transfers from your bank account to our church account.</p>
@@ -505,4 +505,4 @@ import { EMAIL_ADDRESS } from '@/constants/contact'
 .accordion-button::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%233a5a97'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
-</style> 
+</style>

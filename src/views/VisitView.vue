@@ -38,7 +38,7 @@ import { GOOGLE_MAPS_PLACE_URL } from '@/constants/contact'
           <div class="col-md-6 col-lg-3 mb-4">
             <div class="expect-card text-center p-4 bg-white rounded shadow-sm h-100">
               <div class="expect-icon mb-3">
-                <i class="bi bi-music-note-beamed fa-2x"></i>
+                <i class="bi bi-music-note-beamed fs-2"></i>
               </div>
               <h4>Worship</h4>
               <p>Contemporary worship music that helps us connect with God through praise and adoration.</p>
@@ -48,7 +48,7 @@ import { GOOGLE_MAPS_PLACE_URL } from '@/constants/contact'
           <div class="col-md-6 col-lg-3 mb-4">
             <div class="expect-card text-center p-4 bg-white rounded shadow-sm h-100">
               <div class="expect-icon mb-3">
-                <i class="bi bi-book fa-2x"></i>
+                <i class="bi bi-book fs-2"></i>
               </div>
               <h4>Bible Teaching</h4>
               <p>Practical, relevant teaching from God's Word that applies to your everyday life.</p>
@@ -58,7 +58,7 @@ import { GOOGLE_MAPS_PLACE_URL } from '@/constants/contact'
           <div class="col-md-6 col-lg-3 mb-4">
             <div class="expect-card text-center p-4 bg-white rounded shadow-sm h-100">
               <div class="expect-icon mb-3">
-                <i class="bi bi-person fa-2x"></i>
+                <i class="bi bi-person fs-2"></i>
               </div>
               <h4>Kids Ministry</h4>
               <p>Age-appropriate activities and Bible lessons for children in a safe, fun environment.</p>
@@ -68,7 +68,7 @@ import { GOOGLE_MAPS_PLACE_URL } from '@/constants/contact'
           <div class="col-md-6 col-lg-3 mb-4">
             <div class="expect-card text-center p-4 bg-white rounded shadow-sm h-100">
               <div class="expect-icon mb-3">
-                <i class="bi bi-cup-hot fa-2x"></i>
+                <i class="bi bi-cup-hot fs-2"></i>
               </div>
               <h4>Fellowship</h4>
               <p>Friendly people and opportunities to connect with others before and after services.</p>
@@ -301,4 +301,4 @@ import { GOOGLE_MAPS_PLACE_URL } from '@/constants/contact'
 .accordion-button::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%233a5a97'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
-</style> 
+</style>

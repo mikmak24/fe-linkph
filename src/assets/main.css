@@ -25,3 +25,12 @@ a,
     width: 100%;
   }
 }
+
+/* Legacy icon aliases retained for existing lesson content. */
+.bi-praying-hands::before { content: "\f8f6"; }
+.bi-cross::before { content: "\f415"; }
+.bi-target::before { content: "\f1de"; }
+.bi-symbols::before { content: "\f151"; }
+.bi-sword::before { content: "\f53f"; }
+.bi-seed::before { content: "\f3cd"; }
+.bi-mirror::before { content: "\f341"; }

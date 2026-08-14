@@ -94,9 +94,9 @@
                 <h5 class="mb-1">Pastor John Doe</h5>
                 <p class="text-muted">Lead Pastor</p>
                 <div class="social-links mt-2">
-                  <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
-                  <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -110,9 +110,9 @@
                 <h5 class="mb-1">Jane Smith</h5>
                 <p class="text-muted">Worship Leader</p>
                 <div class="social-links mt-2">
-                  <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
-                  <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -126,9 +126,9 @@
                 <h5 class="mb-1">Mark Johnson</h5>
                 <p class="text-muted">Youth Pastor</p>
                 <div class="social-links mt-2">
-                  <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
-                  <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -142,9 +142,9 @@
                 <h5 class="mb-1">Sarah Wilson</h5>
                 <p class="text-muted">Children's Minister</p>
                 <div class="social-links mt-2">
-                  <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
-                  <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -312,7 +312,7 @@
             <div class="card h-100 border-0 shadow-sm">
               <div class="card-body text-center p-4">
                 <div class="feature-icon">
-                  <i class="fas fa-church"></i>
+                  <i class="bi bi-house-heart"></i>
                 </div>
                 <h4 class="card-title">Sunday Worship Services</h4>
                 <p class="card-text">Join us every Sunday for a time of worship, teaching, and community.</p>
@@ -323,7 +323,7 @@
             <div class="card h-100 border-0 shadow-sm">
               <div class="card-body text-center p-4">
                 <div class="feature-icon">
-                  <i class="fas fa-users"></i>
+                  <i class="bi bi-people"></i>
                 </div>
                 <h4 class="card-title">Small Group Gatherings</h4>
                 <p class="card-text">Connect with others in a more intimate setting for support and discussion.</p>
@@ -334,7 +334,7 @@
             <div class="card h-100 border-0 shadow-sm">
               <div class="card-body text-center p-4">
                 <div class="feature-icon">
-                  <i class="fas fa-calendar-alt"></i>
+                  <i class="bi bi-calendar-event"></i>
                 </div>
                 <h4 class="card-title">Community Events</h4>
                 <p class="card-text">Participate in various events designed to foster connection and service within our community.</p>
@@ -359,7 +359,7 @@
             <div class="card h-100 border-0 shadow-sm">
               <div class="card-body text-center p-4">
                 <div class="feature-icon">
-                  <i class="fas fa-hands-helping"></i>
+                  <i class="bi bi-heart"></i>
                 </div>
                 <h4 class="card-title">Volunteer Opportunities</h4>
                 <p class="card-text">Share your talents and time in various ministries and outreach programs.</p>
@@ -370,7 +370,7 @@
             <div class="card h-100 border-0 shadow-sm">
               <div class="card-body text-center p-4">
                 <div class="feature-icon">
-                  <i class="fas fa-user-friends"></i>
+                  <i class="bi bi-people-fill"></i>
                 </div>
                 <h4 class="card-title">Join a Group</h4>
                 <p class="card-text">Find a small group that fits your interests and schedule.</p>
@@ -382,7 +382,7 @@
             <div class="card h-100 border-0 shadow-sm">
               <div class="card-body text-center p-4">
                 <div class="feature-icon">
-                  <i class="fas fa-calendar-check"></i>
+                  <i class="bi bi-calendar-check"></i>
                 </div>
                 <h4 class="card-title">Attend Events</h4>
                 <p class="card-text">Participate in our community events to meet new people and deepen your connections.</p>
@@ -401,9 +401,9 @@
             <h2 class="mb-4">Contact Us</h2>
             <p class="lead mb-4">We would love to hear from you! Whether you have questions about our services, want to get involved, or simply want to learn more, feel free to reach out.</p>
             <div class="contact-details mb-4">
-              <p><i class="fas fa-envelope me-2"></i> {{ EMAIL_ADDRESS }}</p>
-              <p><i class="fas fa-phone me-2"></i> {{ PHONE_NUMBER }}</p>
-              <p><i class="fas fa-map-marker-alt me-2"></i> Bacolod City, Negros Occidental 6100</p>
+              <p><i class="bi bi-envelope me-2"></i> {{ EMAIL_ADDRESS }}</p>
+              <p><i class="bi bi-telephone me-2"></i> {{ PHONE_NUMBER }}</p>
+              <p><i class="bi bi-geo-alt me-2"></i> Bacolod City, Negros Occidental 6100</p>
             </div>
             <RouterLink to="/contact" class="btn btn-light btn-lg">Contact Us</RouterLink>
           </div>

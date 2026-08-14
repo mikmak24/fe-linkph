@@ -57,7 +57,7 @@ import { RouterLink } from 'vue-router'
             <div class="path-card p-4 bg-white rounded shadow-sm h-100 text-center position-relative">
               <div class="path-number position-absolute">1</div>
               <div class="path-icon mb-3">
-                <i class="fas fa-heart fa-3x"></i>
+                <i class="bi bi-heart fs-1"></i>
               </div>
               <h4 class="mb-3">Connect</h4>
               <p>Begin your journey by connecting with God and others through Sunday worship and building meaningful relationships.</p>
@@ -69,7 +69,7 @@ import { RouterLink } from 'vue-router'
             <div class="path-card p-4 bg-white rounded shadow-sm h-100 text-center position-relative">
               <div class="path-number position-absolute">2</div>
               <div class="path-icon mb-3">
-                <i class="fas fa-seedling fa-3x"></i>
+                <i class="bi bi-flower1 fs-1"></i>
               </div>
               <h4 class="mb-3">Grow</h4>
               <p>Deepen your faith through small groups, Bible studies, and developing spiritual disciplines.</p>
@@ -81,7 +81,7 @@ import { RouterLink } from 'vue-router'
             <div class="path-card p-4 bg-white rounded shadow-sm h-100 text-center position-relative">
               <div class="path-number position-absolute">3</div>
               <div class="path-icon mb-3">
-                <i class="fas fa-hands-helping fa-3x"></i>
+                <i class="bi bi-people fs-1"></i>
               </div>
               <h4 class="mb-3">Serve</h4>
               <p>Discover your gifts and use them to serve in the church and community to make an impact.</p>
@@ -93,7 +93,7 @@ import { RouterLink } from 'vue-router'
             <div class="path-card p-4 bg-white rounded shadow-sm h-100 text-center position-relative">
               <div class="path-number position-absolute">4</div>
               <div class="path-icon mb-3">
-                <i class="fas fa-share-alt fa-3x"></i>
+                <i class="bi bi-arrow-left-right fs-1"></i>
               </div>
               <h4 class="mb-3">Share</h4>
               <p>Share your faith journey with others and invite them to experience God's love in their lives.</p>
@@ -183,7 +183,7 @@ import { RouterLink } from 'vue-router'
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="discipline-card p-4 bg-white rounded shadow-sm h-100">
               <div class="discipline-icon mb-3 text-center">
-                <i class="fas fa-book-open fa-3x"></i>
+                <i class="bi bi-book fs-1"></i>
               </div>
               <h4 class="text-center mb-3">Bible Reading</h4>
               <p>Regular Bible reading is essential for spiritual growth. God speaks to us through His Word, guiding us and transforming our minds.</p>
@@ -205,7 +205,7 @@ import { RouterLink } from 'vue-router'
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="discipline-card p-4 bg-white rounded shadow-sm h-100">
               <div class="discipline-icon mb-3 text-center">
-                <i class="fas fa-praying-hands fa-3x"></i>
+                <i class="bi bi-praying-hands fs-1"></i>
               </div>
               <h4 class="text-center mb-3">Prayer</h4>
               <p>Prayer is how we communicate with God. Through prayer, we express our gratitude, confess our sins, and bring our requests to Him.</p>
@@ -227,7 +227,7 @@ import { RouterLink } from 'vue-router'
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="discipline-card p-4 bg-white rounded shadow-sm h-100">
               <div class="discipline-icon mb-3 text-center">
-                <i class="fas fa-church fa-3x"></i>
+                <i class="bi bi-house-heart fs-1"></i>
               </div>
               <h4 class="text-center mb-3">Worship</h4>
               <p>Worship is our response to God's greatness. It's about giving God the honor and praise He deserves, both individually and in community.</p>
@@ -408,4 +408,4 @@ import { RouterLink } from 'vue-router'
 .page-header .breadcrumb-item a {
   text-decoration: underline;
 }
-</style> 
+</style>
